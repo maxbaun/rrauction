@@ -81,10 +81,10 @@ module.exports = function(grunt) {
    'cache-pug-compiler': {
      cache: {
        options: {
-        // Will hook into this pug tasks and replace the src, 
-        // changing what gets compiled 
+        // Will hook into this pug tasks and replace the src,
+        // changing what gets compiled
          pugTask: 'compile',
-        // Used by pugInheritance 
+        // Used by pugInheritance
          basedir: '<%= paths.src_pug %>',
        },
        files: [ {
@@ -181,7 +181,7 @@ module.exports = function(grunt) {
 
  // Pug (formerly Jade).
  grunt.loadNpmTasks('grunt-contrib-pug');
- 
+
  // Concat.
  grunt.loadNpmTasks('grunt-contrib-concat');
 
@@ -198,4 +198,7 @@ module.exports = function(grunt) {
 
  // Default task.
  grunt.registerTask('default', ['browserSync', 'sass:bootstrap', 'sass:expanded', 'autoprefixer:bootstrap', 'autoprefixer:expanded', 'concat', 'uglify', 'pug', 'watch']);
+
+ // Build tast
+ grunt.registerTask('build', ['sass:bootstrap', 'sass:minified', 'autoprefixer:bootstrap', 'autoprefixer:minified', 'concat', 'uglify', 'pug'])
 };
