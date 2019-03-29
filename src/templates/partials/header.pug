@@ -8,7 +8,7 @@ header.site-header.navbar-sticky
     // Logo
     .site-branding.d-flex
       a()&attributes(isNestedFile ? {'href': '../index.html'} : {'href': 'index.html'}).site-logo.align-self-center
-        +image('img/logo/logo.png', 'Unishop')
+        +image('/img/logo/logo.png', 'Unishop')
 
     // Search / Categories
     .search-box-wrap.d-flex
@@ -28,7 +28,7 @@ header.site-header.navbar-sticky
 
     //- toolbar.pug template
     include toolbar
-  
+
     //- mobile-menu.pug template
     include mobile-menu
 
@@ -40,7 +40,7 @@ header.site-header.navbar-sticky
         | &nbsp;Categories
       //- mega-dropdown.pug template
       include mega-dropdown
-  
+
     //- menu.pug template
     include menu
 
@@ -60,14 +60,14 @@ header.site-header.navbar-sticky
             div
               span.cart-icon
                 i.icon-shopping-cart
-                span.count-label 3   
+                span.count-label 3
               span.text-label Cart
           .toolbar-dropdown.cart-dropdown.widget-cart
             // Entry
             .entry
               .entry-thumb
                 a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
-                  +image('img/shop/widget/04.jpg', 'Product')
+                  +image('/img/shop/widget/04.jpg', 'Product')
               .entry-content
                 h4.entry-title
                   a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) Canon EOS M50 Mirrorless Camera
@@ -78,7 +78,7 @@ header.site-header.navbar-sticky
             .entry
               .entry-thumb
                 a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
-                  +image('img/shop/widget/05.jpg', 'Product')
+                  +image('/img/shop/widget/05.jpg', 'Product')
               .entry-content
                 h4.entry-title
                   a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) Apple iPhone X 256 GB Space Gray
@@ -89,7 +89,7 @@ header.site-header.navbar-sticky
             .entry
               .entry-thumb
                 a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'})
-                  +image('img/shop/widget/06.jpg', 'Product')
+                  +image('/img/shop/widget/06.jpg', 'Product')
               .entry-content
                 h4.entry-title
                   a()&attributes(isNestedFile ? {'href': '../shop-single.html'} : {'href': 'shop-single.html'}) HP LaserJet Pro Laser Printer

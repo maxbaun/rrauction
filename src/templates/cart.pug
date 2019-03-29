@@ -16,7 +16,7 @@ block content
       span(data-dismiss='alert').alert-close
       i.icon-award
       | &nbsp;&nbsp;With this purchase you will earn <span class='text-medium'>2,549</span> Reward Points.
-    
+
     // Shopping Cart
     .table-responsive.shopping-cart
         table.table
@@ -33,7 +33,7 @@ block content
               td
                 .product-item
                   a(href='shop-single.html').product-thumb
-                    img(src='img/shop/cart/01.jpg', alt='Product')
+                    img(src='/img/shop/cart/01.jpg', alt='Product')
                   .product-info
                     h4.product-title
                       a(href='shop-single.html') Canon EOS M50 Mirrorless Camera
@@ -60,7 +60,7 @@ block content
               td
                 .product-item
                   a(href='shop-single.html').product-thumb
-                    img(src='img/shop/cart/02.jpg', alt='Product')
+                    img(src='/img/shop/cart/02.jpg', alt='Product')
                   .product-info
                     h4.product-title
                       a(href='shop-single.html') Apple iPhone X 256 GB Space Gray
@@ -87,7 +87,7 @@ block content
               td
                 .product-item
                   a(href='shop-single.html').product-thumb
-                    img(src='img/shop/cart/03.jpg', alt='Product')
+                    img(src='/img/shop/cart/03.jpg', alt='Product')
                   .product-info
                     h4.product-title
                       a(href='shop-single.html') HP LaserJet Pro Laser Printer
@@ -116,7 +116,7 @@ block content
           input(type='text' placeholder='Coupon code' required).form-control.form-control-sm
           button(type='submit' class='btn btn-outline-primary btn-sm') Apply Coupon
       .column.text-lg
-        span.text-muted Subtotal:&nbsp; 
+        span.text-muted Subtotal:&nbsp;
         span.text-gray-dark $2,548.50
     .shopping-cart-footer
       .column
@@ -128,4 +128,3 @@ block content
         a(href='checkout-address.html' class='btn btn-primary') Checkout
 
     include partials/related-products-carousel
-    

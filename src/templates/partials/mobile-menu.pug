@@ -8,14 +8,14 @@
         button(type='submit')
           i.icon-search
       input(type='search' placeholder='Search site').form-control
-  
+
   // Toolbar
   .toolbar
     .toolbar-item
       a(href='#')
         div
           i.flag-icon
-            +image('img/flags/EN.png', 'English')
+            +image('/img/flags/EN.png', 'English')
           span.text-label Eng / Usd
       ul.toolbar-dropdown.lang-dropdown.w-100
         li.px-3.pt-1.pb-2
@@ -27,17 +27,17 @@
         li
           a(href='#')
             i.flag-icon
-              +image('img/flags/FR.png', 'Français')
+              +image('/img/flags/FR.png', 'Français')
             | &nbsp;Français
         li
           a(href='#')
             i.flag-icon
-              +image('img/flags/DE.png', 'Deutsch')
+              +image('/img/flags/DE.png', 'Deutsch')
             | &nbsp;Deutsch
         li
           a(href='#')
             i.flag-icon
-              +image('img/flags/IT.png', 'Italiano')
+              +image('/img/flags/IT.png', 'Italiano')
             | &nbsp;Italiano
     .toolbar-item
       a()&attributes(isNestedFile ? {'href': '../product-comparison.html'} : {'href': 'product-comparison.html'})
