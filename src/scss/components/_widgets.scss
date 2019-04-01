@@ -453,3 +453,13 @@
     }
   }
 }
+
+.sidebar--home-categories {
+  .widget {
+    &-title {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
