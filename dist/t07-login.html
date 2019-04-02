@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>RR Auction
+    <title>T07 - Login
     </title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Unishop - Universal E-Commerce Template">
@@ -162,9 +162,9 @@
           <!-- Slideable (Mobile) Menu-->
           <nav class="slideable-menu">
             <ul class="menu" data-initial-height="385">
-              <li class="has-children active"><span><a href="index.html">Home</a><span class="sub-menu-toggle"></span></span>
+              <li class="has-children"><span><a href="index.html">Home</a><span class="sub-menu-toggle"></span></span>
                 <ul class="slideable-submenu">
-                    <li class="active"><a href="index.html">Hero Slider</a></li>
+                    <li><a href="index.html">Hero Slider</a></li>
                     <li><a href="home-featured-categories.html">Categories Grid</a></li>
                 </ul>
               </li>
@@ -210,7 +210,7 @@
                   <li><a href="#">Video Games</a></li>
                 </ul>
               </li>
-              <li class="has-children"><span><a href="account-orders.html">Account</a><span class="sub-menu-toggle"></span></span>
+              <li class="has-children active"><span><a href="account-orders.html">Account</a><span class="sub-menu-toggle"></span></span>
                 <ul class="slideable-submenu">
                     <li><a href="account-login.html">Login / Register</a></li>
                     <li><a href="account-password-recovery.html">Password Recovery</a></li>
@@ -311,9 +311,9 @@
         <!-- Main Navigation-->
         <nav class="site-menu">
           <ul>
-            <li class="has-submenu active"><a href="index.html">Home</a>
+            <li class="has-submenu"><a href="index.html">Home</a>
               <ul class="sub-menu">
-                <li class="active has-children"><a href="index.html">Hero Slider</a>
+                <li class="has-children"><a href="index.html">Hero Slider</a>
                   <ul class="sub-menu w-400 p-0 overflow-hidden">
                     <li><a class="p-0" href="index.html"><img src="/img/banners/home01.jpg" alt="Hero Slider Home"></a></li>
                   </ul>
@@ -404,7 +404,7 @@
                 <li><a class="card border-0 bg-secondary rounded-0" href="shop-grid-ls.html"><img class="d-block mx-auto" alt="Samsung Galaxy S9" src="/img/banners/mega-menu.jpg"></a></li>
               </ul>
             </li>
-            <li class="has-submenu"><a href="account-orders.html">Account</a>
+            <li class="has-submenu active"><a href="account-orders.html">Account</a>
               <ul class="sub-menu">
                   <li><a href="account-login.html">Login / Register</a></li>
                   <li><a href="account-password-recovery.html">Password Recovery</a></li>
@@ -542,16 +542,103 @@
         </div>
       </div>
     </header>
-    <!-- Page Content-->
-    <section class="my-4">
+    <!-- Page Title-->
+    <div class="page-title">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4 offset-md-4">
-            <nav class="list-group"><a class="list-group-item" href="/t01-homepage.html">T01 - Homepage</a><a class="list-group-item" href="/t02-form-page.html">T02 - Form Page</a><a class="list-group-item" href="/t03-contact.html">T03 - Contact</a><a class="list-group-item" href="/t04-team.html">T04 - Team</a><a class="list-group-item" href="/t05-blog-list.html">T05 - Blog List</a><a class="list-group-item" href="/t06-blog-detail.html">T06 - Blog Detail</a><a class="list-group-item" href="/t07-login.html">T07 - Login</a></nav>
-          </div>
+        <div class="column">
+          <h1>T07 - Login</h1>
+        </div>
+        <div class="column">
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Home</a>
+            </li>
+            <li class="separator">&nbsp;</li>
+            <li>T07 - Login</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- Page Content-->
+    <div class="container padding-bottom-3x mb-2">
+      <div class="row">
+        <div class="col-md-6">
+          <form class="card" method="post">
+            <div class="card-body bg-secondary">
+              <h4 class="margin-bottom-1x">Account Login</h4>
+              <div class="form-group input-group">
+                <input class="form-control" type="email" placeholder="Email" name="email" required><span class="input-group-addon"><i class="icon-mail"></i></span>
+              </div>
+              <div class="form-group input-group">
+                <input class="form-control" type="password" placeholder="Password" name="password" required><span class="input-group-addon"><i class="icon-lock"></i></span>
+              </div>
+              <div class="d-flex flex-wrap justify-content-between padding-bottom-1x">
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" id="remember_me" checked>
+                  <label class="custom-control-label" for="remember_me">Remember me</label>
+                </div><a class="navi-link" href="account-password-recovery.html">Forgot password?</a>
+              </div>
+              <div class="text-sm-right">
+                <button class="btn btn-primary margin-bottom-none" type="submit">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="padding-top-3x hidden-md-up"></div>
+          <h3 class="margin-bottom-1x">Create User Account</h3>
+          <p>Registration takes less than a minute but gives you full control over your orders.</p>
+          <form class="row" method="post">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="reg-fn">First Name</label>
+                <input class="form-control" type="text" id="reg-fn" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="reg-ln">Last Name</label>
+                <input class="form-control" type="text" id="reg-ln" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="reg-email">E-mail Address</label>
+                <input class="form-control" type="email" id="reg-email" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="reg-phone">Phone Number</label>
+                <input class="form-control" type="text" id="reg-phone" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="reg-pass">Password</label>
+                <input class="form-control" type="password" id="reg-pass" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="reg-pass-confirm">Confirm Password</label>
+                <input class="form-control" type="password" id="reg-pass-confirm" required>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" id="email_signup" name="signup" checked>
+                  <label class="custom-control-label" for="email_signup">Please include me on auction update emails</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 text-sm-right">
+              <button class="btn btn-primary margin-bottom-none" type="submit">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- Site Footer-->
     <footer class="site-footer" style="background-image: url(/img/footer-bg.png);">
       <div class="container">
