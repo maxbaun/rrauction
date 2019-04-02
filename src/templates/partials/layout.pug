@@ -2,14 +2,17 @@ doctype html
 html(lang="en")
 
   //- head.pug template
-  include head 
-  
+  include head
+
   // Body
   body
 
     //- modal-example.pug template
     if isModalExample
       include modal-example
+
+    if isModalTerms
+      include modal-terms
 
     //- bootstrap-toast.pug template
     if isBSToast
@@ -22,7 +25,7 @@ html(lang="en")
     //- modal-order.pug template
     if isModalOrder
       include modal-order
-      
+
     //- modal-review.pug template
     if isModalReview
       include modal-review
@@ -45,14 +48,14 @@ html(lang="en")
     //- photoswipe.pug template
     if isGallery
       include photoswipe
-    
+
     // Back To Top Button
     a(href='#').scroll-to-top-btn
       i.icon-chevron-up
 
     // Backdrop
     .site-backdrop
-    
+
     // JavaScript (jQuery) libraries, plugins and custom scripts
     script()&attributes(isNestedFile ? {'src': '../js/vendor.min.js'} : {'src': 'js/vendor.min.js'})
     if isCardScript
