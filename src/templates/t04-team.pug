@@ -1,0 +1,47 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T04 - Team'
+  - var menuTitle = 'Hero Slider'
+  - var pageTitle = 'T04 - Team'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T04 - Team'}]
+
+//- Page Content
+block content
+
+  -
+    var profiles = [
+      {name: 'Bob Eaton', title: 'CEO, Acquisitions', email: 'bob.eaton@rrauction.com', image: '/img/profiles/bob_thumb.jpg'},
+      {name: 'Bobby Livingston', title: 'Executive Vice President, Public Relations', email: 'bobby.livingston@rrauction.com', image: '/img/profiles/bl_thumb.jpg'},
+      {name: 'Bill White', title: 'Lead Autograph Appraiser', email: 'bill.white@rrauction.com', image: '/img/profiles/Bill-2019.jpg'},
+      {name: 'Bobby Eaton', title: 'VP, Business Development', email: 'bobby.eaton@rrauction.com', image: '/img/profiles/bobby_thumb.jpg'},
+      {name: 'Jon Siefken', title: 'Consignment Director', email: 'jon.siefken@rrauction.com', image: '/img/profiles/Jon_thumb.jpg'},
+      {name: 'Tricia Eaton', title: 'Chief Marketing Officer', email: 'tricia.eaton@rrauction.com', image: '/img/profiles/Tricia_thumb2.png'},
+      {name: 'Carla Eaton', title: 'Owner, Auctioneer', email: 'carla.eaton@rrauction.com', image: '/img/profiles/Carla_thumb.jpg'},
+      {name: 'Elizebeth Otto', title: 'Consignment Director', email: 'elizebeth.otto@rrauction.com', image: '/img/profiles/Elizabeth_Thumb.jpg'},
+      {name: 'Sarina Carlo', title: 'Creative Director', email: 'sarina.carlo@rrauction.com', image: '/img/profiles/sarina_thumb.jpg'},
+      {name: 'Mandy Eaton-Casey', title: 'Finance Manager', email: 'amanda.casey@rrauction.com', image: '/img/profiles/Mandy_thumb.jpg'},
+      {name: 'Louis Bollman', title: 'Vice President - Sports', email: 'louis.bollman@rrauction.com', image: '/img/profiles/Louis-2019.jpg'},
+      {name: 'Evan Mugford', title: 'Writer', email: 'evan.mugford@rrauction.com', image: '/img/profiles/Evan_thumb.jpg'},
+      {name: 'Sylvia Nassy', title: 'Accounts Payable', email: 'sylvia.nassy@rrauction.com', image: '/img/profiles/snassy_thumb.jpg'},
+      {name: 'Joseph DelGrippo', title: 'Director of Sports Auctions', email: 'joseph.delgrippo@rrauction.com', image: '/img/profiles/Joe-2019.jpg'},
+      {name: 'Dan McCarthy', title: 'Catalog Writer, Researcher', email: 'dan.mccarthy@rrauction.com', image: '/img/profiles/Dan_thumb.jpg'},
+      {name: 'Sue Recks', title: 'Director of Customer Service, Accounts Receivable', email: 'sue.recks@rrauction.com', image: '/img/profiles/sue_thumb2.jpg'},
+      {name: 'Fiona Lenaire', title: 'Administration Support Representative', email: 'fiona.lenaire@rrauction.com', image: '/img/profiles/Fiona_thumb.jpg'},
+      {name: 'Peter Parenti', title: 'Lead Inventory Executive', email: 'peter.parenti@rrauction.com', image: '/img/profiles/perer_thumb.jpg'},
+      {name: 'Amey Fuller', title: 'Accounting Manager', email: 'amey.fuller@rrauction.com', image: '/img/profiles/amey-2019.jpg'},
+      {name: 'Leanne Baratier', title: 'Production Assistant', email: 'leanne.baratier@rrauction.com', image: '/img/profiles/Leanne-2019.jpg'},
+      {name: 'Kevin Lessard', title: 'Shipping Executive', email: 'kevin.lessard@rrauction.com', image: '/img/profiles/Kevin_Thumb.jpg'}
+    ]
+
+  .team-page.padding-bottom-3x
+    .container
+      .row
+        each profile in profiles
+          .col-md-4.text-center.mb-4
+            img(src=profile.image alt='Team').d-block.w-150.mx-auto.img-thumbnail.rounded-circle.mb-2
+            h6.mb-1 #{profile.name}
+            p.text-sm.text-muted.mb-3 #{profile.title}
