@@ -6690,6 +6690,16 @@ video {
   }
 }
 
+.contact-page__block {
+  margin-bottom: 22.5px;
+}
+
+.contact-page__block h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
 .user-info-wrapper {
   position: relative;
   width: 100%;

@@ -1,0 +1,11 @@
+.contact-page {
+  &__block {
+    margin-bottom: $spacing-unit--md;
+
+    h2 {
+      font-size: $font-size-h4;
+      font-weight: 400;
+      margin-bottom: $spacing-unit;
+    }
+  }
+}
