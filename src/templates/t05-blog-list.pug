@@ -1,0 +1,100 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'T05 - Blog List'
+  - var isModalBlogSidebar = true
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'T05 - Blog List'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T05 - Blog List'}]
+
+//- Page Content
+block content
+
+  -
+    var posts = [
+      {
+        title: 'You’re Invited: Come Visit Us in Chicago!',
+        date: 'March 12, 2019',
+        author: 'RR Auction',
+        link: '/t06-blog-detail.html',
+        content: 'Your Invited! Meet Louis in Chicago March 13th to March 16th Louis Bollman, Sports VP at RR Auction. I will...'
+      },
+      {
+        title: 'Feb Sports Results: Ruth 1932 NY Yankees Player Contract SOLD for $295k',
+        date: 'February 27, 2019',
+        author: 'Sean Coleman',
+        image: '/img/rr/blog/Ruth-1-e1551296065521.jpg',
+        link: '/t06-blog-detail.html',
+        content: 'Babe Ruth 1932 NY Yankees Player Contract SOLD for $295k Boston: Babe Ruth 1932 New York Yankees player contract where Ruth...'
+      },
+      {
+        title: 'How to bid in our Remarkable Rarities auction',
+        date: 'September 13, 2018',
+        author: 'RR Auction',
+        image: '/img/rr/blog/unnamed-2.jpg',
+        link: '/t06-blog-detail.html',
+        content: 'Glamorous oversized Marilyn Monroe portrait, inscribed to her beloved choreographer and confidant, Jack Cole. Offered by RR Auction. RR Auction\'s...'
+      },
+      {
+        title: 'Why It’s Rare; original Apple-1 computer up for auction',
+        date: 'September 12, 2018',
+        author: 'RR Auction',
+        image: '/img/rr/blog/Apple-1.jpg',
+        link: '/t06-blog-detail.html',
+        content: '(Above: Original Apple-1 computer. Offered by RR Auction in our Sept. 25, 2018 live auction event.) First of its kind...'
+      },
+      {
+        title: '\'John\'s Gold\': In-person autograph collector John Brennan',
+        date: 'September 10, 2018',
+        author: 'RR Auction',
+        image: '/img/rr/blog/3a-Led-Zeppelin-Robert-Plant_2-1530x800.jpg',
+        link: '/t06-blog-detail.html',
+        content: 'Four decades of collecting autographs In-person autograph collecting legend John Brennan has met your favorite musician. Probably. In 40+ years...'
+      },
+      {
+        title: 'Why RR Auction is the place to sell Princess Diana memorabilia',
+        date: 'August 31, 2018',
+        author: 'RR Auction',
+        image: '/img/rr/blog/diana4cvr.jpg',
+        link: '/t06-blog-detail.html',
+        content: '(Above: A cropped image of a signed portrait of Princess Diana. Sold by RR Auction for $9,781.) RR to sell...'
+      }
+    ]
+
+  .container.padding-bottom-3x.mb-1
+    .row
+
+      // Blog Posts
+      .col-lg-9.order-lg-2
+        .isotope-grid.cols-2.mb-4
+          .gutter-sizer
+          .grid-sizer
+
+          // Post
+          each post in posts
+            .grid-item
+              .blog-post
+                if post.image
+                  a(href=post.link).post-thumb
+                    img(src=post.image alt=post.title)
+                .post-body
+                  ul.post-meta
+                    li
+                      i.icon-clock
+                      a(href='#') #{post.date}
+                    li
+                      i.icon-user
+                      a(href='#') #{post.author}
+                    li
+                      i.icon-tag
+                      a(href='#') Post Category
+                  h3.post-title
+                    a(href=post.link) #{post.title}
+                  p #{post.content} <a href='blog-single-ls.html'>Read more</a>
+
+        include partials/pagination
+
+      // Sidebar
+      .col-lg-3.order-lg-1
+        include partials/blog-sidebar--rr

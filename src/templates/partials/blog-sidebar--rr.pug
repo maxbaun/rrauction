@@ -1,0 +1,65 @@
+-
+  var posts = [
+      {
+        title: 'How to bid in our Remarkable Rarities auction',
+        author: 'RR Auction',
+        image: '/img/rr/blog/unnamed-2.jpg',
+        link: '/t06-blog-detail.html'
+      },
+      {
+        title: 'Why It’s Rare; original Apple-1 computer up for auction',
+        author: 'RR Auction',
+        image: '/img/rr/blog/Apple-1.jpg',
+        link: '/t06-blog-detail.html'
+      },
+      {
+        title: '\'John\'s Gold\': In-person autograph collector John Brennan',
+        author: 'RR Auction',
+        image: '/img/rr/blog/3a-Led-Zeppelin-Robert-Plant_2-1530x800.jpg',
+        link: '/t06-blog-detail.html'
+      },
+      {
+        title: 'Why RR Auction is the place to sell Princess Diana memorabilia',
+        author: 'RR Auction',
+        image: '/img/rr/blog/diana4cvr.jpg',
+        link: '/t06-blog-detail.html'
+      }
+  ]
+
+//- To use only with sidebar-offcanvas
+.sidebar-toggle.position-left
+  i.icon-filter
+
+aside.sidebar.sidebar-offcanvas.position-left
+  //- To use only with sidebar-offcanvas
+  span.sidebar-close
+    i.icon-x
+
+  // Widget Search
+  section.widget
+    form(method='get').input-group.form-group
+      span.input-group-btn
+        button(type='submit')
+          i.icon-search
+      input(type='search' placeholder='Search blog').form-control
+
+  // Widget Featured Posts
+  section.widget.widget-featured-posts
+    h3.widget-title Featured Posts
+    // Entry
+    each post in posts
+      .entry
+        .entry-thumb
+          a(href=post.link)
+            img(src=post.image, alt=post.title)
+        .entry-content
+          h4.entry-title
+            a(href=post.link) #{post.title}
+          span.entry-meta by #{post.author}
+
+  // Widget Tags
+  section.widget.widget-tags
+    h3.widget-title Archives
+    a(href='/t05-blog-list.html').tag March 2019
+    a(href='/t05-blog-list.html').tag February 2019
+    a(href='/t05-blog-list.html').tag January 2019
