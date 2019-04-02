@@ -1,3 +1,6 @@
+// eslint-disable
+
+
 /*
  * Unishop | Universal E-Commerce Template
  * Copyright 2018 rokaux
@@ -77,7 +80,7 @@ jQuery(document).ready(function($) {
 		}
 	}
 	stickyHeader();
-	
+
 
 	// Mobile Menu Toggle
 	//-----------------------------------------------------------
@@ -132,7 +135,7 @@ jQuery(document).ready(function($) {
     return false;
 	} );
 
-	
+
 	// Off-Canvas Sidebar
 	//-----------------------------------------------------------
 	function offcanvasSidebar(triggerOpen, target, triggerClose) {
@@ -202,13 +205,13 @@ jQuery(document).ready(function($) {
 					search = self.find('input[type=text]'),
 					filters = self.find('input[type=radio]'),
 					list = $(target).find('.list-group-item');
-			
+
 			// Search
 			search.keyup(function() {
 				var searchQuery = search.val();
 				list.each(function() {
 					var text = $(this).text().toLowerCase();
-					(text.indexOf(searchQuery.toLowerCase()) == 0) ? $(this).show() : $(this).hide(); 
+					(text.indexOf(searchQuery.toLowerCase()) == 0) ? $(this).show() : $(this).hide();
 				});
 			});
 
@@ -221,7 +224,7 @@ jQuery(document).ready(function($) {
 				} else {
 					list.show();
 				}
-				
+
 			});
 		});
 	}
@@ -261,12 +264,12 @@ jQuery(document).ready(function($) {
 		});
 	}
 	countDownFunc( $('.countdown') );
-	
+
 
 	// Toast Notifications
 	//------------------------------------------------------------------------------
 	$('[data-toast]').on('click', function() {
-		
+
 		var self = $(this),
 				$type = self.data('toast-type'),
 				$icon = self.data('toast-icon'),
@@ -274,7 +277,7 @@ jQuery(document).ready(function($) {
 				$title = self.data('toast-title'),
 				$message = self.data('toast-message'),
 				toastOptions = '';
-		
+
 		switch ($position) {
 			case 'topRight':
 				toastOptions = {
@@ -422,7 +425,7 @@ jQuery(document).ready(function($) {
 				toastOptions.message = 'added to your wishlist!';
 				toastOptions.icon = 'icon-info';
 				break;
-			
+
 			case 2:
 				$(this).removeClass('active');
 				toastOptions.class = 'iziToast-danger';
@@ -462,7 +465,7 @@ jQuery(document).ready(function($) {
 				toastOptions.message = 'added to comparison table!';
 				toastOptions.icon = 'icon-info';
 				break;
-			
+
 			case 2:
 				$(this).removeClass('active');
 				toastOptions.class = 'iziToast-danger';
@@ -586,9 +589,9 @@ jQuery(document).ready(function($) {
 	// Gallery (Photoswipe)
 	//------------------------------------------------------------------------------
 	if($('.gallery-wrapper').length) {
-		
+
 		var initPhotoSwipeFromDOM = function(gallerySelector) {
-		
+
 			// parse slide data (url, title, size ...) from DOM elements
 			// (children of gallerySelector)
 			var parseThumbnailElements = function(el) {
@@ -599,18 +602,18 @@ jQuery(document).ready(function($) {
 					linkEl,
 					size,
 					item;
-		
+
 				for (var i = 0; i < numNodes; i++) {
-		
+
 					figureEl = thumbElements[i]; // <figure> element
-		
+
 					// include only element nodes
 					if (figureEl.nodeType !== 1) {
 						continue;
 					}
-		
+
 					linkEl = figureEl.children[0]; // <a> element
-					
+
 					// create slide object
 					if ($(linkEl).data('type') == 'video') {
 						item = {
@@ -624,47 +627,47 @@ jQuery(document).ready(function($) {
 							h: parseInt(size[1], 10)
 						};
 					}
-		
+
 					if (figureEl.children.length > 1) {
 						item.title = $(figureEl).find('.caption').html();
 					}
-		
+
 					if (linkEl.children.length > 0) {
 						item.msrc = linkEl.children[0].getAttribute('src');
 					}
-		
+
 					item.el = figureEl; // save link to element for getThumbBoundsFn
 					items.push(item);
 				}
-		
+
 				return items;
 			};
-		
+
 			// find nearest parent element
 			var closest = function closest(el, fn) {
 				return el && (fn(el) ? el : closest(el.parentNode, fn));
 			};
-		
+
 			function hasClass(element, cls) {
 				return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 			}
-		
+
 			// triggers when user clicks on thumbnail
 			var onThumbnailsClick = function(e) {
 				e = e || window.event;
 				e.preventDefault ? e.preventDefault() : e.returnValue = false;
-		
+
 				var eTarget = e.target || e.srcElement;
-		
+
 				// find root element of slide
 				var clickedListItem = closest(eTarget, function(el) {
 					return (hasClass(el, 'gallery-item'));
 				});
-		
+
 				if (!clickedListItem) {
 					return;
 				}
-		
+
 				// find index of clicked item by looping through all child nodes
 				// alternatively, you may define index via data- attribute
 				var clickedGallery = clickedListItem.closest('.gallery-wrapper'),
@@ -672,35 +675,35 @@ jQuery(document).ready(function($) {
 					numChildNodes = childNodes.length,
 					nodeIndex = 0,
 					index;
-		
+
 				for (var i = 0; i < numChildNodes; i++) {
 					if (childNodes[i].nodeType !== 1) {
 						continue;
 					}
-		
+
 					if (childNodes[i] === clickedListItem) {
 						index = nodeIndex;
 						break;
 					}
 					nodeIndex++;
 				}
-		
+
 				if (index >= 0) {
 					// open PhotoSwipe if valid index found
 					openPhotoSwipe(index, clickedGallery);
 				}
 				return false;
 			};
-		
+
 			// parse picture index and gallery index from URL (#&pid=1&gid=2)
 			var photoswipeParseHash = function() {
 				var hash = window.location.hash.substring(1),
 					params = {};
-		
+
 				if (hash.length < 5) {
 					return params;
 				}
-		
+
 				var vars = hash.split('&');
 				for (var i = 0; i < vars.length; i++) {
 					if (!vars[i]) {
@@ -712,37 +715,37 @@ jQuery(document).ready(function($) {
 					}
 					params[pair[0]] = pair[1];
 				}
-		
+
 				if (params.gid) {
 					params.gid = parseInt(params.gid, 10);
 				}
-		
+
 				return params;
 			};
-		
+
 			var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
 				var pswpElement = document.querySelectorAll('.pswp')[0],
 					gallery,
 					options,
 					items;
-		
+
 				items = parseThumbnailElements(galleryElement);
-		
+
 				// define options (if needed)
 				options = {
-					
+
 					closeOnScroll: false,
-					
+
 					// define gallery index (for URL)
 					galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-		
+
 					getThumbBoundsFn: function(index) {
 							// See Options -> getThumbBoundsFn section of documentation for more info
 							var thumbnail = items[index].el.getElementsByTagName('img')[0]; // find thumbnail
 							if($(thumbnail).length > 0) {
 								var	pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
 										rect = thumbnail.getBoundingClientRect();
-				
+
 								return {
 									x: rect.left,
 									y: rect.top + pageYScroll,
@@ -750,9 +753,9 @@ jQuery(document).ready(function($) {
 								};
 							}
 						}
-		
+
 				};
-		
+
 				// PhotoSwipe opened from URL
 				if (fromURL) {
 					if (options.galleryPIDs) {
@@ -771,20 +774,20 @@ jQuery(document).ready(function($) {
 				} else {
 					options.index = parseInt(index, 10);
 				}
-		
+
 				// exit if index not found
 				if (isNaN(options.index)) {
 					return;
 				}
-		
+
 				if (disableAnimation) {
 					options.showAnimationDuration = 0;
 				}
-		
+
 				// Pass data to PhotoSwipe and initialize it
 				gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
 				gallery.init();
-		
+
 				gallery.listen('beforeChange', function() {
 					var currItem = $(gallery.currItem.container);
 					$('.pswp__video').removeClass('active');
@@ -795,31 +798,31 @@ jQuery(document).ready(function($) {
 						}
 					});
 				});
-		
+
 				gallery.listen('close', function() {
 					$('.pswp__video').each(function() {
 						$(this).attr('src', $(this).attr('src'));
 					});
 				});
-		
+
 			};
-		
+
 			// loop through all gallery elements and bind events
 			var galleryElements = document.querySelectorAll(gallerySelector);
-		
+
 			for (var i = 0, l = galleryElements.length; i < l; i++) {
 				galleryElements[i].setAttribute('data-pswp-uid', i + 1);
 				galleryElements[i].onclick = onThumbnailsClick;
 			}
-		
+
 			// Parse URL and open gallery if it contains #&pid=3&gid=1
 			var hashData = photoswipeParseHash();
 			if (hashData.pid && hashData.gid) {
 				openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
 			}
-		
+
 		};
-		
+
 		// execute above function
 		initPhotoSwipeFromDOM('.gallery-wrapper');
 	}
@@ -846,10 +849,9 @@ jQuery(document).ready(function($) {
 			$('.product-thumbnails li').removeClass('active');
 			$('[href="#' + $activeHash + '"]').parent().addClass('active');
 			$('[data-hash="' + $activeHash + '"]').parent().addClass('active');
-			
-		}
-	}
 
+		}
+  }
 
 	// Google Maps API
 	//------------------------------------------------------------------------------
@@ -905,7 +907,7 @@ jQuery(document).ready(function($) {
             }
           }
 			});
-		});
+    });
 	}
 
 });/*Document Ready End*/

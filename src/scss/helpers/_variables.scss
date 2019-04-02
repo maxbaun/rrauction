@@ -2,6 +2,15 @@
 // Variables
 // --------------------------------------------------
 
+// Spacing
+$spacing-unit: 15px;
+$spacing-unit--sm: $spacing-unit / 1.5;
+$spacing-unit--half: $spacing-unit / 2;
+$spacing-unit--xs: $spacing-unit / 3;
+$spacing-unit--md: $spacing-unit * 1.5;
+$spacing-unit--lg: $spacing-unit * 2;
+$spacing-unit--xl: $spacing-unit * 3;
+
 //== Colors
 //
 //## Gray and brand colors for use across Theme.
