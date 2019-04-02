@@ -1,0 +1,77 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'T06 - Blog Detail'
+  - var isGallery = true
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'T06 - Blog Detail'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Blog', 'link': 'blog-rs.html'}, {'title': 'T06 - Blog Detail'}]
+
+//- Page Content
+block content
+  .container.padding-bottom-3x.mb-2
+    .row
+
+      // Content
+      .col-xl-9.col-lg-8.order-lg-2
+
+        // Post Meta
+        ul.post-meta.mb-4
+          li
+            i.icon-clock
+            a(href='#') Mar 15, 2018
+          li
+            i.icon-user
+            a(href='#') Sean Coleman
+          li
+            i.icon-tag
+            a(href='#') Category
+
+        // Gallery
+        .gallery-wrapper
+          .gallery-item
+            a(href='/img/rr/blog/Ruth-1-e1551296065521.jpg' data-size='737x661')
+              img(src='/img/rr/blog/Ruth-1-e1551296065521.jpg' alt='Image')
+            span.caption Image Caption
+
+        h2.pt-4 Feb Sports Results: Ruth 1932 NY Yankees Player Contract SOLD for $295k
+        p
+          strong Boston: Babe Ruth 1932 New York Yankees player contract where Ruth takes a pay cut signed during the Great Depression sold for $295,531.
+          | The four-page American League uniform player’s contract signed “George Herman Ruth,” and dated March 16, 1932. The Depression severely hit baseball revenues—it is estimated that Yankee gate receipts fell 12 to 15 percent during the 1931 season. Ruth’s annual salary of $80,000 for the past two seasons was an irresistible target.“Ruth’s Depression-era contract provided an unprecedented historical look at the Game of Baseball —especially considering Manny Machado’s just signed deal worth $300 million, the richest free-agent contract in baseball history,” said Bobby Livingston, Executive VP at RR Auction. “It’s a classic power struggle between owner and player—and each contract providing its telling and unique tale.”
+        p Ruth eventually settled for $75,000 a year, plus 25 percent of the net receipts from Yankee exhibition games. “It was the first time in Ruth’s long career—since the day in 1914 when he signed for $600 per season—that he had ever taken a cut in pay,” added Livingston. Among other player contracts; Lou Gehrig’s 1935 New York Yankees Contract for Gehrig’s first season as Yankee captain sold for $183,500, and Christy Mathewson 1902 New York Giants Contract sold for $68,481.
+
+        // Post Tags + Share
+        .d-flex.flex-wrap.justify-content-between.align-items-center.pt-3.pb-4
+          .pb-2
+            a(href='#').text-sm.text-muted.navi-link Category 1,
+            a(href='#').text-sm.text-muted.navi-link &nbsp;Category 2&nbsp;
+          .pb-2
+            span.d-inline-block.align-middle.text-sm.text-muted Share post:&nbsp;&nbsp;&nbsp;
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-rounded.sb-facebook
+              i.socicon-facebook
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-rounded.sb-twitter
+              i.socicon-twitter
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-rounded.sb-instagram
+              i.socicon-instagram
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-rounded.sb-google-plus
+              i.socicon-googleplus
+
+        // Post Navigation
+        .entry-navigation
+          .column.text-left
+            a(href='#' class='btn btn-outline-secondary btn-sm')
+              i.icon-arrow-left
+              | &nbsp;Prev
+          .column
+            a(href='/t05-blog-list.html' class='btn btn-outline-secondary view-all' data-toggle='tooltip' data-placement='top' title='All posts' aria-label='All Posts')
+              i.icon-menu
+          .column.text-right
+            a(href='#' class='btn btn-outline-secondary btn-sm')
+              | Next&nbsp;
+              i.icon-arrow-right
+
+
+      // Sidebar
+      .col-xl-3.col-lg-4.order-lg-1
+        include partials/blog-sidebar--rr
