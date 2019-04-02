@@ -1,0 +1,7 @@
+
+@font-face {
+    font-family:"socicon";
+    src:url("socicon.woff2") format("woff2"),url("socicon.woff") format("woff"),url("socicon.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+        
