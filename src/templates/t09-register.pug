@@ -198,11 +198,10 @@ block content
                 .custom-control.custom-checkbox
                   input(type='checkbox' id='email_signup' name='signup').custom-control-input
                   label(for='email_signup').custom-control-label Yes, I want to receive email updates from RR
-              .form-group.col-6
+              .form-group.col-12
                 .custom-control.custom-checkbox
                   input(type="checkbox" name="agree" id="agree" value="1" aria-required='true' required).custom-control-input
-                  label(for='agree').custom-control-label I have read and agree to abide by and comply with all RR Auction
-              .form-group.col-6
-                button(type='button' class='btn btn-primary btn-sm' data-toggle='modal' data-target='#modalTerms').m-0 Click To Read Terms
+                  label(for='agree').custom-control-label I have read and agree to RR Auction's
+                    a(href="#" data-toggle='modal' data-target='#modalTerms') &nbsp; Terms and Conditions
               .col-12.text-right
                 button(type='submit').btn.btn-primary.btn-sm Submit Application
