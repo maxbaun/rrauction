@@ -86,7 +86,7 @@ a.list-group-item {
 // Active state
 .list-group-item.active {
   border-color: $border-color;
-  background-color: $white-color;
+  background-color: $gray-light;
   color: $nav-link-active-color;
   cursor: default;
   pointer-events: none;
