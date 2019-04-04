@@ -26,6 +26,19 @@
   </head>
   <!-- Body-->
   <body>
+    <div class="modal fade" id="modalFormPage" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Thanks For Your Submission</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <p>One of our representatives will be in touch shortly. If you have any immediate questions, please reach out to us at 603-732-4280.</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Header-->
     <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
     <header class="site-header navbar-sticky">
@@ -566,28 +579,28 @@
             <div class="contact-page__block">
               <h2>Business Hours</h2>
               <p>Our business hours are weekdays<br>9:00 AM – 5:00 PM EST.*</p>
-              <p>* We monitor the contact form and email accounts after hours. If you need immediate assistance, please email<a href="mailto:bobby@rrauction.com"> Bobby@rrauction.com.</a></p>
+              <p>* We monitor the contact form and email accounts after hours. If you need immediate assistance, please email<a href="mailto:support@rrauction.com"> Support@rrauction.com.</a></p>
             </div>
             <div class="contact-page__block">
               <h2>Contact Info</h2>
               <p>Phone:<br>Toll free at (800) 937-3880 or<br>Internationally at +1 (603) 732-4280</p>
               <p>Fax:<br>Toll free at (888) 790-2437 or<br>Internationally at +1 (603) 732-4288</p>
               <p>Media Inquiries:<br>Bobby Livingston<br><a href="Bobby.Livingston@RRAuction.com">Bobby.Livingston@RRAuction.com</a><br>Toll free at (800) 937-3880 (ext 111)<br>Internationally at +1 (603) 732-4280 (ext 111)</p>
-              <p>Email:<br><a href="Support@RRAuction.com">Support@RRAuction.com</a></p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="contact-page__block">
               <h2>Consignment Opportunities</h2><a class="btn btn-primary" href="/">Free Evaluations</a>
+              <p>Or email &nbsp;<a href="mailto:sell@rrauction.com">Sell@rrauction.com</a></p>
             </div>
             <div class="contact-page__block">
               <h2>Operations Center</h2>
               <p>5 State Route 101A, Suite 5<br>Amherst, New Hampshire, 03031</p>
             </div>
             <div class="contact-page__block">
-              <h2>Auction Gallery</h2>
+              <h2>Headquarters</h2>
               <p><em>Please do not ship anything to this address.</em></p>
-              <p>236 Commercial Street, Suite 100<br>Boston, Massachusetts, 02109</p>
+              <p>One Beacon Street<br>Suite 1500<br>Boston, Massachusetts, 02108</p>
             </div>
             <div class="contact-page__block">
               <h2>Follow RR Auction</h2>
@@ -612,7 +625,7 @@
                 <label for="form-message">Message</label>
                 <textarea class="form-control" id="form-message" name="message" rows="10"></textarea>
               </div>
-              <button class="btn btn-primary btn-sm" type="submit">Send</button>
+              <button class="btn btn-primary btn-sm" type="submit" data-toggle="modal" data-target="#modalFormPage">Send</button>
             </form>
           </div>
         </div>

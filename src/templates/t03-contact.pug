@@ -7,6 +7,7 @@ append config
   - var pageTitle = 'T03 - Contact'
   - var menuTitle = 'Hero Slider'
   - var pageTitle = 'T03 - Contact'
+  - var isFormPageModal = true
   - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T03 - Contact'}]
 
   //- - var isHeader = false
@@ -26,7 +27,7 @@ block content
               | 9:00 AM – 5:00 PM EST.*
             p
               | * We monitor the contact form and email accounts after hours. If you need immediate assistance, please email
-              a(href='mailto:bobby@rrauction.com')  Bobby@rrauction.com.
+              a(href='mailto:support@rrauction.com')  Support@rrauction.com.
 
           .contact-page__block
             h2
@@ -53,14 +54,12 @@ block content
               | Toll free at (800) 937-3880 (ext 111)
               br
               | Internationally at +1 (603) 732-4280 (ext 111)
-            p
-              | Email:
-              br
-              a(href='Support@RRAuction.com') Support@RRAuction.com
         .col-md-4
           .contact-page__block
             h2 Consignment Opportunities
             a(href='/').btn.btn-primary Free Evaluations
+            p Or email &nbsp;
+              a(href='mailto:sell@rrauction.com') Sell@rrauction.com
 
           .contact-page__block
             h2 Operations Center
@@ -70,13 +69,15 @@ block content
               | Amherst, New Hampshire, 03031
 
           .contact-page__block
-            h2 Auction Gallery
+            h2 Headquarters
             p
               em Please do not ship anything to this address.
             p
-              | 236 Commercial Street, Suite 100
+              | One Beacon Street
               br
-              | Boston, Massachusetts, 02109
+              | Suite 1500
+              br
+              | Boston, Massachusetts, 02108
 
           .contact-page__block
             h2 Follow RR Auction
@@ -97,5 +98,5 @@ block content
             .form-group
               label(for='form-message') Message
               textarea(id='form-message' name='message' rows='10').form-control
-            button(type='submit').btn.btn-primary.btn-sm Send
+            button(type='submit' data-toggle='modal' data-target='#modalFormPage').btn.btn-primary.btn-sm Send
 
