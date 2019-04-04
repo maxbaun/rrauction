@@ -7,6 +7,7 @@ append config
   - var pageTitle = 'T02 - Form Page'
   - var menuTitle = 'Hero Slider'
   - var pageTitle = 'T02 - Form Page'
+  - var isFormPageModal = true
   - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T02 - Form Page'}]
 
   //- - var isHeader = false
@@ -103,4 +104,4 @@ block content
                   input(type='file' id='form-images' name='images' multiple).form-control-file
                   small.form-text.text-muted File size must be below 10MB and be a jpg, jpeg, gif, png, tif, or pdf.
 
-                button(type='submit').btn.btn-primary.btn-sm Submit
+                button(type='submit' data-toggle='modal' data-target='#modalFormPage').btn.btn-primary.btn-sm Submit
