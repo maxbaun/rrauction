@@ -910,6 +910,33 @@ jQuery(document).ready(function($) {
     });
   }
 
+  // Toggle Elements
+  var toggles = $('.toggle-element')
+
+  if (toggles.length) {
+    toggles.each(function () {
+      var $self = $(this)
+      var target = $self.data('target')
+      var $target = $(target)
+      var inputs = $self.find('input');
+
+      inputs.each(function () {
+        var input = $(this)
+
+        input.click(function (e) {
+          const value = $(e.target).data('value')
+          const show = Boolean(value)
+
+          if (show) {
+            $target.show()
+          } else {
+            $target.hide()
+          }
+        })
+      })
+    })
+  }
+
   // Social share
   window.simpleSocialShare.init(document.getElementsByClassName('socialShareBtn'));
 

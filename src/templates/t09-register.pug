@@ -74,88 +74,42 @@ block content
             .form-group
               label(for="form-state") State/Province *
               <select name="state" id="form-state" class="form-control" aria-required="true" required>
-                <option value=""> Required for US &amp; Canada
-                </option><option value="AL"> ALABAMA
-                </option><option value="AK"> ALASKA
-                </option><option value="AZ"> ARIZONA
-                </option><option value="AR"> ARKANSAS
-                </option><option value="CA"> CALIFORNIA
-                </option><option value="CO"> COLORADO
-                </option><option value="CT"> CONNECTICUT
-                </option><option value="DE"> DELAWARE
-                </option><option value="DC"> DIST OF COLUMBIA
-                </option><option value="FL"> FLORIDA
-                </option><option value="GA"> GEORGIA
-                </option><option value="HI"> HAWAII
-                </option><option value="ID"> IDAHO
-                </option><option value="IL"> ILLINOIS
-                </option><option value="IN"> INDIANA
-                </option><option value="IA"> IOWA
-                </option><option value="KS"> KANSAS
-                </option><option value="KY"> KENTUCKY
-                </option><option value="LA"> LOUISIANA
-                </option><option value="ME"> MAINE
-                </option><option value="MD"> MARYLAND
-                </option><option value="MA"> MASSACHUSETTS
-                </option><option value="MI"> MICHIGAN
-                </option><option value="MN"> MINNESOTA
-                </option><option value="MS"> MISSISSIPPI
-                </option><option value="MO"> MISSOURI
-                </option><option value="MT"> MONTANA
-                </option><option value="NE"> NEBRASKA
-                </option><option value="NV"> NEVADA
-                </option><option value="NH"> NEW HAMPSHIRE
-                </option><option value="NJ"> NEW JERSEY
-                </option><option value="NM"> NEW MEXICO
-                </option><option value="NY"> NEW YORK
-                </option><option value="NC"> NORTH CAROLINA
-                </option><option value="ND"> NORTH DAKOTA
-                </option><option value="OH"> OHIO
-                </option><option value="OK"> OKLAHOMA
-                </option><option value="OR"> OREGON
-                </option><option value="PA"> PENNSYLVANIA
-                </option><option value="PR"> PUERTO RICO
-                </option><option value="RI"> RHODE ISLAND
-                </option><option value="SC"> SOUTH CAROLINA
-                </option><option value="SD"> SOUTH DAKOTA
-                </option><option value="TN"> TENNESSEE
-                </option><option value="TX"> TEXAS
-                </option><option value="UT"> UTAH
-                </option><option value="VT"> VERMONT
-                </option><option value="VI"> VIRGIN ISLANDS
-                </option><option value="VA"> VIRGINIA
-                </option><option value="WA"> WASHINGTON
-                </option><option value="WV"> WEST VIRGINIA
-                </option><option value="WI"> WISCONSIN
-                </option><option value="WY"> WYOMING
-                </option><option value="AE"> ARMED FORCES EUROPE
-                </option><option value="AP"> ARMED FORCES PACIFIC
-                </option><option value="AB"> ALBERTA
-                </option><option value="BC"> BRITISH COLUMBIA
-                </option><option value="MB"> MANITOBA
-                </option><option value="NB"> NEW BRUNSWICK
-                </option><option value="NL"> NEWFOUNDLAND/LABRADOR
-                </option><option value="NT"> NORTHWEST TERR
-                </option><option value="NS"> NOVA SCOTIA
-                </option><option value="NU"> NUNAVUT
-                </option><option value="ON"> ONTARIO
-                </option><option value="PE"> PR EDWARD ISLAND
-                </option><option value="QC"> QUEBEC
-                </option><option value="SK"> SASKATCHEWAN
-                </option><option value="YT"> YUKON </option>
+                option Required for US &amp; Canada
+                include partials/state-options
               </select>
 
             .form-group
               label(for='form-state') Zip/Postal Code *
               input(id='form-zip' name='zip' type='text' inputmode='numeric' pattern='^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$' placeholder='Required for US & Canada' aria-required='true' required).form-control
-            .form-group
+            .form-group.toggle-element(data-target="#billing-info")
               label Use Same Address For Billing & Shipping
               .form-check
-                input(type="radio" name="sameshipping" id="sameshipping-yes-id" value="yes" checked).form-check-input
+                input(type="radio" name="sameshipping" id="sameshipping-yes-id" value="yes" data-value="0" checked).form-check-input
                 label(for="sameshipping-yes-id") Yes
               .form-check
-                input(type="radio" name="sameshipping" id="sameshipping-no-id" value="no").form-check-input
+                input(type="radio" name="sameshipping" id="sameshipping-no-id" value="no" data-value="1").form-check-input
                 label(for="sameshipping-no-id") No
+            .billing-info(id="billing-info" style="display: none")
+              h2.h5.form-text Billing Address Information
+              .form-group
+                  label(for='form-billingaddress') Address *
+                  input(type='text' id='form-address' name='address' aria-required="true" placeholder="Enter your billing address" required).form-control
+              .form-group
+                label(for='form-billingaddress2') Address Line 2
+                input(type='text' id='form-billingaddress2' name='billingaddress2' placeholder="Enter address line 2 (if applicable)").form-control
+              .form-group
+                label(for='form-billingcity') City *
+                input(type='text' id='form-billingcity' name='billingcity' aria-required="true" placeholder="Enter your billing city" required).form-control
+              .form-group
+                label(for="form-billingstate") State/Province *
+                <select name="billingstate" id="form-billingstate" class="form-control" aria-required="true" required>
+                  option Enter your billing state
+                  include partials/state-options
+                </select>
+
+              .form-group
+                label(for='form-state') Zip/Postal Code *
+                input(id='form-zip' name='zip' type='text' inputmode='numeric' pattern='^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$' placeholder='Required for US & Canada' aria-required='true' required).form-control
           .col-md-6
             .row
               .form-group.col-12
@@ -243,11 +197,11 @@ block content
               .form-group.col-12
                 .custom-control.custom-checkbox
                   input(type='checkbox' id='email_signup' name='signup').custom-control-input
-                  label(for='email_signup').custom-control-label Please include me on auction update emails
+                  label(for='email_signup').custom-control-label Yes, I want to receive email updates from RR
               .form-group.col-6
                 .custom-control.custom-checkbox
                   input(type="checkbox" name="agree" id="agree" value="1" aria-required='true' required).custom-control-input
-                  label(for='agree').custom-control-label I have read and agree to abide by and comply with all RRAuction
+                  label(for='agree').custom-control-label I have read and agree to abide by and comply with all RR Auction
               .form-group.col-6
                 button(type='button' class='btn btn-primary btn-sm' data-toggle='modal' data-target='#modalTerms').m-0 Click To Read Terms
               .col-12.text-right
