@@ -1,0 +1,46 @@
+.auction-catalog-list {
+  .catalog {
+    margin: 0 auto $spacing-unit--lg;
+    max-width: 320px;
+
+    a {
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    .img {
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        transform: scale(1);
+        transition: transform .2s ease-in-out;
+      }
+
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: $font-size-sm;
+      margin: $spacing-unit--half 0 $spacing-unit--sm;
+
+      a {
+        color: $body-color;
+      }
+    }
+  }
+}
