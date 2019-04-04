@@ -37,5 +37,11 @@
         background-color: green;
       }
     }
+
+    &[data-status='progress'] {
+      &:before {
+        background-color: lightblue;
+      }
+    }
   }
 }
