@@ -1,0 +1,14 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Account'
+  - var pageTitle = 'T27 - User Watchlist'
+  - var menuTitle = 'Account'
+  - var pageTitle = 'T27 - User Watchlist'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/account-orders.html'}, {'title': 'T27 - User Watchlist'}]
+
+//- Page Content
+block content
+  .user-watchlist-page.padding-bottom-3x

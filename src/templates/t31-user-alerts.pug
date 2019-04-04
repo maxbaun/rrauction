@@ -1,0 +1,14 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Account'
+  - var pageTitle = 'T31 - User Alerts'
+  - var menuTitle = 'Account'
+  - var pageTitle = 'T31 - User Alerts'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/account-orders.html'}, {'title': 'T31 - User Alerts'}]
+
+//- Page Content
+block content
+  .user-alerts-page.padding-bottom-3x

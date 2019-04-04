@@ -1,0 +1,19 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T07 - Contact'
+  - var menuTitle = 'Hero Slider'
+  - var pageTitle = 'T07 - Contact'
+  - var isFormPageModal = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T07 - Contact'}]
+
+  //- - var isHeader = false
+
+//- Page Content
+block content
+  - var formSent = true
+  include partials/t07-content
+

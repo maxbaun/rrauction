@@ -1,0 +1,14 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T10 - Specialists'
+  - var menuTitle = 'Home'
+  - var pageTitle = 'T10 - Specialists'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T10 - Specialists'}]
+
+//- Page Content
+block content
+  .specialists-page.padding-bottom-3x

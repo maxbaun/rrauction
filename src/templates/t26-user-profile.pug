@@ -1,0 +1,14 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Account'
+  - var pageTitle = 'T26 - User Profile'
+  - var menuTitle = 'Account'
+  - var pageTitle = 'T26 - User Profile'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/account-orders.html'}, {'title': 'T26 - User Profile'}]
+
+//- Page Content
+block content
+  .user-profile-page.padding-bottom-3x

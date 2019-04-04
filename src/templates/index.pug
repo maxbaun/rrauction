@@ -9,26 +9,73 @@ append config
 
 //- Page Content
 block content
+  -
+    var links = [
+      {title: 'T01 - Homepage', link: '/t01-homepage.html', status: 'rrtodo'},
+      {title: 'T02 - How To Buy', link: '/t02-how-to-buy.html', status: 'rrtodo'},
+      {title: 'T03 - How To Sell', link: '/t03-how-to-sell.html', status: 'rrtodo'},
+      {title: 'T04 - Form Page', link: '/t04-form-page.html', status: 'approved'},
+      {title: 'T06 - Testimonials', link: '/t06-testimonials.html', status: 'pending'},
+      {title: 'T07 - Contact', link: '/t07-contact.html', status: 'approved'},
+      {title: 'T08 - About', link: '/t08-about.html', status: 'submitted'},
+      {title: 'T09 - Team', link: '/t09-team.html', status: 'approved'},
+      {title: 'T10 - Specialists', link: '/t10-specialists.html', status: 'submitted'},
+      {title: 'T11 - Auction Department', link: '/t11-auction-department.html', status: 'rrtodo'},
+      {title: 'T12 - Auction Catalog List', link: '/t12-auction-catalog-list.html', status: 'approved'},
+      {title: 'T13 - Auction Catalog Detail', link: '/t13-auction-catalog-detail.html', status: 'pending'},
+      {title: 'T14 - FAQ', link: '/t14-faq.html', status: 'pending'},
+      {title: 'T15 - Blog List', link: '/t15-blog-list.html', status: 'approved'},
+      {title: 'T16 - Blog Detail', link: '/t16-blog-detail.html', status: 'approved'},
+      {title: 'T17 - Auction Calendar', link: '/t17-auction-calendar.html', status: 'approved'},
+      {title: 'T18 - Auction List (Default)', link: '/t18-auction-list--default.html', status: 'rrtodo'},
+      {title: 'T19 - Auction List (Tile)', link: '/t19-auction-list--tile.html', status: 'rrtodo'},
+      {title: 'T20 - Auction List (List)', link: '/t20-auction-list--list.html', status: 'rrtodo'},
+      {title: 'T21 - Auction Item Detail', link: '/t21-auction-item-detail.html', status: 'rrtodo'},
+      {title: 'T23 - Login', link: '/t23-login.html', status: 'approved'},
+      {title: 'T24 - Forgot Password', link: '/t24-forgot-password.html', status: 'approved'},
+      {title: 'T25 - Register', link: '/t25-register.html', status: 'pending'},
+      {title: 'T26 - User Profile', link: '/t26-user-profile.html', status: 'rrtodo'},
+      {title: 'T27 - User Watchlist', link: '/t27-user-watchlist.html', status: 'rrtodo'},
+      {title: 'T28 - User Bids', link: '/t28-user-bids.html', status: 'rrtodo'},
+      {title: 'T29 - User Consignments', link: '/t29-user-consignments.html', status: 'rrtodo'},
+      {title: 'T30 - User Purchases', link: '/t30-user-purchases.html', status: 'rrtodo'},
+      {title: 'T31 - User Alerts', link: '/t31-user-alerts.html', status: 'rrtodo'},
+      {title: 'T32 - User Notifications', link: '/t32-user-notifications.html', status: 'rrtodo'},
+      {title: 'T33 - User Invoice List', link: '/t33-user-invoice-list.html', status: 'rrtodo'},
+      {title: 'T34 - User Invoice Detail', link: '/t34-user-invoice-detail.html', status: 'rrtodo'},
+      {title: 'T35 - User Payment Gateway', link: '/t35-user-payment-gateway.html', status: 'rrtodo'},
+    ]
 
-  section.my-4
+  section.index-page.my-4
     .container
       .row
+        .col-md-4.offset-md-2
+          h2.h4 Color Key
+          p(data-status='approved').template-item Approved
+          p(data-status='pending').template-item Pending Approval
+          p(data-status='progress').template-item In Progress
+          p(data-status='submitted').template-item Submitted
+          p(data-status='rrtodo').template-item RR TODO
+          br
+          a(href='https://docs.google.com/spreadsheets/d/1DNosdWjkUAjccyX4oVdxFGhKGSZHgWavh8EVRj9Ixkw/edit?ts=5ca25056#gid=0') Dev Schedle
+
         .col-md-4.offset-md-4
           nav.list-group
-            a(href='/t01-homepage.html').list-group-item T01 - Homepage
-            a(href='/t02-form-page.html').list-group-item T02 - Form Page
-            a(href='/t02-form-page--sent.html').list-group-item T02 - Form Page (Sent)
-            a(href='/t03-contact.html').list-group-item T03 - Contact
-            a(href='/t03-contact--sent.html').list-group-item T03 - Contact (Sent)
-            a(href='/t04-team.html').list-group-item T04 - Team
-            a(href='/t05-blog-list.html').list-group-item T05 - Blog List
-            a(href='/t06-blog-detail.html').list-group-item T06 - Blog Detail
-            a(href='/t07-login.html').list-group-item T07 - Login
-            a(href='/t08-forgot-password.html').list-group-item T08 - Forgot Password
-            a(href='/t09-register.html').list-group-item T09 - Register
-            a(href='/t10-auction-catalog-list.html').list-group-item T10 - Auction Catalog List
-            a(href='/t11-faq.html').list-group-item T11 - FAQ
-            a(href='/t12-testimonials.html').list-group-item T12 - Testimonials
-            a(href='/t13-auction-catalog-detail.html').list-group-item T13 - Auction Catalog Detail
-            a(href='/t14-auction-calendar.html').list-group-item T14 - Auction Calendar
+            each link in links
+              a(href=link.link data-status=link.status).list-group-item.template-item #{link.title}
+            //- a(href='/t02-form-page.html').list-group-item T02 - Form Page
+            //- a(href='/t02-form-page--sent.html').list-group-item T02 - Form Page (Sent)
+            //- a(href='/t03-contact.html').list-group-item T03 - Contact
+            //- a(href='/t03-contact--sent.html').list-group-item T03 - Contact (Sent)
+            //- a(href='/t04-team.html').list-group-item T04 - Team
+            //- a(href='/t05-blog-list.html').list-group-item T05 - Blog List
+            //- a(href='/t06-blog-detail.html').list-group-item T06 - Blog Detail
+            //- a(href='/t07-login.html').list-group-item T07 - Login
+            //- a(href='/t08-forgot-password.html').list-group-item T08 - Forgot Password
+            //- a(href='/t09-register.html').list-group-item T09 - Register
+            //- a(href='/t10-auction-catalog-list.html').list-group-item T10 - Auction Catalog List
+            //- a(href='/t11-faq.html').list-group-item T11 - FAQ
+            //- a(href='/t12-testimonials.html').list-group-item T12 - Testimonials
+            //- a(href='/t13-auction-catalog-detail.html').list-group-item T13 - Auction Catalog Detail
+            //- a(href='/t14-auction-calendar.html').list-group-item T14 - Auction Calendar
             //- a(href='#').list-group-item.active Dapibus ac facilisis in

@@ -1,0 +1,14 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Account'
+  - var pageTitle = 'T34 - User Invoice Detail'
+  - var menuTitle = 'Account'
+  - var pageTitle = 'T34 - User Invoice Detail'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/account-orders.html'}, {'title': 'T34 - User Invoice Detail'}]
+
+//- Page Content
+block content
+  .user-invoice-detail-page.padding-bottom-3x

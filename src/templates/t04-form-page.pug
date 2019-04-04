@@ -1,0 +1,18 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T04 - Form Page'
+  - var menuTitle = 'Hero Slider'
+  - var pageTitle = 'T04 - Form Page'
+  - var isFormPageModal = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T04 - Form Page'}]
+
+  //- - var isHeader = false
+
+//- Page Content
+block content
+  - var formSent = false
+  include partials/t04-content

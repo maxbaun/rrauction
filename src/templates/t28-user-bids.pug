@@ -1,0 +1,14 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Account'
+  - var pageTitle = 'T28 - User Bids'
+  - var menuTitle = 'Account'
+  - var pageTitle = 'T28 - User Bids'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/account-orders.html'}, {'title': 'T28 - User Bids'}]
+
+//- Page Content
+block content
+  .user-bids-page.padding-bottom-3x

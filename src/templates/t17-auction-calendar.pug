@@ -1,0 +1,26 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'T17 - Auction Calendar'
+  - var isModalBlogSidebar = true
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'T17 - Auction Calendar'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T17 - Auction Calendar'}]
+
+block content
+  .auction-calendar-page.padding-bottom-3x
+    .container
+      .calendar-header
+        ul(class='nav nav-pills' role='tablist')
+          li.nav-item: a(href='#upcoming-auctions' class='nav-link active' data-toggle='tab' role='tab') Upcoming Auctions
+          li.nav-item: a(href='#current-auctions' class='nav-link' data-toggle='tab' role='tab') Current Auctions
+        ul(class='nav nav-pills nav-justified' role='tablist')
+          li.nav-item: a(href='#upcoming-auctions' class='nav-link active' data-toggle='tab' role='tab') Upcoming Auctions
+          li.nav-item: a(href='#current-auctions' class='nav-link' data-toggle='tab' role='tab') Current Auctions
+      .calendar-content
+        .tab-content
+          div(id='upcoming-auctions' class='tab-pane fade show active' role='tabpanel')
+            include partials/calendar-table
+          div(id='current-auctions' class='tab-pane fade' role='tabpanel')
+            include partials/calendar-table

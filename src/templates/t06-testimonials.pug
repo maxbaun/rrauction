@@ -1,0 +1,85 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'T06 - Testimonials'
+  - var parentMenu = 'Pages'
+  - var menuTitle = 'T06 - Testimonials'
+  - var isGallery = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T06 - Testimonials'}]
+
+//- Page Content
+block content
+  .testimonials-page
+    .container
+      .row.align-items-center.padding-bottom-2x
+        .col-md-5
+          .position-relative
+            img(src='/img/banners/about-05.jpg' alt='Partner').d-block.m-auto.img-thumbnail
+            div(style='top: 50%; left: 50%; margin: -43px 0 0 -40px;').gallery-wrapper.text-center.position-absolute
+              .gallery-item.video-btn.text-center
+                a(href='#' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube.com/embed/d8WNn3QbJek" frameborder="0" allowfullscreen></iframe></div></div>')
+
+        .col-md-7.text-md-left.text-center
+          .mt-30.hidden-md-up
+          h2 Title for the copy below
+          p.text-muted Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus at risus pellentesque faucibus a quis eros. In eu fermentum leo. Integer ut eros lacus. Proin ut accumsan leo. Morbi vitae est eget dolor consequat aliquam eget quis dolor. Mauris rutrum fermentum erat, at euismod lorem pharetra nec. Duis erat lectus, ultrices euismod sagittis at, pharetra eu nisl. Phasellus id ante at velit tincidunt hendrerit. Aenean dolor dolor, tristique nec placerat nec.
+          a(href='shop-grid-ls.html').text-decoration-none
+            | CTA Link (optional) &nbsp;
+            i.icon-arrow-right.d-inline-block.align-middle
+      .align-items-center.padding-top-2x.padding-bottom-2x
+        h6.text-muted.text-lg.text-uppercase Buyer Testimonials
+        hr.margin-bottom-1x
+        .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+      .align-items-center.padding-top-2x.padding-bottom-2x
+        h6.text-muted.text-lg.text-uppercase Consigner Testimonials
+        hr.margin-bottom-1x
+        .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous
+          .item
+            blockquote
+              p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis eius modi tempora.
+              cite Someone famous

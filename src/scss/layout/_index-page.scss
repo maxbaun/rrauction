@@ -1,0 +1,41 @@
+.index-page {
+  .template-item {
+    padding-left: 40px;
+    position: relative;
+
+    &::before {
+      background-color: transparent;
+      content: ' ';
+      height: 100%;
+      width: 35px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 1;
+    }
+
+    &[data-status='rrtodo'] {
+      &:before {
+        background-color: gray;
+      }
+    }
+
+    &[data-status='submitted'] {
+      &:before {
+        background-color: orange;
+      }
+    }
+
+    &[data-status='pending'] {
+      &:before {
+        background-color: yellow;
+      }
+    }
+
+    &[data-status='approved'] {
+      &:before {
+        background-color: green;
+      }
+    }
+  }
+}

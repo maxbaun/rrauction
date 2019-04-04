@@ -1,0 +1,14 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T08 - About'
+  - var menuTitle = 'Home'
+  - var pageTitle = 'T08 - About'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T08 - About'}]
+
+//- Page Content
+block content
+  .about-page.padding-bottom-3x

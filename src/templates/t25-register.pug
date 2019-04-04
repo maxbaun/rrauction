@@ -1,0 +1,207 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T25 - Register'
+  - var menuTitle = 'Hero Slider'
+  - var pageTitle = 'T25 - Register'
+  - var isModalTerms = true
+  - var isCardScript = true
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T25 - Register'}]
+
+  //- - var isHeader = false
+
+//- Page Content
+block content
+  .register-page.padding-bottom-3x
+    .container
+      form(method='post')
+        .row
+          .col-md-6
+            .form-group
+              label(for='form-auction') Auction I'm Registering For *
+              <select name="auction" id="form-auction" class="form-control" aria-required="true" required>
+                <option value="0">
+                </option><option value="549"> Mar - Fine Autographs and Artifacts
+                </option><option value="550"> Apr - Space &amp; Aviation
+                </option><option value="555"> Apr - Fine Autographs and Artifacts
+                </option><option value="556"> May - John Brennan Music Collection
+                </option><option value="548"> May - Hollywood
+                </option><option value="558"> May - Fine Autographs and Artifacts
+                </option><option value="559"> Jun - Apollo 11 50th Anniversary
+                </option><option value="560"> Jun - Fine Autographs and Artifacts
+                </option><option value="561"> Jul - Olympics
+                </option><option value="562"> Jul - American Presidents &amp; Founding Fathers
+                </option><option value="563"> Jul - Fine Autographs and Artifacts
+                </option><option value="564"> Aug - Pop Culture
+                </option><option value="565"> Aug - Fine Autographs and Artifacts
+                </option><option value="567"> Sep - Sports
+                </option><option value="566"> Sep - Remarkable Rarities
+                </option><option value="568"> Sep - Fine Autographs and Artifacts
+                </option><option value="569"> Oct - Space &amp; Aviation
+                </option><option value="570"> Oct - Fine Autographs and Artifacts
+                </option><option value="571"> Nov - Marvels of Modern Music
+                </option><option value="572"> Nov - Fine Autographs and Artifacts
+                </option><option value="573"> Dec - Lifetime Collection Opportunity </option>
+              </select>
+            .form-group
+              label(for='form-fname') First Name *
+              input(type='text' id='form-fname' name='fname' aria-required="true" placeholder="Enter your first name" required).form-control
+            .form-group
+              label(for='form-lname') Last Name *
+              input(type='text' id='form-lname' name='lname' aria-required="true" placeholder="Enter your last name" required).form-control
+            .form-group
+              label(for='form-email') Email Address *
+              input(type='email' id='form-email' name='email' aria-required="true" placeholder="Enter your primary email address" required).form-control
+            .form-group
+              label(for='form-password') Password *
+              input(type='password' id='form-password' name='password' aria-required="true" placeholder="Create your account password" required).form-control
+            .form-group
+              label(for='form-phone') Phone Number *
+              input(type='tel' id='form-phone' name='phone' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' aria-required="true" placeholder="Enter your phone number" required).form-control
+            h2.h5.form-text Shippping Address Information
+            .form-group
+              label(for='form-address') Address *
+              input(type='text' id='form-address' name='address' aria-required="true" placeholder="Enter your address" required).form-control
+            .form-group
+              label(for='form-address2') Address Line 2
+              input(type='text' id='form-address2' name='address2' placeholder="Enter address line 2 (if applicable)").form-control
+            .form-group
+              label(for='form-city') City *
+              input(type='text' id='form-city' name='city' aria-required="true" placeholder="Enter your city" required).form-control
+            .form-group
+              label(for="form-state") State/Province *
+              <select name="state" id="form-state" class="form-control" aria-required="true" required>
+                option Required for US &amp; Canada
+                include partials/state-options
+              </select>
+
+            .form-group
+              label(for='form-state') Zip/Postal Code *
+              input(id='form-zip' name='zip' type='text' inputmode='numeric' pattern='^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$' placeholder='Required for US & Canada' aria-required='true' required).form-control
+            .form-group.toggle-element(data-target="#billing-info")
+              label Use Same Address For Billing & Shipping
+              .form-check
+                input(type="radio" name="sameshipping" id="sameshipping-yes-id" value="yes" data-value="0" checked).form-check-input
+                label(for="sameshipping-yes-id") Yes
+              .form-check
+                input(type="radio" name="sameshipping" id="sameshipping-no-id" value="no" data-value="1").form-check-input
+                label(for="sameshipping-no-id") No
+            .billing-info(id="billing-info" style="display: none")
+              h2.h5.form-text Billing Address Information
+              .form-group
+                  label(for='form-billingaddress') Address *
+                  input(type='text' id='form-address' name='address' aria-required="true" placeholder="Enter your billing address" required).form-control
+              .form-group
+                label(for='form-billingaddress2') Address Line 2
+                input(type='text' id='form-billingaddress2' name='billingaddress2' placeholder="Enter address line 2 (if applicable)").form-control
+              .form-group
+                label(for='form-billingcity') City *
+                input(type='text' id='form-billingcity' name='billingcity' aria-required="true" placeholder="Enter your billing city" required).form-control
+              .form-group
+                label(for="form-billingstate") State/Province *
+                <select name="billingstate" id="form-billingstate" class="form-control" aria-required="true" required>
+                  option Enter your billing state
+                  include partials/state-options
+                </select>
+
+              .form-group
+                label(for='form-state') Zip/Postal Code *
+                input(id='form-zip' name='zip' type='text' inputmode='numeric' pattern='^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$' placeholder='Required for US & Canada' aria-required='true' required).form-control
+          .col-md-6
+            .row
+              .form-group.col-12
+                label(for="cardnumber") Credit Card Number *
+                img(src='/img/credit-cards.png' style='width: 120px;' alt='Cerdit Cards').d-inline-block.align-middle
+                input(type='number' name='number' id='cardnumber' placeholder='Card Number' aria-required='true' required).form-control
+                small.form-text.text-muted Establishing bidding privileges requires identity verification via a credit card. If you wish to do this over the phone, please call us at (800) 937-3880.
+              .form-group.col-12
+                label(for="cardname") Name as printed on card *
+                input(type='text' name='name' id="cardname" cardname placeholder='Enter name as printed on card' aria-required='true' required).form-control
+              .form-group.col-12.col-sm-6
+                label(for="cardexpiry") Expiration Date *
+                input(type='text' name='expiry' id='cardexpiry' placeholder='MM/YY' aria-required='true' required).form-control
+              .form-group.col-12.col-sm-6
+                label(for="cardcvv") CVV *
+                input(type='text' name='cvv' id='cardcvv' placeholder='CVV'  aria-required='true' required).form-control
+                small.form-text.text-muted The CVV is a 3-digit code found on the card's back to the right of the cc number.
+              .form-group.col-12
+                label(for="form-trade") Trade References
+                input(type='text' id='form-trade' name='trade' placeholder="Enter other auction/trade references").form-control
+              .form-group.col-12
+                label(for="form-referral") Referral Information
+                <select name="referral" id="form-referral" class="form-control">
+                  <option value="0">Where did you hear about us?</option>
+                  <option value="1">Advertisement</option>
+                  <option value="2">Event or Show</option>
+                  <option value="3">Google Search</option>
+                  <option value="4">Live Auctioneers</option>
+                  <option value="5">PSAcard.com</option>
+                  <option value="6">Press Report</option>
+                  <option value="7">Referral</option>
+                  <option value="8">RRAuctionSellConsignments.com</option>
+                  <option value="9">Referral</option>
+                  <option value="10">Social Media</option>
+                  <option value="11">Trade Magazine</option>
+                  <option value="12">None of the Above</option>
+                </select>
+              .form-group.col-12
+                label Auction Interests
+                .form-check
+                  input(type="checkbox" name="auctioninterests" id="auctioninterests-autographs" value="Autographs & Manuscrips" checked).form-check-input
+                  label(for="auctioninterests-autographs") Autographs & Manuscrips
+                .form-check
+                  input(type="checkbox" name="auctioninterests" id="auctioninterests-animation" value="Animation").form-check-input
+                  label(for="auctioninterests-animation") Animation
+                .form-check
+                  input(type="checkbox" name="auctioninterests" id="auctioninterests-hollywood" value="Hollywood").form-check-input
+                  label(for="auctioninterests-hollywood") Hollywood
+                .form-check
+                  input(type="checkbox" name="auctioninterests" id="auctioninterests-modernmusic" value="Modern Music").form-check-input
+                  label(for="auctioninterests-modernmusic") Modern Music
+                .form-check
+                  input(type="checkbox" name="auctioninterests" id="auctioninterests-prince" value="Prince").form-check-input
+                  label(for="auctioninterests-prince") Prince
+                .form-check
+                  input(type="checkbox" name="auctioninterests" id="auctioninterests-sports" value="Sports").form-check-input
+                  label(for="auctioninterests-sports") Sports
+                .form-check
+                  input(type="checkbox" name="auctioninterests" id="auctioninterests-olympics" value="Olympics").form-check-input
+                  label(for="auctioninterests-olympics") Olympics
+                .form-check
+                  input(type="checkbox" name="auctioninterests" id="auctioninterests-popculture" value="Pop Culture").form-check-input
+                  label(for="auctioninterests-popculture") Pop Culture
+              .form-group.col-12
+                label(for="form-otherauctioninterests") Other Auction Interests
+                input(type='text' id='form-otherauctioninterests' name='otherauctioninterests' placeholder="Enter other interests you may have").form-control
+              .form-group.col-12
+                label(for="spendingrequest") Spending Request
+                <select name="spendingrequest" id="spendingrequest" class="form-control">
+                  <option value="100 to 500"> $100 - $500</option>
+                  <option value="500 to 1000"> $500 - $1000</option>
+                  <option value="1000 to 5000"> $1,000 - $5,000</option>
+                  <option value="5000 to 10000"> $5,000 - $10,000</option>
+                  <option value="10000 to 100000"> $10,000 - $100,000</option>
+                  <option value="over 100000"> Over $100,000</option>
+                </select>
+                small.form-text.text-muted About how much are you thinking of spending in your first auction?
+              .form-group.col-12
+                label(for="paymentmethod") Preferred Payment Method
+                <select name="paymentmethod" id="paymentmethod" class="form-control">
+                  <option value="Check"> Check, MO, Cashier's Check</option>
+                  <option value="Wire"> Wire Transfer</option>
+                </select>
+                small.form-text.text-muted You may always use any allowable payment method for payment.
+              .form-group.col-12
+                .custom-control.custom-checkbox
+                  input(type='checkbox' id='email_signup' name='signup').custom-control-input
+                  label(for='email_signup').custom-control-label Yes, I want to receive email updates from RR
+              .form-group.col-12
+                .custom-control.custom-checkbox
+                  input(type="checkbox" name="agree" id="agree" value="1" aria-required='true' required).custom-control-input
+                  label(for='agree').custom-control-label I have read and agree to RR Auction's
+                    a(href="#" data-toggle='modal' data-target='#modalTerms') &nbsp; Terms and Conditions
+              .col-12.text-right
+                button(type='submit').btn.btn-primary.btn-sm Submit Application

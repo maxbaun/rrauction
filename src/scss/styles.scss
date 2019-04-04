@@ -49,12 +49,13 @@
 @import 'layout/header';
 @import 'layout/page-title';
 @import 'layout/footer';
-@import 'layout/t02-form-page';
-@import 'layout/t03-contact';
-@import 'layout/t04-team';
-@import 'layout/t10-auction-catalog-list';
+@import 'layout/index-page';
+@import 'layout/t04-form-page';
+@import 'layout/t07-contact';
+@import 'layout/t09-team';
+@import 'layout/t12-auction-catalog-list';
 @import 'layout/t13-auction-catalog-detail';
-@import 'layout/t14-auction-calendar';
+@import 'layout/t17-auction-calendar';
 
 // Modules
 @import 'modules/account';

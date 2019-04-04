@@ -5918,11 +5918,32 @@ video {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+.catalog-item .links a {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.catalog-item .links a:nth-child(1) {
+  text-align: left;
+}
+
+.catalog-item .links a:nth-child(2) {
+  text-align: center;
+}
+
+.catalog-item .links a:nth-child(3) {
+  text-align: right;
+}
+
+.sidebar .catalog-item {
+  max-width: 200px;
+  margin: 0 auto 15px 0;
+}
+
+@media (min-width: 768px) {
   .sidebar .catalog-item {
     font-size: 12px;
-    margin-bottom: 15px;
-    max-width: 200px;
+    margin: 0 0 15px auto;
   }
   .sidebar .catalog-item p {
     font-size: 12px;
@@ -6741,6 +6762,24 @@ video {
   color: #7f2e2b;
 }
 
+.index-page .link {
+  padding-left: 40px;
+  position: relative;
+}
+
+.index-page .link::before {
+  content: ' ';
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.index-page .link[data-status='todo']:before {
+  background-color: black;
+}
+
 @media (min-width: 768px) {
   .form-page__copy {
     padding-right: 30px;
@@ -6759,6 +6798,41 @@ video {
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 15px;
+}
+
+.auction-catalog-detail-page .catalog-detail {
+  margin: 0 0 30px;
+}
+
+.auction-catalog-detail-page .catalog-detail__preview {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .auction-catalog-detail-page .catalog-detail__preview {
+    margin-bottom: 30px;
+  }
+}
+
+.auction-calendar-page .calendar-content {
+  margin-top: 30px;
+}
+
+.auction-calendar-page .calendar-content .tab-content {
+  border: none;
+  padding: 0;
+}
+
+.auction-calendar-page .calendar-content .table-responsive {
+  min-height: 50vh;
+}
+
+.auction-calendar-page .calendar-content table .action .btn {
+  z-index: 0;
+}
+
+.auction-calendar-page .calendar-content table .action .dropdown-menu {
+  z-index: 1;
 }
 
 .user-info-wrapper {

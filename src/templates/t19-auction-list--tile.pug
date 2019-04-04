@@ -1,0 +1,14 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T19 - Auction List (Tile)'
+  - var menuTitle = 'Home'
+  - var pageTitle = 'T19 - Auction List (Tile)'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T19 - Auction List (Tile)'}]
+
+//- Page Content
+block content
+  .auction-list-page.padding-bottom-3x
