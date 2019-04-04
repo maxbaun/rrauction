@@ -44,4 +44,36 @@
       color: $body-color;
     }
   }
+
+  .links {
+    a {
+      display: inline-block;
+      margin-right: 5px;
+
+      &:nth-child(1) {
+        text-align: left;
+      }
+
+      &:nth-child(2) {
+        text-align: center;
+      }
+
+      &:nth-child(3) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.sidebar .catalog-item {
+  max-width: 200px;
+  margin: 0 auto $spacing-unit 0;
+  @media (min-width: $screen-md) {
+    font-size: $font-size-xs;
+    margin: 0 0 $spacing-unit auto;
+
+    p {
+      font-size: $font-size-xs;
+    }
+  }
 }

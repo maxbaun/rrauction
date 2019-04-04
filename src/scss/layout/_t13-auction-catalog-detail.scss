@@ -1,0 +1,13 @@
+.auction-catalog-detail-page {
+  .catalog-detail {
+    margin: 0 0 $spacing-unit--lg;
+
+    &__preview {
+      margin-bottom: $spacing-unit;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: $spacing-unit--lg;
+      }
+    }
+  }
+}

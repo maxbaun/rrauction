@@ -1,0 +1,50 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'T13 - Auction Catalog Detail'
+  - var isModalBlogSidebar = true
+  - var parentMenu = 'Blog'
+  - var menuTitle = 'T13 - Auction Catalog Detail'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T13 - Auction Catalog Detail'}]
+
+block content
+  -
+    var catalogs = [
+      {
+        title: 'RR Auction: Fine Autographs and Articacts featuring Pop Culture',
+        link: '/t11-auction-catalog-detail.html',
+        image: '/img/auction-catalog/catalog-1.jpg'
+      },
+      {
+        title: 'RR Auction: Space & Aviation',
+        link: '/t11-auction-catalog-detail.html',
+        image: '/img/auction-catalog/catalog-2.jpg'
+      },
+      {
+        title: 'RR Auction: Fine Autographs and Artifacts featuring Literature',
+        link: '/t11-auction-catalog-detail.html',
+        image: '/img/auction-catalog/catalog-3.jpg'
+      },
+      {
+        title: 'RR Auction: March 2019 Marvels of Modern Music',
+        link: '/t11-auction-catalog-detail.html',
+        image: '/img/auction-catalog/catalog-4.jpg'
+      }
+    ]
+
+  .auction-catalog-detail-page.padding-bottom-3x
+    .container
+      .row
+        .col-lg-4.col-md-4.order-2
+          .sidebar
+            .row
+              each catalog in catalogs
+                .col-6
+                  include partials/catalog-item
+        .col-lg-8.col-md-8.order-1
+          .catalog-detail
+            .catalog-detail__preview
+              insert preview here
+            h2.h4 RR Auction: Fine Autographs and Artifacts featuring Pop Culture
+            p RR Auction's April Fine Autograph and Artifact sale features an impressive selection of pop culture material, including a fully signed Led Zeppelin debut album, a Hofner 'Beatle' bass autographed by Paul McCartney, John F. Kennedy's rocking chair from the Carlyle Hotel, a "gold coin" interest note signed by legendary gangster Al Capone, an Apple award signed by Steve Jobs, a Charles Schulz comic strip, and the white suit of KFC founder Colonel Sanders. Other top items include a letter by Queen Elizabeth I, a Henry David Thoreau handwritten manuscript page, an important letter by Thomas Jefferson about the Bonaparte family, a rare check by Charles Darwin, and a handful of vintage Topps baseball card sets. RR Auction is a globally recognized and trusted auction house specializing in historical autographs and artifacts. Join us as we make history selling history in April 2019.

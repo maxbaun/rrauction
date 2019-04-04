@@ -4015,7 +4015,7 @@ a.list-group-item {
 
 .list-group-item.active {
   border-color: #e5e5e5;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
   color: #7f2e2b;
   cursor: default;
   pointer-events: none;
@@ -5868,6 +5868,67 @@ video {
   cursor: pointer;
 }
 
+.catalog-item {
+  margin: 0 auto 30px;
+  max-width: 320px;
+}
+
+.catalog-item .img {
+  overflow: hidden;
+}
+
+.catalog-item .img img {
+  width: 100%;
+  -ms-transform: scale(1);
+      transform: scale(1);
+  transition: transform .2s ease-in-out;
+}
+
+.catalog-item .img a {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.catalog-item .img a:hover, .catalog-item .img a:focus {
+  text-decoration: underline;
+}
+
+.catalog-item .img a:hover {
+  text-decoration: none;
+}
+
+.catalog-item .img a:hover img {
+  -ms-transform: scale(1.1);
+      transform: scale(1.1);
+}
+
+.catalog-item p {
+  font-size: 13px;
+  margin: 7.5px 0 10px;
+}
+
+.catalog-item p a {
+  text-decoration: none;
+  color: #505050;
+}
+
+.catalog-item p a:hover, .catalog-item p a:focus {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .sidebar .catalog-item {
+    font-size: 12px;
+    margin-bottom: 15px;
+    max-width: 200px;
+  }
+  .sidebar .catalog-item p {
+    font-size: 12px;
+  }
+}
+
 .fw-section,
 .fh-section {
   position: relative;
@@ -6698,56 +6759,6 @@ video {
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 15px;
-}
-
-.auction-catalog-list .catalog {
-  margin: 0 auto 30px;
-  max-width: 320px;
-}
-
-.auction-catalog-list .catalog .img {
-  overflow: hidden;
-}
-
-.auction-catalog-list .catalog .img img {
-  width: 100%;
-  -ms-transform: scale(1);
-      transform: scale(1);
-  transition: transform .2s ease-in-out;
-}
-
-.auction-catalog-list .catalog .img a {
-  text-decoration: none;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.auction-catalog-list .catalog .img a:hover, .auction-catalog-list .catalog .img a:focus {
-  text-decoration: underline;
-}
-
-.auction-catalog-list .catalog .img a:hover {
-  text-decoration: none;
-}
-
-.auction-catalog-list .catalog .img a:hover img {
-  -ms-transform: scale(1.1);
-      transform: scale(1.1);
-}
-
-.auction-catalog-list .catalog p {
-  font-size: 13px;
-  margin: 7.5px 0 10px;
-}
-
-.auction-catalog-list .catalog p a {
-  text-decoration: none;
-  color: #505050;
-}
-
-.auction-catalog-list .catalog p a:hover, .auction-catalog-list .catalog p a:focus {
-  text-decoration: underline;
 }
 
 .user-info-wrapper {
