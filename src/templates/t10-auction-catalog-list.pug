@@ -71,7 +71,13 @@ block content
                     img(src=catalog.image, alt=catalog.title)
                 p
                   a(href=catalog.link) #{catalog.title}
-                .btn.btn-primary.btn-sm(href=catalog.link) View/Download/Buy
+                .row
+                  .col-4
+                    a(href="#") View
+                  .col-4
+                    a(href="#") Download
+                  .col-4
+                    a(href="#") Buy
 
 
 

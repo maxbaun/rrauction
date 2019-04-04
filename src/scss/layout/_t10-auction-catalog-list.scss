@@ -3,7 +3,7 @@
     margin: 0 auto $spacing-unit--lg;
     max-width: 320px;
 
-    a {
+    @mixin noLink() {
       text-decoration: none;
 
       &:hover,
@@ -22,11 +22,13 @@
       }
 
       a {
+        @include noLink();
         display: block;
         height: 100%;
         width: 100%;
 
         &:hover {
+          text-decoration: none;
           img {
             transform: scale(1.1);
           }
@@ -39,6 +41,7 @@
       margin: $spacing-unit--half 0 $spacing-unit--sm;
 
       a {
+        @include noLink();
         color: $body-color;
       }
     }
