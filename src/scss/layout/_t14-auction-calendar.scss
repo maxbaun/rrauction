@@ -1,0 +1,29 @@
+.auction-calendar-page {
+  .calendar-content {
+    margin-top: $spacing-unit--lg;
+
+    .tab-content {
+      border: none;
+      padding: 0;
+    }
+
+    .table-responsive {
+      min-height: 50vh;
+    }
+
+    table {
+      .status {
+
+      }
+
+      .action {
+        .btn {
+          z-index: 0;
+        }
+        .dropdown-menu {
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

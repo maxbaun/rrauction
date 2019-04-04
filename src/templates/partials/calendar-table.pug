@@ -1,0 +1,92 @@
+-
+  var items = [
+    {
+      id: '491',
+      title: 'Fine Autographs and Artifacts',
+      month: 'Jan 2017',
+      consignmentDeadline: 'Nov 18, 2016',
+      starts: 'Dec 16, 2016',
+      ends: 'Jan 11, 2017',
+      type: 'Timed',
+      status: 'Closed',
+      link: '#'
+    },
+    {
+      id: '492',
+      title: 'Olympics',
+      month: 'Jan 2017',
+      consignmentDeadline: 'Nov 4, 2016',
+      starts: 'Jan 12, 2017',
+      ends: 'Jan 19, 2017',
+      type: 'Timed',
+      status: 'Consign',
+      link: '#'
+    },
+    {
+      id: '493',
+      title: 'Fine Autographs and Artifacts',
+      month: 'Feb 2017',
+      consignmentDeadline: 'Dec 4, 2016',
+      starts: 'Jan 20, 2017',
+      ends: 'Feb 8, 2017',
+      type: 'Timed',
+      status: 'In Production',
+      link: '#'
+    },
+    {
+      id: '494',
+      title: 'Marvels of Modern Music',
+      month: 'Feb 2017',
+      consignmentDeadline: 'Dec 4, 2016',
+      starts: 'Dec 2, 2017',
+      ends: 'Feb 9, 2017',
+      type: 'Timed',
+      status: 'Bid Now',
+      link: '#'
+    }
+  ]
+.table-responsive
+  table.table.table-striped
+    thead
+      tr
+        th.d-none.d-md-table-cell ID
+        th Title
+        th.d-none.d-md-table-cell Month
+        th.d-none.d-md-table-cell Consignment Deadline
+        th.d-none.d-md-table-cell Starts
+        th Ends
+        th.d-none.d-md-table-cell Type
+        th Status
+        th Action
+    tbody
+      each item in items
+        tr
+          td.d-none.d-md-table-cell #{item.id}
+          td.title
+            a(href=item.link) #{item.title}
+          td.d-none.d-md-table-cell #{item.month}
+          td.d-none.d-md-table-cell #{item.consignmentDeadline}
+          td.d-none.d-md-table-cell #{item.starts}
+          td #{item.ends}
+          td.d-none.d-md-table-cell #{item.type}
+          td.status
+            if (item.status == 'Closed')
+              span #{item.status}
+            else if (item.status == 'Bid Now')
+              a(href=item.link)
+                strong #{item.status}
+            else if (item.status == 'In Production')
+              em #{item.status}
+            else if (item.status == 'Consign')
+              a(href=item.link) #{item.status}
+
+          td.action
+            .btn-group.my-0
+              button.btn.btn-primary.btn-sm.my-0.dropdown-toggle(type='button' data-toggle='dropdown' aria-expanded='false') Action
+              .dropdown-menu
+                a.dropdown-item(href=item.link) View Auction Info
+                a.dropdown-item(href="#") View Lots
+                a.dropdown-item(href="#") Register To Bid
+                a.dropdown-item(href="#") View E-Catalog
+                a.dropdown-item(href="#") Download PDF
+                a.dropdown-item(href="#") View Auction Info

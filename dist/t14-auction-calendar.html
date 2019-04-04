@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>RR Auction
+    <title>T14 - Auction Calendar
     </title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Unishop - Universal E-Commerce Template">
@@ -162,9 +162,9 @@
           <!-- Slideable (Mobile) Menu-->
           <nav class="slideable-menu">
             <ul class="menu" data-initial-height="385">
-              <li class="has-children active"><span><a href="index.html">Home</a><span class="sub-menu-toggle"></span></span>
+              <li class="has-children"><span><a href="index.html">Home</a><span class="sub-menu-toggle"></span></span>
                 <ul class="slideable-submenu">
-                    <li class="active"><a href="index.html">Hero Slider</a></li>
+                    <li><a href="index.html">Hero Slider</a></li>
                     <li><a href="home-featured-categories.html">Categories Grid</a></li>
                 </ul>
               </li>
@@ -223,7 +223,7 @@
                     <li><a href="account-single-ticket.html">Single Ticket</a></li>
                 </ul>
               </li>
-              <li class="has-children"><span><a href="blog-rs.html">Blog</a><span class="sub-menu-toggle"></span></span>
+              <li class="has-children active"><span><a href="blog-rs.html">Blog</a><span class="sub-menu-toggle"></span></span>
                 <ul class="slideable-submenu">
                   <li class="has-children"><span><a href="blog-rs.html">Blog Layout</a><span class="sub-menu-toggle"></span></span>
                     <ul class="slideable-submenu">
@@ -311,9 +311,9 @@
         <!-- Main Navigation-->
         <nav class="site-menu">
           <ul>
-            <li class="has-submenu active"><a href="index.html">Home</a>
+            <li class="has-submenu"><a href="index.html">Home</a>
               <ul class="sub-menu">
-                <li class="active has-children"><a href="index.html">Hero Slider</a>
+                <li class="has-children"><a href="index.html">Hero Slider</a>
                   <ul class="sub-menu w-400 p-0 overflow-hidden">
                     <li><a class="p-0" href="index.html"><img src="/img/banners/home01.jpg" alt="Hero Slider Home"></a></li>
                   </ul>
@@ -416,7 +416,7 @@
                   <li><a href="account-single-ticket.html">Single Ticket</a></li>
               </ul>
             </li>
-            <li class="has-submenu"><a href="blog-rs.html">Blog</a>
+            <li class="has-submenu active"><a href="blog-rs.html">Blog</a>
               <ul class="sub-menu">
                 <li class="has-children"><a href="blog-rs.html">Blog Layout</a>
                   <ul class="sub-menu">
@@ -542,16 +542,219 @@
         </div>
       </div>
     </header>
-    <!-- Page Content-->
-    <section class="my-4">
+    <!-- Page Title-->
+    <div class="page-title">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4 offset-md-4">
-            <nav class="list-group"><a class="list-group-item" href="/t01-homepage.html">T01 - Homepage</a><a class="list-group-item" href="/t02-form-page.html">T02 - Form Page</a><a class="list-group-item" href="/t02-form-page--sent.html">T02 - Form Page (Sent)</a><a class="list-group-item" href="/t03-contact.html">T03 - Contact</a><a class="list-group-item" href="/t03-contact--sent.html">T03 - Contact (Sent)</a><a class="list-group-item" href="/t04-team.html">T04 - Team</a><a class="list-group-item" href="/t05-blog-list.html">T05 - Blog List</a><a class="list-group-item" href="/t06-blog-detail.html">T06 - Blog Detail</a><a class="list-group-item" href="/t07-login.html">T07 - Login</a><a class="list-group-item" href="/t08-forgot-password.html">T08 - Forgot Password</a><a class="list-group-item" href="/t09-register.html">T09 - Register</a><a class="list-group-item" href="/t10-auction-catalog-list.html">T10 - Auction Catalog List</a><a class="list-group-item" href="/t11-faq.html">T11 - FAQ</a><a class="list-group-item" href="/t12-testimonials.html">T12 - Testimonials</a><a class="list-group-item" href="/t13-auction-catalog-detail.html">T13 - Auction Catalog Detail</a><a class="list-group-item" href="/t14-auction-calendar.html">T13 - Auction Calendar</a></nav>
+        <div class="column">
+          <h1>T14 - Auction Calendar</h1>
+        </div>
+        <div class="column">
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Home</a>
+            </li>
+            <li class="separator">&nbsp;</li>
+            <li>T14 - Auction Calendar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Page Content-->
+    <div class="auction-calendar-page padding-bottom-3x">
+      <div class="container">
+        <div class="calendar-header">
+          <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item"><a class="nav-link active" href="#upcoming-auctions" data-toggle="tab" role="tab">Upcoming Auctions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#current-auctions" data-toggle="tab" role="tab">Current Auctions</a></li>
+          </ul>
+          <ul class="nav nav-pills nav-justified" role="tablist">
+            <li class="nav-item"><a class="nav-link active" href="#upcoming-auctions" data-toggle="tab" role="tab">Upcoming Auctions</a></li>
+            <li class="nav-item"><a class="nav-link" href="#current-auctions" data-toggle="tab" role="tab">Current Auctions</a></li>
+          </ul>
+        </div>
+        <div class="calendar-content">
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="upcoming-auctions" role="tabpanel">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="d-none d-md-table-cell">ID</th>
+                      <th>Title</th>
+                      <th class="d-none d-md-table-cell">Month</th>
+                      <th class="d-none d-md-table-cell">Consignment Deadline</th>
+                      <th class="d-none d-md-table-cell">Starts</th>
+                      <th>Ends</th>
+                      <th class="d-none d-md-table-cell">Type</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="d-none d-md-table-cell">491</td>
+                      <td class="title"><a href="#">Fine Autographs and Artifacts</a></td>
+                      <td class="d-none d-md-table-cell">Jan 2017</td>
+                      <td class="d-none d-md-table-cell">Nov 18, 2016</td>
+                      <td class="d-none d-md-table-cell">Dec 16, 2016</td>
+                      <td>Jan 11, 2017</td>
+                      <td class="d-none d-md-table-cell">Timed</td>
+                      <td class="status"><span>Closed</span>
+                      </td>
+                      <td class="action">
+                        <div class="btn-group my-0">
+                          <button class="btn btn-primary btn-sm my-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Action</button>
+                          <div class="dropdown-menu"><a class="dropdown-item" href="#">View Auction Info</a><a class="dropdown-item" href="#">View Lots</a><a class="dropdown-item" href="#">Register To Bid</a><a class="dropdown-item" href="#">View E-Catalog</a><a class="dropdown-item" href="#">Download PDF</a><a class="dropdown-item" href="#">View Auction Info</a></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-md-table-cell">492</td>
+                      <td class="title"><a href="#">Olympics</a></td>
+                      <td class="d-none d-md-table-cell">Jan 2017</td>
+                      <td class="d-none d-md-table-cell">Nov 4, 2016</td>
+                      <td class="d-none d-md-table-cell">Jan 12, 2017</td>
+                      <td>Jan 19, 2017</td>
+                      <td class="d-none d-md-table-cell">Timed</td>
+                      <td class="status"><a href="#">Consign</a>
+                      </td>
+                      <td class="action">
+                        <div class="btn-group my-0">
+                          <button class="btn btn-primary btn-sm my-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Action</button>
+                          <div class="dropdown-menu"><a class="dropdown-item" href="#">View Auction Info</a><a class="dropdown-item" href="#">View Lots</a><a class="dropdown-item" href="#">Register To Bid</a><a class="dropdown-item" href="#">View E-Catalog</a><a class="dropdown-item" href="#">Download PDF</a><a class="dropdown-item" href="#">View Auction Info</a></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-md-table-cell">493</td>
+                      <td class="title"><a href="#">Fine Autographs and Artifacts</a></td>
+                      <td class="d-none d-md-table-cell">Feb 2017</td>
+                      <td class="d-none d-md-table-cell">Dec 4, 2016</td>
+                      <td class="d-none d-md-table-cell">Jan 20, 2017</td>
+                      <td>Feb 8, 2017</td>
+                      <td class="d-none d-md-table-cell">Timed</td>
+                      <td class="status"><em>In Production</em>
+                      </td>
+                      <td class="action">
+                        <div class="btn-group my-0">
+                          <button class="btn btn-primary btn-sm my-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Action</button>
+                          <div class="dropdown-menu"><a class="dropdown-item" href="#">View Auction Info</a><a class="dropdown-item" href="#">View Lots</a><a class="dropdown-item" href="#">Register To Bid</a><a class="dropdown-item" href="#">View E-Catalog</a><a class="dropdown-item" href="#">Download PDF</a><a class="dropdown-item" href="#">View Auction Info</a></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-md-table-cell">494</td>
+                      <td class="title"><a href="#">Marvels of Modern Music</a></td>
+                      <td class="d-none d-md-table-cell">Feb 2017</td>
+                      <td class="d-none d-md-table-cell">Dec 4, 2016</td>
+                      <td class="d-none d-md-table-cell">Dec 2, 2017</td>
+                      <td>Feb 9, 2017</td>
+                      <td class="d-none d-md-table-cell">Timed</td>
+                      <td class="status"><a href="#"><strong>Bid Now</strong></a>
+                      </td>
+                      <td class="action">
+                        <div class="btn-group my-0">
+                          <button class="btn btn-primary btn-sm my-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Action</button>
+                          <div class="dropdown-menu"><a class="dropdown-item" href="#">View Auction Info</a><a class="dropdown-item" href="#">View Lots</a><a class="dropdown-item" href="#">Register To Bid</a><a class="dropdown-item" href="#">View E-Catalog</a><a class="dropdown-item" href="#">Download PDF</a><a class="dropdown-item" href="#">View Auction Info</a></div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="current-auctions" role="tabpanel">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="d-none d-md-table-cell">ID</th>
+                      <th>Title</th>
+                      <th class="d-none d-md-table-cell">Month</th>
+                      <th class="d-none d-md-table-cell">Consignment Deadline</th>
+                      <th class="d-none d-md-table-cell">Starts</th>
+                      <th>Ends</th>
+                      <th class="d-none d-md-table-cell">Type</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="d-none d-md-table-cell">491</td>
+                      <td class="title"><a href="#">Fine Autographs and Artifacts</a></td>
+                      <td class="d-none d-md-table-cell">Jan 2017</td>
+                      <td class="d-none d-md-table-cell">Nov 18, 2016</td>
+                      <td class="d-none d-md-table-cell">Dec 16, 2016</td>
+                      <td>Jan 11, 2017</td>
+                      <td class="d-none d-md-table-cell">Timed</td>
+                      <td class="status"><span>Closed</span>
+                      </td>
+                      <td class="action">
+                        <div class="btn-group my-0">
+                          <button class="btn btn-primary btn-sm my-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Action</button>
+                          <div class="dropdown-menu"><a class="dropdown-item" href="#">View Auction Info</a><a class="dropdown-item" href="#">View Lots</a><a class="dropdown-item" href="#">Register To Bid</a><a class="dropdown-item" href="#">View E-Catalog</a><a class="dropdown-item" href="#">Download PDF</a><a class="dropdown-item" href="#">View Auction Info</a></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-md-table-cell">492</td>
+                      <td class="title"><a href="#">Olympics</a></td>
+                      <td class="d-none d-md-table-cell">Jan 2017</td>
+                      <td class="d-none d-md-table-cell">Nov 4, 2016</td>
+                      <td class="d-none d-md-table-cell">Jan 12, 2017</td>
+                      <td>Jan 19, 2017</td>
+                      <td class="d-none d-md-table-cell">Timed</td>
+                      <td class="status"><a href="#">Consign</a>
+                      </td>
+                      <td class="action">
+                        <div class="btn-group my-0">
+                          <button class="btn btn-primary btn-sm my-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Action</button>
+                          <div class="dropdown-menu"><a class="dropdown-item" href="#">View Auction Info</a><a class="dropdown-item" href="#">View Lots</a><a class="dropdown-item" href="#">Register To Bid</a><a class="dropdown-item" href="#">View E-Catalog</a><a class="dropdown-item" href="#">Download PDF</a><a class="dropdown-item" href="#">View Auction Info</a></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-md-table-cell">493</td>
+                      <td class="title"><a href="#">Fine Autographs and Artifacts</a></td>
+                      <td class="d-none d-md-table-cell">Feb 2017</td>
+                      <td class="d-none d-md-table-cell">Dec 4, 2016</td>
+                      <td class="d-none d-md-table-cell">Jan 20, 2017</td>
+                      <td>Feb 8, 2017</td>
+                      <td class="d-none d-md-table-cell">Timed</td>
+                      <td class="status"><em>In Production</em>
+                      </td>
+                      <td class="action">
+                        <div class="btn-group my-0">
+                          <button class="btn btn-primary btn-sm my-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Action</button>
+                          <div class="dropdown-menu"><a class="dropdown-item" href="#">View Auction Info</a><a class="dropdown-item" href="#">View Lots</a><a class="dropdown-item" href="#">Register To Bid</a><a class="dropdown-item" href="#">View E-Catalog</a><a class="dropdown-item" href="#">Download PDF</a><a class="dropdown-item" href="#">View Auction Info</a></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-md-table-cell">494</td>
+                      <td class="title"><a href="#">Marvels of Modern Music</a></td>
+                      <td class="d-none d-md-table-cell">Feb 2017</td>
+                      <td class="d-none d-md-table-cell">Dec 4, 2016</td>
+                      <td class="d-none d-md-table-cell">Dec 2, 2017</td>
+                      <td>Feb 9, 2017</td>
+                      <td class="d-none d-md-table-cell">Timed</td>
+                      <td class="status"><a href="#"><strong>Bid Now</strong></a>
+                      </td>
+                      <td class="action">
+                        <div class="btn-group my-0">
+                          <button class="btn btn-primary btn-sm my-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Action</button>
+                          <div class="dropdown-menu"><a class="dropdown-item" href="#">View Auction Info</a><a class="dropdown-item" href="#">View Lots</a><a class="dropdown-item" href="#">Register To Bid</a><a class="dropdown-item" href="#">View E-Catalog</a><a class="dropdown-item" href="#">Download PDF</a><a class="dropdown-item" href="#">View Auction Info</a></div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!-- Site Footer-->
     <footer class="site-footer" style="background-image: url(/img/footer-bg.png);">
       <div class="container">
