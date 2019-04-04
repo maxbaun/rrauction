@@ -4,16 +4,15 @@ extends partials/layout
 append config
   - var isPageTitle = true
   - var parentMenu = 'Home'
-  - var pageTitle = 'T03 - Contact'
+  - var pageTitle = 'T02 - Form Page (Sent)'
   - var menuTitle = 'Hero Slider'
-  - var pageTitle = 'T03 - Contact'
+  - var pageTitle = 'T02 - Form Page (Sent)'
   - var isFormPageModal = true
-  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T03 - Contact'}]
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T02 - Form Page (Sent)'}]
 
   //- - var isHeader = false
 
 //- Page Content
 block content
-  - var formSent = false
-  include partials/t03-content
-
+  - var formSent = true
+  include partials/t02-content

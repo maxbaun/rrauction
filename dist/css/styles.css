@@ -6700,6 +6700,56 @@ video {
   margin-bottom: 15px;
 }
 
+.auction-catalog-list .catalog {
+  margin: 0 auto 30px;
+  max-width: 320px;
+}
+
+.auction-catalog-list .catalog .img {
+  overflow: hidden;
+}
+
+.auction-catalog-list .catalog .img img {
+  width: 100%;
+  -ms-transform: scale(1);
+      transform: scale(1);
+  transition: transform .2s ease-in-out;
+}
+
+.auction-catalog-list .catalog .img a {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.auction-catalog-list .catalog .img a:hover, .auction-catalog-list .catalog .img a:focus {
+  text-decoration: underline;
+}
+
+.auction-catalog-list .catalog .img a:hover {
+  text-decoration: none;
+}
+
+.auction-catalog-list .catalog .img a:hover img {
+  -ms-transform: scale(1.1);
+      transform: scale(1.1);
+}
+
+.auction-catalog-list .catalog p {
+  font-size: 13px;
+  margin: 7.5px 0 10px;
+}
+
+.auction-catalog-list .catalog p a {
+  text-decoration: none;
+  color: #505050;
+}
+
+.auction-catalog-list .catalog p a:hover, .auction-catalog-list .catalog p a:focus {
+  text-decoration: underline;
+}
+
 .user-info-wrapper {
   position: relative;
   width: 100%;

@@ -1,0 +1,89 @@
+.contact-page.padding-bottom-3x
+  .container
+    .row
+      .col-md-4
+        .contact-page__block
+          h2
+            | Business Hours
+          p
+            | Our business hours are weekdays
+            br
+            | 9:00 AM – 5:00 PM EST.*
+          p
+            | * We monitor the contact form and email accounts after hours. If you need immediate assistance, please email
+            a(href='mailto:support@rrauction.com')  Support@rrauction.com.
+
+        .contact-page__block
+          h2
+            | Contact Info
+          p
+            | Phone:
+            br
+            | Toll free at (800) 937-3880 or
+            br
+            | Internationally at +1 (603) 732-4280
+          p
+            | Fax:
+            br
+            | Toll free at (888) 790-2437 or
+            br
+            | Internationally at +1 (603) 732-4288
+          p
+            | Media Inquiries:
+            br
+            | Bobby Livingston
+            br
+            a(href='Bobby.Livingston@RRAuction.com') Bobby.Livingston@RRAuction.com
+            br
+            | Toll free at (800) 937-3880 (ext 111)
+            br
+            | Internationally at +1 (603) 732-4280 (ext 111)
+      .col-md-4
+        .contact-page__block
+          h2 Consignment Opportunities
+          a(href='/').btn.btn-primary Free Evaluations
+          p Or email &nbsp;
+            a(href='mailto:sell@rrauction.com') Sell@rrauction.com
+
+        .contact-page__block
+          h2 Operations Center
+          p
+            | 5 State Route 101A, Suite 5
+            br
+            | Amherst, New Hampshire, 03031
+
+        .contact-page__block
+          h2 Headquarters
+          p
+            em Please do not ship anything to this address.
+          p
+            | One Beacon Street
+            br
+            | Suite 1500
+            br
+            | Boston, Massachusetts, 02108
+
+        .contact-page__block
+          h2 Follow RR Auction
+          include social-buttons
+
+
+      .col-md-4
+        if formSent
+          h2.h4 Thanks for your submission
+          p One of our representatives will be in touch shortly. If you have any immediate questions, please reach out to us at 603-732-4280.
+        else
+          form(method='post')
+            .form-group
+              label(for='form-name') Name *
+              input(type='text' id='form-name' name='name' required).form-control
+            .form-group
+              label(for='form-email') Email *
+              input(type='email' id='form-email' name='email' required).form-control
+            .form-group
+              label(for='form-subject') Subject
+              input(type='text' id='form-subject' name='subject').form-control
+            .form-group
+              label(for='form-message') Message
+              textarea(id='form-message' name='message' rows='10').form-control
+            button(type='submit').btn.btn-primary.btn-sm Send

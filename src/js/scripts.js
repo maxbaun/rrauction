@@ -940,4 +940,18 @@ jQuery(document).ready(function($) {
   // Social share
   window.simpleSocialShare.init(document.getElementsByClassName('socialShareBtn'));
 
+  // Validate Form
+
+  var $validateForms = $('.validate-form')
+
+  if ($validateForms.length) {
+    $validateForms.each(function () {
+      var $self = $(this)
+
+      $self.submit(function () {
+        console.log('submit')
+      })
+    })
+  }
+
 });/*Document Ready End*/
