@@ -48,14 +48,12 @@ block content
             a(href='#').text-sm.text-muted.navi-link &nbsp;Category 2&nbsp;
           .pb-2
             span.d-inline-block.align-middle.text-sm.text-muted Share post:&nbsp;&nbsp;&nbsp;
-            a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-rounded.sb-facebook
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook' data-share-network="facebook" data-share-url="http://rrauction.com" data-share-title="Post Title" data-share-text="Description of the text to share" data-share-media="/img/rr/blog/Ruth-1-e1551296065521.jpg").social-button.shape-rounded.sb-facebook.socialShareBtn
               i.socicon-facebook
-            a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-rounded.sb-twitter
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter' data-share-network="twitter" data-share-url="http://rrauction.com" data-share-title="Post Title" data-share-text="Description of the text to share" data-share-media="/img/rr/blog/Ruth-1-e1551296065521.jpg").social-button.shape-rounded.sb-twitter.socialShareBtn
               i.socicon-twitter
-            a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-rounded.sb-instagram
-              i.socicon-instagram
-            a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-rounded.sb-google-plus
-              i.socicon-googleplus
+            //- a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram' data-share-network="instagram" data-share-url="http://rrauction.com" data-share-title="Post Title" data-share-text="Description of the text to share" data-share-media="/img/rr/blog/Ruth-1-e1551296065521.jpg").social-button.shape-rounded.sb-instagram.socialShareBtn
+            //-   i.socicon-instagram
 
         // Post Navigation
         .entry-navigation

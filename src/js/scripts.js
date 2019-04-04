@@ -908,6 +908,9 @@ jQuery(document).ready(function($) {
           }
 			});
     });
-	}
+  }
+
+  // Social share
+  window.simpleSocialShare.init(document.getElementsByClassName('socialShareBtn'));
 
 });/*Document Ready End*/
