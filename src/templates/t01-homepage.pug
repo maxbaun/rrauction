@@ -11,6 +11,46 @@ append config
 //- Page Content
 block content
 
+  -
+    var auctions = [
+      {
+        image: '/img/components/img05.jpg',
+        title: 'Marvels of Modern Music',
+        link: '#',
+        date: '27 September 2019 | 03:00 PM EST'
+      },
+      {
+        image: '/img/components/img05.jpg',
+        title: 'Marvels of Modern Music',
+        link: '#',
+        date: '27 September 2019 | 03:00 PM EST'
+      },
+      {
+        image: '/img/components/img05.jpg',
+        title: 'Marvels of Modern Music',
+        link: '#',
+        date: '27 September 2019 | 03:00 PM EST'
+      },
+      {
+        image: '/img/components/img05.jpg',
+        title: 'Marvels of Modern Music',
+        link: '#',
+        date: '27 September 2019 | 03:00 PM EST'
+      },
+      {
+        image: '/img/components/img05.jpg',
+        title: 'Marvels of Modern Music',
+        link: '#',
+        date: '27 September 2019 | 03:00 PM EST'
+      },
+      {
+        image: '/img/components/img05.jpg',
+        title: 'Marvels of Modern Music',
+        link: '#',
+        date: '27 September 2019 | 03:00 PM EST'
+      }
+    ]
+
   // Main Slider
   section.mb-4.mt-4
     .container
@@ -28,48 +68,9 @@ block content
       h3.text-lg.text-uppercase.margin-top-0 Upcoming Auctions
       hr.margin-bottom-1x
       .owl-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":4}} }')
-        .item
-          .card
-            img(src='../img/components/img05.jpg' alt='Card image').card-img-top
-            .card-body
-              h5.card-title.mb-1 Marvels of Modern Music
-              a(href='#' class='btn btn-primary btn-sm mt-1') Buy Now
-            .card-footer.text-sm.text-muted 27 September 2019 | 03:00 PM EST
-        .item
-          .card
-            img(src='../img/components/img05.jpg' alt='Card image').card-img-top
-            .card-body
-              h5.card-title.mb-1 Marvels of Modern Music
-              a(href='#' class='btn btn-primary btn-sm mt-1') Buy Now
-            .card-footer.text-sm.text-muted 27 September 2019 | 03:00 PM EST
-        .item
-          .card
-            img(src='../img/components/img05.jpg' alt='Card image').card-img-top
-            .card-body
-              h5.card-title.mb-1 Marvels of Modern Music
-              a(href='#' class='btn btn-primary btn-sm mt-1') Buy Now
-            .card-footer.text-sm.text-muted 27 September 2019 | 03:00 PM EST
-        .item
-          .card
-            img(src='../img/components/img05.jpg' alt='Card image').card-img-top
-            .card-body
-              h5.card-title.mb-1 Marvels of Modern Music
-              a(href='#' class='btn btn-primary btn-sm mt-1') Buy Now
-            .card-footer.text-sm.text-muted 27 September 2019 | 03:00 PM EST
-        .item
-          .card
-            img(src='../img/components/img05.jpg' alt='Card image').card-img-top
-            .card-body
-              h5.card-title.mb-1 Marvels of Modern Music
-              a(href='#' class='btn btn-primary btn-sm mt-1') Buy Now
-            .card-footer.text-sm.text-muted 27 September 2019 | 03:00 PM EST
-        .item
-          .card
-            img(src='../img/components/img05.jpg' alt='Card image').card-img-top
-            .card-body
-              h5.card-title.mb-1 Marvels of Modern Music
-              a(href='#' class='btn btn-primary btn-sm mt-1') Buy Now
-            .card-footer.text-sm.text-muted 27 September 2019 | 03:00 PM EST
+        each auction in auctions
+          .item
+            include partials/auction-card
 
   section.bg-secondary.padding-top-2x.padding-bottom-2x
     .container

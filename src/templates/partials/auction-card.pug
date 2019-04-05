@@ -1,0 +1,6 @@
+.card.auction-card
+  img(src=auction.image alt=auction.title).card-img-top
+  .card-body
+    h5.card-title.mb-1 #{auction.title}
+    a(href=auction.link class='btn btn-primary btn-sm mt-1') Buy Now
+  .card-footer.text-sm.text-muted #{auction.date}

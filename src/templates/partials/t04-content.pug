@@ -50,46 +50,4 @@
 
           .col-md-6
             .form-page__form
-              if formSent
-                h2.h4 Thanks for your submission
-                p One of our representatives will be in touch shortly. If you have any immediate questions, please reach out to us at 603-732-4280.
-              else
-                form(method='post' data-success-modal='#modalFormPage').validate-form
-                  .form-group
-                    label(for='form-name') Name *
-                    input(type='text' id='form-name' name='name' aria-required="true" required).form-control
-                  .form-group
-                    label(for='form-email') Email *
-                    input(type='email' id='form-email' name='email' aria-required="true" required).form-control
-                  .form-group
-                    label(for='form-phone') Phone *
-                    input(type='tel' id='form-phone' name='phone' aria-required="true" required).form-control
-                  .form-group
-                    label(for='form-accountnumber') Your account number (if applicable)
-                    input(type='text' id='form-accountnumber' name='accountnumber').form-control
-                  .form-group
-                    label(for='form-referral') How did you find us? *
-                    select(id='form-referral' name='referral' aria-required='true').form-control
-                      option(value='I’m an existing RR Client') I’m an existing RR Client
-                      option(value='received an RR email') received an RR email
-                      option(value='print ad') print ad
-                      option(value='saw news coverage') saw news coverage
-                      option(value='Google Search') Google Search
-                      option(value='Live Auctioneers') Live Auctioneers
-                      option(value='PSAcard.com') PSAcard.com
-                      option(value='AuctionReport.com') AuctionReport.com
-                      option(value='Referral') Referral
-                      option(value='RRAuction.com') RRAuction.com
-                      option(value='SMR Ad') SMR Ad
-                      option(value='Facebook') Facebook
-                      option(value='Twitter') Twitter
-                      option(value='Trade Magazine') Trade Magazine
-                  .form-group
-                    label(for='form-items') Item(s) information
-                    textarea(id='form-items' name='items' rows='10').form-control
-                  .form-group
-                    label(for='form-images') Upload images
-                    input(type='file' id='form-images' name='images' multiple).form-control-file
-                    small.form-text.text-muted File size must be below 10MB and be a jpg, jpeg, gif, png, tif, or pdf.
-
-                  button(type='submit').btn.btn-primary.btn-sm Submit
+              include t04-form

@@ -1,0 +1,14 @@
+.product-card.auction-item-card
+  if item.badge
+    .product-badge.bg-danger #{item.badge}
+  a(href=item.link).product-thumb
+    img(src=item.image alt=item.title)
+  .product-card-body
+    .product-category
+      a(href=item.catetoryUrl) #{item.category}
+    h3.product-title
+      a(href=item.link) #{item.title}
+    h4.product-price
+      if item.priceOld
+        del #{item.priceOld}
+      | #{item.price}
