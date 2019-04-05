@@ -1,0 +1,18 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T22 - Terms & Conditions'
+  - var menuTitle = 'Home'
+  - var pageTitle = 'T22 - Terms & Conditions'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T22 - Terms & Conditions'}]
+
+//- Page Content
+block content
+  .terms-page.padding-bottom-3x
+    .container
+      .row
+        .col-md-8.offset-md-2
+          include partials/terms-conditions
