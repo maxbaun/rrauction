@@ -11,4 +11,112 @@ append config
 
 //- Page Content
 block content
+
+  -
+    var specialists = [
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Specialist Name',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Specialist Name 2',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Specialist Name 3',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Specialist Name 4',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Specialist Name 5',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Specialist Name 6',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Specialist Name 7',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Specialist Name 8',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      }
+    ]
+  -
+    var experts = [
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Expert Name',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Expert Name 2',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Expert Name 3',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Expert Name 4',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Expert Name 5',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Expert Name 6',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Expert Name 7',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      },
+      {
+        image: 'https://source.unsplash.com/750x420',
+        title: 'Expert Name 8',
+        text: 'Id culpa labore culpa aliquip tempor eu laboris deserunt enim sint enim ut fugiat.'
+      }
+    ]
+
   .specialists-page.padding-bottom-3x
+    section.padding-bottom-1x
+      .container
+        .row
+          .col-12
+            h2.h3.text-center.mb-30 RR Auction Specialists
+            .row
+              each specialist in specialists
+                .col-3.mb-30
+                  include partials/specialist-card
+    section.padding-bottom-1x.padding-top-2x.bg-secondary
+        .container
+          .row
+            .col-12
+              h2.h3.text-center.mb-30 Services & 3rd Party Experts
+              .row
+                each specialist in experts
+                  .col-3.mb-30
+                    include partials/specialist-card
+
+
