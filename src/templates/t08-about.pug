@@ -7,8 +7,127 @@ append config
   - var pageTitle = 'T08 - About'
   - var menuTitle = 'Home'
   - var pageTitle = 'T08 - About'
+  - var isGallery = true
   - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T08 - About'}]
 
 //- Page Content
 block content
+  -
+    var timeline = [
+      {
+        year: '1976',
+        text: 'At age 19, RR CEO and founder, Bob Eaton, purchases his first collection of sports memorabilia. He begins selling at local Boston flea markets and buying more.'
+      },
+      {
+        year: '1980',
+        text: 'Eaton begins a mail-order catalog and types the first issue himself.'
+      },
+      {
+        year: '1990',
+        text: 'Then named R&R Enterprises, the operation moves to New Hampshire and opens a small retail space with frame shop.'
+      },
+      {
+        year: '1995',
+        text: 'R&R makes a historic leap when they transition from direct sales to auctions.'
+      },
+      {
+        year: '2002',
+        text: 'After 26 years in business, R&R launches online bidding at www.rrauction.com'
+      },
+      {
+        year: '2012',
+        text: 'Now officially known as RR Auction, they host their first LIVE auction featuring the worldwide press attention-grabbing Bonnie & Clyde guns.'
+      },
+      {
+        year: '2015',
+        text: 'RR breaches the million dollar single item mark when they achieve $1.625 million for Apollo 15 Commander Dave Scott’s lunar-surface worn watch.'
+      },
+      {
+        year: '2018',
+        text: 'RR goes back to their roots and enters the Sports cards and memorabilia market with their June 2019 Sports Auction, which was followed up in 2019 by an even more successful Sports sale, which included a world-record price for'
+      }
+    ]
+
+  -
+    var profiles = [
+      {name: 'Bob Eaton', title: 'CEO, Acquisitions', email: 'bob.eaton@rrauction.com', image: '/img/rr/profiles/bob_thumb.jpg', email: 'bob.eaton@rrauction.com'},
+      {name: 'Bobby Livingston', title: 'Executive Vice President, Public Relations', email: 'bobby.livingston@rrauction.com', image: '/img/rr/profiles/bl_thumb.jpg', email: 'bobby.livingston@rrauction.com'},
+      {name: 'Bill White', title: 'Lead Autograph Appraiser', email: 'bill.white@rrauction.com', image: '/img/rr/profiles/Bill-2019.jpg', email: 'bill.white@rrauction.com'},
+      {name: 'Bobby Eaton', title: 'VP, Business Development', email: 'bobby.eaton@rrauction.com', image: '/img/rr/profiles/bobby_thumb.jpg', email: 'bobby.eaton@rrauction.com'}
+    ]
+
   .about-page.padding-bottom-3x
+      section.padding-bottom-1x
+        .container
+          .row
+            .col-md-5
+              .position-relative
+                img(src='/img/rr/about/video-thumbnail.jpg' alt='Partner').d-block.m-auto.img-thumbnail
+                div(style='top: 50%; left: 50%; margin: -43px 0 0 -40px;').gallery-wrapper.text-center.position-absolute
+                  .gallery-item.video-btn.text-center
+                    a(href='#' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube.com/embed/tTv0-X75VKI" frameborder="0" allowfullscreen></iframe></div></div>')
+            .col-md-7.text-md-left.text-center
+              .mt-30.hidden-md-up
+              h2 Our Story
+              p
+                | Headquartered in Boston, RR Auction is a globally recognized and trusted source for rare manuscripts, autographs, and historic artifacts. Founded in 1976, RR has achieved countless record-setting prices in more than 560 successful sales, including: astronaut &nbsp;
+                a(href='https://www.rrauction.com/PastAuctionItem/3348050') Dave Scott’s Apollo 15 Lunar Surface Chronograph watch
+                | &nbsp;, which sold for $1.625 million;&nbsp;
+                a(href='https://www.rrauction.com/PastAuctionItem/3374537') President Kennedy’s reporter diary from 1945
+                | &nbsp;, for $718,750; author Mario Puzo’s extensive archive relating to his novel “The Godfather,” for $625,000; an original&nbsp;
+                a(href='https://www.rrauction.com/PastAuctionItem/3391617') Apple-1 computer
+                | &nbsp;, garnering $325,000; author Truman Capote’s hand-notated manuscript for&nbsp;
+                a(href='https://www.rrauction.com/Breakfast-at-Tiffanys-Hand-Notated-Manuscript') “Breakfast at Tiffany’s”
+                | &nbsp;, for over $300,000; a rare&nbsp;
+                a(href='https://www.rrauction.com/PastAuctionItem/3398945') NWA 11789 Lunar Meteorite
+                | &nbsp;for $612,500; and a pair of&nbsp;
+                a(href='https://www.rrauction.com/Bonnie-Parker-Colt-Detective-Special-38-Revolver') Bonnie
+                | &nbsp;and&nbsp;
+                a(href='https://www.rrauction.com/Clyde-Barrow-1911-Army-Colt-45-Pistol') Clyde’s
+                | &nbsp;guns for over $500,000.
+              p Internationally known and frequently featured in all media outlets, RR Auction prides itself on selling historic material, thoroughly examined by in-house experts and third-party authenticators, to ensure the highest standards of authenticity. With more than 40 years of industry experience, RR Auction continues to grow and expand into new categories, achieving record prices for clients around the world.
+      hr
+      section.padding-bottom-1x.padding-top-1x
+        .container
+          .row
+            .col-12
+              h2.h3.text-center.mb-30 Remarkable Results
+              each item in timeline
+                .row
+                  .col-1
+                    p.mb-0
+                      strong #{item.year}
+                  .col-11
+                    p #{item.text}
+      section.padding-bottom-2x.padding-top-2x.bg-secondary
+        .container
+          .row
+            .col-12
+              h2.h3.text-center.mb-30 As Seen On
+              .owl-carousel(data-owl-carousel='{ "nav": false, "dots": false, "loop": true, "autoplay": true, "autoplayTimeout": 4000, "responsive": {"0":{"items":2}, "470":{"items":3},"630":{"items":4},"991":{"items":5},"1200":{"items":6}} }')
+                img(src='/img/brands/01.png', alt='IBM').d-block.w-110.opacity-75.m-auto
+                img(src='/img/brands/02.png', alt='Sony').d-block.w-110.opacity-75.m-auto
+                img(src='/img/brands/03.png', alt='HP').d-block.w-110.opacity-75.m-auto
+                img(src='/img/brands/04.png', alt='Canon').d-block.w-110.opacity-75.m-auto
+                img(src='/img/brands/05.png', alt='Bosh').d-block.w-110.opacity-75.m-auto
+                img(src='/img/brands/06.png', alt='Dell').d-block.w-110.opacity-75.m-auto
+                img(src='/img/brands/07.png', alt='Samsung').d-block.w-110.opacity-75.m-auto
+
+      section.padding-bottom-1x.padding-top-1x
+        .container
+          .row
+            .col-12
+              h2.h3.text-center.mb-30 Meet The Team
+              .row
+                each profile in profiles
+                  .col-sm-6.col-md-3.text-center.mb-4
+                    include partials/profile
+              .text-center
+                a(href='/t09-team.html').btn.btn-outline-primary.mx-auto View All
+      hr
+      section.padding-top-1x
+        .container
+          .row
+            .col-12
+              h2.h3.text-center.mb-30 Client Testimonials
+              include partials/testimonial-carousel
