@@ -6762,22 +6762,40 @@ video {
   color: #7f2e2b;
 }
 
-.index-page .link {
+.index-page .template-item {
   padding-left: 40px;
   position: relative;
 }
 
-.index-page .link::before {
+.index-page .template-item::before {
+  background-color: transparent;
   content: ' ';
-  height: 35px;
+  height: 100%;
   width: 35px;
   position: absolute;
   left: 0;
   top: 0;
+  opacity: 1;
 }
 
-.index-page .link[data-status='todo']:before {
-  background-color: black;
+.index-page .template-item[data-status='rrtodo']:before {
+  background-color: gray;
+}
+
+.index-page .template-item[data-status='submitted']:before {
+  background-color: orange;
+}
+
+.index-page .template-item[data-status='pending']:before {
+  background-color: yellow;
+}
+
+.index-page .template-item[data-status='approved']:before {
+  background-color: green;
+}
+
+.index-page .template-item[data-status='progress']:before {
+  background-color: lightblue;
 }
 
 @media (min-width: 768px) {
