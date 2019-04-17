@@ -67,6 +67,7 @@
     .input-group {
       width: 100%;
       .form-control {
+        border-color: darken($border-color, 3%);
         border: {
           top-left-radius: 0;
           bottom-left-radius: 0;
