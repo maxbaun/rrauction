@@ -2,4 +2,16 @@
   img(src=specialist.image alt=specialist.title).card-img-top
   .card-body
     h4.card-title #{specialist.title}
+    if specialist.categoryUrl
+      a(href=specialist.categoryUrl).mb-2.d-block #{specialist.categoryTitle}
     p.card-text #{specialist.text}
+    if specialist.phone || specialist.email
+      p.card-text
+        if specialist.phone
+          div.text-nowrap
+            i.icon-phone.mr-1
+            | #{specialist.phone}
+        if specialist.email
+          div.text-nowrap
+            i.icon-mail.mr-1
+            | #{specialist.email}
