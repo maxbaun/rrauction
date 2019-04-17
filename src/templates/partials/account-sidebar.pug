@@ -1,0 +1,50 @@
+-
+  var items = [
+    {
+      icon: 'icon-user',
+      text: 'My Profile',
+      url: '/t26-user-profile.html'
+    },
+    {
+      icon: 'icon-eye',
+      text: 'My Watchlist',
+      url: '/t27-user-watchlist.html'
+    },
+    {
+      icon: 'icon-dollar-sign',
+      text: 'My Bids',
+      url: '/t28-user-bids.html'
+    },
+    {
+      icon: 'icon-package',
+      text: 'My Consignments',
+      url: '/t29-user-consignments.html'
+    },
+    {
+      icon: 'icon-shopping-bag',
+      text: 'My Wantlist',
+      url: '/t30-user-wantlist.html'
+    },
+    {
+      icon: 'icon-bell',
+      text: 'My Notifications',
+      url: '/t32-user-notifications.html'
+    },
+    {
+      icon: 'icon-paperclip',
+      text: 'My Invoices',
+      url: '/t33-user-invoices.html'
+    }
+  ]
+
+aside.account-sidebar
+  .user-info-wrapper
+    .user-info
+      .user-data
+        h4.h5 RR Auction Account ID #6666
+        span Joined February 06, 2017
+  nav.list-group
+    each item, index in items
+      a(href=item.url class= index === activeItem ? "list-group-item active" : "list-group-item")
+        i(class=item.icon)
+        | #{item.text}

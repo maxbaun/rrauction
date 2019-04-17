@@ -925,7 +925,7 @@ jQuery(document).ready(function($) {
 
         input.click(function (e) {
           const value = $(e.target).data('value')
-          const show = Boolean(value)
+          const show = Boolean(value) || !e.target.checked
 
           if (show) {
             $target.show()

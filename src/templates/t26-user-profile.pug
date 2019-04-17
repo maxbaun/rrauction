@@ -11,4 +11,135 @@ append config
 
 //- Page Content
 block content
+  - var activeItem = 0
+
   .user-profile-page.padding-bottom-3x
+    .container
+      .row
+        .col-md-4
+          include partials/account-sidebar
+        .col-md-8
+          .padding-top-2x.mt-2.hidden-lg-up
+          h5 Profile
+          hr.padding-bottom-1x
+          form.row
+            .col-md-6
+              .form-group
+                label(for='account-fn') First Name
+                input(type='text' id='account-fn' value='Daniel' required).form-control
+            .col-md-6
+              .form-group
+                label(for='account-ln') Last Name
+                input(type='text' id='account-ln' value='Adams' required).form-control
+            .col-md-6
+              .form-group
+                label(for='account-email') E-mail Address
+                input(type='email' id='account-email' value='daniel.adams@mail.com' disabled).form-control
+            .col-md-6
+              .form-group
+                label(for='account-phone') Phone Number
+                input(type='text' id='account-phone' value='+7 (805) 348 95 72' required).form-control
+            .col-md-6
+              .form-group
+                label(for='account-pass') New Password
+                input(type='password' id='account-pass').form-control
+            .col-md-6
+              .form-group
+                label(for='account-confirm-pass') Confirm Password
+                input(type='password' id='account-confirm-pass').form-control
+            .col-12
+              hr.mt-2.mb-3
+              .d-flex.flex-wrap.justify-content-between.align-items-center
+                .custom-control.custom-checkbox.d-block
+                  input(type='checkbox' id='subscribe_me' checked).custom-control-input
+                  label(for='subscribe_me').custom-control-label Subscribe me to Newsletter
+                button(type='button' class='btn btn-primary margin-right-none' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='icon-check-circle' data-toast-title='Success!' data-toast-message='Your profile updated successfuly.') Update Profile
+
+          .padding-top-2x.mt-2
+          h5 Contact Address
+          hr.padding-bottom-1x
+          form.row
+            .col-md-6
+              .form-group
+                label(for='account-company') Company
+                input(type='text' id='account-company' value='Bets Company Ltd.').form-control
+            .col-md-6
+              .form-group
+                label(for='account-country') Country
+                select(id='account-country').form-control
+                  option Choose country
+                  option Australia
+                  option Canada
+                  option France
+                  option Germany
+                  option Switzerland
+                  option(selected) United States
+            .col-md-6
+              .form-group
+                label(for='account-city') City
+                select(id='account-city').form-control
+                  option Choose city
+                  option Amsterdam
+                  option Berlin
+                  option Geneve
+                  option(selected) New York
+                  option Paris
+            .col-md-6
+              .form-group
+                label(for='account-zip') ZIP Code
+                input(type='text' id='account-zip' required).form-control
+            .col-md-6
+              .form-group
+                label(for='account-address1') Address 1
+                input(type='text' id='account-address1' required).form-control
+            .col-md-6
+              .form-group
+                label(for='account-address2') Address 2
+                input(type='text' id='account-address2').form-control
+            .col-12.padding-top-1x
+              h5 Shipping Address
+              hr.padding-bottom-1x
+              .custom-control.custom-checkbox.d-block.toggle-element(data-target="#shipping-address-wrap")
+                input(type='checkbox' id='same_address' checked).custom-control-input
+                label(for='same_address').custom-control-label Same as Contact Address
+              .row(id='shipping-address-wrap' style='display: none')
+                .col-md-6
+                  .form-group
+                    label(for='shipping-company') Shipping Company
+                    input(type='text' id='shipping-company').form-control
+                .col-md-6
+                  .form-group
+                    label(for='shipping-country') Shipping Country
+                    select(id='shipping-country').form-control
+                      option Choose country
+                      option Australia
+                      option Canada
+                      option France
+                      option Germany
+                      option Switzerland
+                      option(selected) United States
+                .col-md-6
+                  .form-group
+                    label(for='shipping-city') Shipping City
+                    select(id='shipping-city').form-control
+                      option Choose city
+                      option Amsterdam
+                      option Berlin
+                      option Geneve
+                      option(selected) New York
+                      option Paris
+                .col-md-6
+                  .form-group
+                    label(for='shipping-zip') Shipping ZIP Code
+                    input(type='text' id='shipping-zip' required).form-control
+                .col-md-6
+                  .form-group
+                    label(for='shipping-address1') Shipping Address 1
+                    input(type='text' id='shipping-address1' required).form-control
+                .col-md-6
+                  .form-group
+                    label(for='shipping-address2') Shipping Address 2
+                    input(type='text' id='shipping-address2').form-control
+              hr.margin-top-1x.margin-bottom-1x
+              .text-right
+                button(type='button' class='btn btn-primary margin-bottom-none' data-toast data-toast-position='topRight' data-toast-type='success' data-toast-icon='icon-check-circle' data-toast-title='Success!' data-toast-message='Your address updated successfuly.') Update Address
