@@ -102,11 +102,11 @@ block content
   .auction-department-page.padding-bottom-3x
     .container
       .row
-        .col-lg-4.col-md-4
+        .col-lg-8.col-md-8.order-md-1
+          include partials/t11-content
+        .col-lg-4.col-md-4.order-md-0
           .sidebar
             .mb-3
               include partials/specialist-card
+            hr.mb-3
             include partials/t04-form
-
-        .col-lg-8.col-md-8
-          include partials/t11-content
