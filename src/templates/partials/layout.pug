@@ -13,18 +13,12 @@ html(lang="en")
 
     include modal-terms
     include modal-wantlist
-
-    //- bootstrap-toast.pug template
-    if isBSToast
-      include bootstrap-toast
+    include modal-order
+    include bootstrap-toast
 
     //- modal-ticket.pug template
     if isModalTicket
       include modal-ticket
-
-    //- modal-order.pug template
-    if isModalOrder
-      include modal-order
 
     //- modal-review.pug template
     if isModalReview
