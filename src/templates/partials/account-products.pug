@@ -1,0 +1,104 @@
+.account-products
+  ul(class='nav nav-tabs nav-justified')
+    li.nav-item: a(href='/t27-user-watchlist.html' class=activeLink === 0 ? 'nav-link active' : 'nav-link') My Watchlist
+    li.nav-item: a(href='/t28-user-bids.html' class=activeLink === 1 ? 'nav-link active' : 'nav-link' ) My Bids
+    li.nav-item: a(href='/t29-user-consignments.html' class=activeLink === 2 ? 'nav-link active' : 'nav-link') My Consignments
+
+  .table-responsive.shopping-cart
+    table.table
+      thead
+        tr
+          th Product Name
+          th.text-center Quantity
+          th.text-center Subtotal
+          th.text-center Discount
+          th.text-center
+            a(href='#').btn.btn-sm.btn-outline-danger Clear List
+      tbody
+        tr
+          td
+            .product-item
+              a(href='shop-single.html').product-thumb
+                img(src='/img/rr/items/3409878_1.jpg', alt='Product')
+              .product-info
+                h4.product-title
+                  a(href='shop-single.html') George Washington
+                span
+                  em Type:
+                  |  Book
+                span
+                  em Color:
+                  |  White
+          td.text-center
+            .count-input
+              select.form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+          td.text-center.text-lg $910.00
+          td.text-center.text-lg $35.00
+          td.text-center
+            a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+              i.icon-x
+        tr
+          td
+            .product-item
+              a(href='shop-single.html').product-thumb
+                img(src='/img/rr/items/3410295_1.jpg', alt='Product')
+              .product-info
+                h4.product-title
+                  a(href='shop-single.html') Thomas Jefferson
+                span
+                  em Type:
+                  |  Picture
+                span
+                  em Color:
+                  |  Space Gray
+          td.text-center
+            .count-input
+              select.form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+          td.text-center.text-lg $1,450.00
+          td.text-center &mdash;
+          td.text-center
+            a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+              i.icon-x
+        tr
+          td
+            .product-item
+              a(href='shop-single.html').product-thumb
+                img(src='/img/rr/items/3409343_1.jpg', alt='Product')
+              .product-info
+                h4.product-title
+                  a(href='shop-single.html') Abraham Lincoln
+                span
+                  em Type:
+                  |  Transcript
+                span
+                  em Color:
+                  |  White
+          td.text-center
+            .count-input
+              select.form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+          td.text-center.text-lg $188.50
+          td.text-center &mdash;
+          td.text-center
+            a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+              i.icon-x
+  .shopping-cart-footer
+    .column
+
+    .column.text-lg
+      span.text-muted Subtotal:&nbsp;
+      span.text-gray-dark $2,548.50

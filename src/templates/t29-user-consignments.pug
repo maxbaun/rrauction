@@ -7,8 +7,13 @@ append config
   - var pageTitle = 'T29 - User Consignments'
   - var menuTitle = 'Account'
   - var pageTitle = 'T29 - User Consignments'
-  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/account-orders.html'}, {'title': 'T29 - User Consignments'}]
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/t26-user-profile.html'}, {'title': 'T29 - User Consignments'}]
 
 //- Page Content
 block content
+  - var activeLink = 2
   .user-consignments-page.padding-bottom-3x
+    .container
+      .row
+        .col-12
+          include partials/account-products

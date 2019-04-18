@@ -155,6 +155,36 @@
         </div>
       </div>
     </div>
+    <!-- Open Ticket Modal-->
+    <form class="modal fade" method="post" id="modalWantlist" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Create New Wantlist</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="wantlist-name">Search Name</label>
+              <input class="form-control" type="text" id="wantlist-name" name="wantlist-name" required>
+            </div>
+            <div class="form-group">
+              <label for="wantlist-keywords">Keywords</label>
+              <input class="form-control" type="text" id="wantlist-keywords" name="wantlist-keywords" required>
+            </div>
+            <div class="form-group">
+              <div class="custom-control custom-checkbox d-block">
+                <input class="custom-control-input" type="checkbox" id="wantlist-email" name="wantlist-email" checked>
+                <label class="custom-control-label" for="wantlist-email">Email Me</label>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" type="submit">Submit Wantlist</button>
+          </div>
+        </div>
+      </div>
+    </form>
     <!-- Header-->
     <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
     <header class="site-header navbar-sticky">

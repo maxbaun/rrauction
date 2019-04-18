@@ -1,0 +1,11 @@
+.account-products {
+  .nav-tabs {
+    .nav-link {
+      transition-property: color, background-color;
+      &.active {
+        background-color: $brand-primary;
+        color: $white-color;
+      }
+    }
+  }
+}

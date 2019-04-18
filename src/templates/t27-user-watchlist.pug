@@ -7,15 +7,14 @@ append config
   - var pageTitle = 'T27 - User Watchlist'
   - var menuTitle = 'Account'
   - var pageTitle = 'T27 - User Watchlist'
-  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/account-orders.html'}, {'title': 'T27 - User Watchlist'}]
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/t26-user-profile.html'}, {'title': 'T27 - User Watchlist'}]
 
 //- Page Content
 block content
-  - var activeItem = 1
+  - var activeLink = 0
 
   .user-watchlist-page.padding-bottom-3x
     .container
       .row
-        .col-md-4
-          include partials/account-sidebar
-        .col-md-8
+        .col-12
+          include partials/account-products

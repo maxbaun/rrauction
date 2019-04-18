@@ -5962,6 +5962,15 @@ video {
   padding: 0;
 }
 
+.account-products .nav-tabs .nav-link {
+  transition-property: color, background-color;
+}
+
+.account-products .nav-tabs .nav-link.active {
+  background-color: #7f2e2b;
+  color: #ffffff;
+}
+
 .fw-section,
 .fh-section {
   position: relative;

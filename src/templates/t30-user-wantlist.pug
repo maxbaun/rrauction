@@ -7,10 +7,40 @@ append config
   - var pageTitle = 'T30 - User Wantlist'
   - var menuTitle = 'Account'
   - var pageTitle = 'T30 - User Wantlist'
-  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/account-orders.html'}, {'title': 'T30 - User Wantlist'}]
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/t26-user-profile.html'}, {'title': 'T30 - User Wantlist'}]
 
 //- Page Content
 block content
+  -
+    var searchItems = [
+      {
+        name: 'Search Name 1',
+        keywords: 'keyword 1, keyword 2, keyword 3',
+        resultText: 'No Matching Results',
+        id: 1
+      },
+      {
+        name: 'Search Name 2',
+        keywords: 'keyword 1, keyword 2, keyword 3',
+        resultText: '2 Matching Results',
+        resultUrl: '#',
+        id: 2
+      },
+      {
+        name: 'Search Name 3',
+        keywords: 'keyword 1, keyword 2, keyword 3',
+        resultText: '9 Matching Results',
+        resultUrl: '#',
+        id: 3
+      },
+      {
+        name: 'Search Name 4',
+        keywords: 'keyword 1, keyword 2, keyword 3',
+        resultText: 'No Matching Results',
+        id: 4
+      }
+    ]
+
   - var activeItem = 4
 
   .user-wantlist-page.padding-bottom-3x
@@ -19,3 +49,37 @@ block content
         .col-md-4
           include partials/account-sidebar
         .col-md-8
+          .text-right.mb-3
+            button(class='btn btn-primary margin-bottom-none' data-toggle='modal' data-target='#modalWantlist') Create New Wantlist
+
+          .table-responsive
+            table.table.table-striped
+              thead
+                tr
+                  th Search Name
+                  th Keywords
+                  th Search Results
+                  th Email Me
+                  th Delete
+                  th Edit
+              tbody
+                each item in searchItems
+                  tr
+                    td #{item.name}
+                    td #{item.keywords}
+                    td
+                      if item.resultUrl
+                        a(href=item.resultUrl) #{item.resultText}
+                      else
+                        | #{item.resultText}
+                    td
+                      form
+                        .custom-control.custom-checkbox.d-block
+                          input(type='checkbox' id='email-me' checked).custom-control-input
+                          label(for='email-me').custom-control-label Email Me
+                        input(type='hidden' value=item.id)
+                    td
+                      a(href='#').btn.btn-warning.btn-sm Edit
+                    td
+                      a(href='#').btn.btn-danger.btn-sm Delete
+
