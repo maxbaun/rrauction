@@ -173,6 +173,9 @@ a.alert { text-decoration: none; }
     bottom: 30px;
     left: 30px;
   }
+  &:not(.show) {
+    display: none;
+  }
   @media (max-width: $screen-xs) {
     &.top-right,
     &.top-left,

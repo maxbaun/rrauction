@@ -4409,6 +4409,10 @@ a.alert {
   left: 30px;
 }
 
+.toast.position-fixed:not(.show) {
+  display: none;
+}
+
 @media (max-width: 360px) {
   .toast.position-fixed.top-right, .toast.position-fixed.top-left, .toast.position-fixed.bottom-right, .toast.position-fixed.bottom-left {
     right: auto;
