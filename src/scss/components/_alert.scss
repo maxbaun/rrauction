@@ -144,6 +144,11 @@ a.alert { text-decoration: none; }
     }
   }
 }
+.toast {
+  &:not(.show) {
+    display: none;
+  }
+}
 .toast.position-fixed {
   min-width: 300px;
   z-index: 9900;
