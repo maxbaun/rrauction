@@ -7,16 +7,21 @@ form(method='post' id='modalWantlist' tabindex='-1').modal.fade
         button(type='button' class='close' data-dismiss='modal' aria-label='Close')
           span(aria-hidden='true') &times;
       .modal-body
+        p Culpa ullamco exercitation magna velit et minim. Amet nisi deserunt consequat cupidatat anim est occaecat sit ex duis proident cupidatat culpa. Proident sit quis eiusmod incididunt ad. Anim amet excepteur exercitation occaecat dolore enim pariatur quis cillum in deserunt.
         .form-group
-          label(for='wantlist-name') Search Name
-          input(type='text' id='wantlist-name' name='wantlist-name' required).form-control
-        .form-group
-          label(for="wantlist-keywords") Keywords
+          label(for="wantlist-keywords") Search Keywords
           input(type="text" id='wantlist-keywords' name='wantlist-keywords' required).form-control
+        .form-group
+          .custom-control.custom-radio
+            input(type='radio' id='search-lot-titles' name='search' value='titles' checked).custom-control-input
+            label(for='search-lot-titles').custom-control-label Search Lot Titles
+          .custom-control.custom-radio
+            input(type='radio' id='search-lot-titles-descriptions' name='search' value='titles-descriptions').custom-control-input
+            label(for='search-lot-titles-descriptions').custom-control-label Search Lot Titles & Description
         .form-group
           .custom-control.custom-checkbox.d-block
             input(type='checkbox' id='wantlist-email' name='wantlist-email' checked).custom-control-input
-            label(for='wantlist-email').custom-control-label Email Me
+            label(for='wantlist-email').custom-control-label Notify me by email with matched Search Results
 
       .modal-footer
         button(type='submit' class='btn btn-primary') Submit Wantlist

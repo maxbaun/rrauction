@@ -56,16 +56,14 @@ block content
             table.table.table-striped
               thead
                 tr
-                  th Search Name
-                  th Keywords
+                  th Search Keywords
                   th Search Results
                   th Email Me
-                  th Delete
                   th Edit
+                  th Delete
               tbody
                 each item in searchItems
                   tr
-                    td #{item.name}
                     td #{item.keywords}
                     td
                       if item.resultUrl
@@ -76,10 +74,12 @@ block content
                       form
                         .custom-control.custom-checkbox.d-block
                           input(type='checkbox' id='email-me' checked).custom-control-input
-                          label(for='email-me').custom-control-label Email Me
+                          label(for='email-me').custom-control-label
                         input(type='hidden' value=item.id)
                     td
-                      a(href='#').btn.btn-warning.btn-sm Edit
+                      a(href='#').btn.btn-warning.btn-sm.m-0
+                        i.icon-edit
                     td
-                      a(href='#').btn.btn-danger.btn-sm Delete
+                      a(href='#').btn.btn-danger.btn-sm.m-0
+                        i.icon-x
 

@@ -162,18 +162,25 @@
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
+            <p>Culpa ullamco exercitation magna velit et minim. Amet nisi deserunt consequat cupidatat anim est occaecat sit ex duis proident cupidatat culpa. Proident sit quis eiusmod incididunt ad. Anim amet excepteur exercitation occaecat dolore enim pariatur quis cillum in deserunt.</p>
             <div class="form-group">
-              <label for="wantlist-name">Search Name</label>
-              <input class="form-control" type="text" id="wantlist-name" name="wantlist-name" required>
+              <label for="wantlist-keywords">Search Keywords</label>
+              <input class="form-control" type="text" id="wantlist-keywords" name="wantlist-keywords" required>
             </div>
             <div class="form-group">
-              <label for="wantlist-keywords">Keywords</label>
-              <input class="form-control" type="text" id="wantlist-keywords" name="wantlist-keywords" required>
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" id="search-lot-titles" name="search" value="titles" checked>
+                <label class="custom-control-label" for="search-lot-titles">Search Lot Titles</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" id="search-lot-titles-descriptions" name="search" value="titles-descriptions">
+                <label class="custom-control-label" for="search-lot-titles-descriptions">Search Lot Titles & Description</label>
+              </div>
             </div>
             <div class="form-group">
               <div class="custom-control custom-checkbox d-block">
                 <input class="custom-control-input" type="checkbox" id="wantlist-email" name="wantlist-email" checked>
-                <label class="custom-control-label" for="wantlist-email">Email Me</label>
+                <label class="custom-control-label" for="wantlist-email">Notify me by email with matched Search Results</label>
               </div>
             </div>
           </div>
@@ -853,17 +860,15 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Search Name</th>
-                    <th>Keywords</th>
+                    <th>Search Keywords</th>
                     <th>Search Results</th>
                     <th>Email Me</th>
-                    <th>Delete</th>
                     <th>Edit</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Search Name 1</td>
                     <td>keyword 1, keyword 2, keyword 3</td>
                     <td>No Matching Results
                     </td>
@@ -871,16 +876,15 @@
                       <form>
                         <div class="custom-control custom-checkbox d-block">
                           <input class="custom-control-input" type="checkbox" id="email-me" checked>
-                          <label class="custom-control-label" for="email-me">Email Me</label>
+                          <label class="custom-control-label" for="email-me"></label>
                         </div>
                         <input type="hidden" value="1">
                       </form>
                     </td>
-                    <td><a class="btn btn-warning btn-sm" href="#">Edit</a></td>
-                    <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
+                    <td><a class="btn btn-warning btn-sm m-0" href="#"><i class="icon-edit"></i></a></td>
+                    <td><a class="btn btn-danger btn-sm m-0" href="#"><i class="icon-x"></i></a></td>
                   </tr>
                   <tr>
-                    <td>Search Name 2</td>
                     <td>keyword 1, keyword 2, keyword 3</td>
                     <td><a href="#">2 Matching Results</a>
                     </td>
@@ -888,16 +892,15 @@
                       <form>
                         <div class="custom-control custom-checkbox d-block">
                           <input class="custom-control-input" type="checkbox" id="email-me" checked>
-                          <label class="custom-control-label" for="email-me">Email Me</label>
+                          <label class="custom-control-label" for="email-me"></label>
                         </div>
                         <input type="hidden" value="2">
                       </form>
                     </td>
-                    <td><a class="btn btn-warning btn-sm" href="#">Edit</a></td>
-                    <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
+                    <td><a class="btn btn-warning btn-sm m-0" href="#"><i class="icon-edit"></i></a></td>
+                    <td><a class="btn btn-danger btn-sm m-0" href="#"><i class="icon-x"></i></a></td>
                   </tr>
                   <tr>
-                    <td>Search Name 3</td>
                     <td>keyword 1, keyword 2, keyword 3</td>
                     <td><a href="#">9 Matching Results</a>
                     </td>
@@ -905,16 +908,15 @@
                       <form>
                         <div class="custom-control custom-checkbox d-block">
                           <input class="custom-control-input" type="checkbox" id="email-me" checked>
-                          <label class="custom-control-label" for="email-me">Email Me</label>
+                          <label class="custom-control-label" for="email-me"></label>
                         </div>
                         <input type="hidden" value="3">
                       </form>
                     </td>
-                    <td><a class="btn btn-warning btn-sm" href="#">Edit</a></td>
-                    <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
+                    <td><a class="btn btn-warning btn-sm m-0" href="#"><i class="icon-edit"></i></a></td>
+                    <td><a class="btn btn-danger btn-sm m-0" href="#"><i class="icon-x"></i></a></td>
                   </tr>
                   <tr>
-                    <td>Search Name 4</td>
                     <td>keyword 1, keyword 2, keyword 3</td>
                     <td>No Matching Results
                     </td>
@@ -922,13 +924,13 @@
                       <form>
                         <div class="custom-control custom-checkbox d-block">
                           <input class="custom-control-input" type="checkbox" id="email-me" checked>
-                          <label class="custom-control-label" for="email-me">Email Me</label>
+                          <label class="custom-control-label" for="email-me"></label>
                         </div>
                         <input type="hidden" value="4">
                       </form>
                     </td>
-                    <td><a class="btn btn-warning btn-sm" href="#">Edit</a></td>
-                    <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
+                    <td><a class="btn btn-warning btn-sm m-0" href="#"><i class="icon-edit"></i></a></td>
+                    <td><a class="btn btn-danger btn-sm m-0" href="#"><i class="icon-x"></i></a></td>
                   </tr>
                 </tbody>
               </table>

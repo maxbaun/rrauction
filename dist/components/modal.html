@@ -283,18 +283,25 @@
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
+            <p>Culpa ullamco exercitation magna velit et minim. Amet nisi deserunt consequat cupidatat anim est occaecat sit ex duis proident cupidatat culpa. Proident sit quis eiusmod incididunt ad. Anim amet excepteur exercitation occaecat dolore enim pariatur quis cillum in deserunt.</p>
             <div class="form-group">
-              <label for="wantlist-name">Search Name</label>
-              <input class="form-control" type="text" id="wantlist-name" name="wantlist-name" required>
+              <label for="wantlist-keywords">Search Keywords</label>
+              <input class="form-control" type="text" id="wantlist-keywords" name="wantlist-keywords" required>
             </div>
             <div class="form-group">
-              <label for="wantlist-keywords">Keywords</label>
-              <input class="form-control" type="text" id="wantlist-keywords" name="wantlist-keywords" required>
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" id="search-lot-titles" name="search" value="titles" checked>
+                <label class="custom-control-label" for="search-lot-titles">Search Lot Titles</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" id="search-lot-titles-descriptions" name="search" value="titles-descriptions">
+                <label class="custom-control-label" for="search-lot-titles-descriptions">Search Lot Titles & Description</label>
+              </div>
             </div>
             <div class="form-group">
               <div class="custom-control custom-checkbox d-block">
                 <input class="custom-control-input" type="checkbox" id="wantlist-email" name="wantlist-email" checked>
-                <label class="custom-control-label" for="wantlist-email">Email Me</label>
+                <label class="custom-control-label" for="wantlist-email">Notify me by email with matched Search Results</label>
               </div>
             </div>
           </div>
