@@ -11,4 +11,59 @@ append config
 
 //- Page Content
 block content
+  - var activeItem = 5
   .user-notifications-page.padding-bottom-3x
+    .container
+      .row
+        .col-md-4
+          include partials/account-sidebar
+        .col-md-8
+          form(method='post')
+            h2 Auction Annoucements and Interests
+            .form-group
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='general-annoucements' name='general-annoucements').custom-control-input
+                label(for='general-annoucements').custom-control-label General Annoucements & Special Promotions
+              small.form-text.text-muted On occasion, you will receive emails regarding special promotions and discounts as well as product or market updates.
+            .form-group
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='sale-item-annoucements' name='sale-item-annoucements').custom-control-input
+                label(for='sale-item-annoucements').custom-control-label Sale / Item Annoucements
+              small.form-text.text-muted Send daily, our Sale / Item Annoucements let you know about new sales that are starting and sales that are ending soon.
+            .form-group
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='saved-search-alerts' name='saved-search-alerts').custom-control-input
+                label(for='saved-search-alerts').custom-control-label Saved Search Alerts
+              small.form-text.text-muted Saved Search Alert emails let you know when we find new items the match
+                a(href="#") your saved searches
+            hr.mt-3.mb-3
+            h2 Auction Notifications
+            .form-group
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='outbid-notifications' name='outbid-notifications').custom-control-input
+                label(for='outbid-notifications').custom-control-label Outbid Notifications
+              small.form-text.text-muted Helper text
+            .form-group
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='daily-bid-status' name='daily-bid-status').custom-control-input
+                label(for='daily-bid-status').custom-control-label Daily Bid Status
+              small.form-text.text-muted Helper text
+            hr.mt-3.mb-3
+            h2 Text Message Alerts
+            .form-group
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='text-outbid-notices' name='text-outbid-notices').custom-control-input
+                label(for='text-outbid-notices').custom-control-label Outbid Notices
+              small.form-text.text-muted Helper text
+            .form-group
+              .custom-control.custom-checkbox
+                input(type='checkbox' id='text-auction-reminders' name='text-auction-reminders').custom-control-input
+                label(for='text-auction-reminders').custom-control-label Auction Reminders
+              small.form-text.text-muted Helper text
+
+            .form-group
+              button(type='submit').btn.btn-primary Update Preferences
+              a(href='#').btn.btn-outline-primary Unsubscribe All
+              small.form-text.text-muted By clicking unsubscribe all, you will no longer receive General Annoucements / Special Promotions and our Sale / Item Annoucements. You will continue to receive big and order-related emails.
+
+

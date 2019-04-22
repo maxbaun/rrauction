@@ -954,4 +954,22 @@ jQuery(document).ready(function($) {
     })
   }
 
+  var unsubscribes = $('.unsubscribe-all')
+
+  if (unsubscribes.length) {
+    unsubscribes.each(function () {
+      var $self = $(this)
+
+      $self.click(function () {
+        var checks = $('input[type="checkbox"]')
+
+        checks.each(function () {
+          var check = $(this)
+
+          check.prop('checked', false)
+        })
+      })
+    })
+  }
+
 });/*Document Ready End*/
