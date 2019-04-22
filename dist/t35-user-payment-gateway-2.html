@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Checkout
+    <title>T35 - User Payment Gateway (Step 2)
     </title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Unishop - Universal E-Commerce Template">
@@ -19,8 +19,6 @@
     <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
     <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
     <link rel="stylesheet" media="screen" href="css/vendor.min.css">
-    <!-- Interactive Credit Card-->
-    <link rel="stylesheet" media="screen" href="css/card.min.css">
     <!-- Main Template Styles-->
     <link id="mainStyles" rel="stylesheet" media="screen" href="css/styles.min.css">
     <!-- Modernizr-->
@@ -404,8 +402,8 @@
                   <li class="active has-children"><span><a href="checkout-address.html">Checkout</a><span class="sub-menu-toggle"></span></span>
                     <ul class="slideable-submenu">
                         <li><a href="checkout-address.html">Address</a></li>
-                        <li><a href="checkout-shipping.html">Shipping</a></li>
-                        <li class="active"><a href="checkout-payment.html">Payment</a></li>
+                        <li class="active"><a href="checkout-shipping.html">Shipping</a></li>
+                        <li><a href="checkout-payment.html">Payment</a></li>
                         <li><a href="checkout-review.html">Review</a></li>
                         <li><a href="checkout-complete.html">Complete</a></li>
                     </ul>
@@ -561,8 +559,8 @@
                 <li class="active has-children"><a href="checkout-address.html">Checkout</a>
                   <ul class="sub-menu">
                       <li><a href="checkout-address.html">Address</a></li>
-                      <li><a href="checkout-shipping.html">Shipping</a></li>
-                      <li class="active"><a href="checkout-payment.html">Payment</a></li>
+                      <li class="active"><a href="checkout-shipping.html">Shipping</a></li>
+                      <li><a href="checkout-payment.html">Payment</a></li>
                       <li><a href="checkout-review.html">Review</a></li>
                       <li><a href="checkout-complete.html">Complete</a></li>
                   </ul>
@@ -760,130 +758,152 @@
     <div class="page-title">
       <div class="container">
         <div class="column">
-          <h1>Checkout</h1>
+          <h1>T35 - User Payment Gateway (Step 2)</h1>
         </div>
         <div class="column">
           <ul class="breadcrumbs">
             <li><a href="index.html">Home</a>
             </li>
             <li class="separator">&nbsp;</li>
-            <li>Checkout</li>
+            <li>T35 - User Payment Gateway (Step 2)</li>
           </ul>
         </div>
       </div>
     </div>
     <!-- Page Content-->
-    <div class="container padding-bottom-3x mb-2">
-      <div class="row">
-        <!-- Checkout Adress-->
-        <div class="col-xl-9 col-lg-8">
-          <div class="steps flex-sm-nowrap mb-5"><a class="step" href="checkout-address.html">
-              <h4 class="step-title"><i class="icon-check-circle"></i>1. Address</h4></a><a class="step" href="checkout-shipping.html">
-              <h4 class="step-title"><i class="icon-check-circle"></i>2. Shipping</h4></a><a class="step active" href="checkout-payment.html">
-              <h4 class="step-title">3. Payment</h4></a><a class="step" href="checkout-review.html">
-              <h4 class="step-title">4. Review</h4></a></div>
-          <h4>Choose Payment Method</h4>
-          <hr class="padding-bottom-1x">
-          <div class="accordion" id="accordion" role="tablist">
-            <div class="card">
-              <div class="card-header" role="tab">
-                <h6><a href="#card" data-toggle="collapse"><i class="icon-credit-card"></i>Pay with Credit Card</a></h6>
-              </div>
-              <div class="collapse show" id="card" data-parent="#accordion" role="tabpanel">
-                <div class="card-body">
-                  <p>We accept following credit cards:&nbsp;&nbsp;<img class="d-inline-block align-middle" src="/img/credit-cards.png" style="width: 120px;" alt="Cerdit Cards"></p>
-                  <div class="card-wrapper"></div>
-                  <form class="interactive-credit-card row">
-                    <div class="form-group col-sm-6">
-                      <input class="form-control" type="text" name="number" placeholder="Card Number" required>
-                    </div>
-                    <div class="form-group col-sm-6">
-                      <input class="form-control" type="text" name="name" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group col-sm-3">
-                      <input class="form-control" type="text" name="expiry" placeholder="MM/YY" required>
-                    </div>
-                    <div class="form-group col-sm-3">
-                      <input class="form-control" type="text" name="cvc" placeholder="CVC" required>
-                    </div>
-                    <div class="col-sm-6">
-                      <button class="btn btn-outline-primary btn-block mt-0" type="submit">Submit</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" role="tab">
-                <h6><a class="collapsed" href="#paypal" data-toggle="collapse"><i class="socicon-paypal"></i>Pay with PayPal</a></h6>
-              </div>
-              <div class="collapse" id="paypal" data-parent="#accordion" role="tabpanel">
-                <div class="card-body">
-                  <p>PayPal - the safer, easier way to pay</p>
-                  <form class="row" method="post">
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <input class="form-control" type="email" placeholder="E-mail" required>
+    <div class="user-payment-gateway-page padding-bottom-3x">
+      <div class="container">
+        <div class="row">
+          <!-- Checkout Adress-->
+          <div class="col-xl-9 col-lg-8">
+            <div class="steps flex-sm-nowrap mb-5"><a class="step" href="/t35-user-payment-gateway-1.html">
+                <h4 class="step-title"><i class="icon-check-circle"></i>1. Address</h4></a><a class="step active" href="/t35-user-payment-gateway-2.html">
+                <h4 class="step-title">2. Shipping</h4></a><a class="step" href="/t35-user-payment-gateway-3.html">
+                <h4 class="step-title">3. Payment</h4></a><a class="step" href="/t35-user-payment-gateway-4.html">
+                <h4 class="step-title">4. Review</h4></a></div>
+            <h4>Choose Shipping Method</h4>
+            <hr class="padding-bottom-1x">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead class="thead-default">
+                  <tr>
+                    <th></th>
+                    <th>Shipping method</th>
+                    <th>Delivery time</th>
+                    <th>Handling fee</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="custom-control custom-radio mb-0">
+                        <input class="custom-control-input" type="radio" id="courier" name="shipping-method" checked>
+                        <label class="custom-control-label" for="courier"></label>
                       </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <input class="form-control" type="password" placeholder="Password" required>
+                    </td>
+                    <td class="align-middle"><span class="text-gray-dark">Courier</span><br><span class="text-muted text-sm">All Addresses(default zone), United States & Canada</span></td>
+                    <td class="align-middle">2 - 4 days</td>
+                    <td class="align-middle">$26.50</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="custom-control custom-radio mb-0">
+                        <input class="custom-control-input" type="radio" id="local" name="shipping-method">
+                        <label class="custom-control-label" for="local"></label>
                       </div>
-                    </div>
-                    <div class="col-12">
-                      <div class="d-flex flex-wrap justify-content-between align-items-center"><a class="navi-link" href="#"><u>Forgot password?</u></a>
-                        <button class="btn btn-outline-primary margin-top-none" type="submit">Log In</button>
+                    </td>
+                    <td class="align-middle"><span class="text-gray-dark">Local Shipping</span><br><span class="text-muted text-sm">All Addresses(default zone), United States & Canada</span></td>
+                    <td class="align-middle">up to one week</td>
+                    <td class="align-middle">$10.00</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="custom-control custom-radio mb-0">
+                        <input class="custom-control-input" type="radio" id="flat" name="shipping-method">
+                        <label class="custom-control-label" for="flat"></label>
                       </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" role="tab">
-                <h6><a class="collapsed" href="#points" data-toggle="collapse"><i class="icon-award"></i>Redeem Reward Points</a></h6>
-              </div>
-              <div class="collapse" id="points" data-parent="#accordion" role="tabpanel">
-                <div class="card-body">
-                  <p>You currently have<span class="text-medium"> 2,549</span> Reward Points to spend.</p>
-                  <div class="custom-control custom-checkbox d-block">
-                    <input class="custom-control-input" type="checkbox" id="use_points">
-                    <label class="custom-control-label" for="use_points">Use my Reward Points to pay for this order.</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex justify-content-between paddin-top-1x mt-4"><a class="btn btn-outline-secondary" href="checkout-shipping.html"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Back</span></a><a class="btn btn-primary" href="checkout-review.html"><span class="hidden-xs-down">Continue&nbsp;</span><i class="icon-arrow-right"></i></a></div>
-        </div>
-        <!-- Sidebar-->
-        <div class="col-xl-3 col-lg-4">
-          <aside class="sidebar">
-            <div class="padding-top-2x hidden-lg-up"></div>
-            <!-- Order Summary Widget-->
-            <section class="widget widget-order-summary">
-              <h3 class="widget-title">Order Summary</h3>
-              <table class="table">
-                <tr>
-                  <td>Cart Subtotal:</td>
-                  <td class="text-gray-dark">$2,548.50</td>
-                </tr>
-                <tr>
-                  <td>Shipping:</td>
-                  <td class="text-gray-dark">$26.50</td>
-                </tr>
-                <tr>
-                  <td>Estimated tax:</td>
-                  <td class="text-gray-dark">$9.72</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="text-lg text-gray-dark">$2,584.72</td>
-                </tr>
+                    </td>
+                    <td class="align-middle"><span class="text-gray-darkm">Flat Rate</span><br><span class="text-muted text-sm">All Addresses(default zone)</span></td>
+                    <td class="align-middle">5 - 7 days</td>
+                    <td class="align-middle">$33.85</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="custom-control custom-radio mb-0">
+                        <input class="custom-control-input" type="radio" id="ups" name="shipping-method">
+                        <label class="custom-control-label" for="ups"></label>
+                      </div>
+                    </td>
+                    <td class="align-middle"><span class="text-gray-dark">UPS Ground Shipping</span><br><span class="text-muted text-sm">All Addresses(default zone)</span></td>
+                    <td class="align-middle">4 - 6 days</td>
+                    <td class="align-middle">$18.00</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="custom-control custom-radio mb-0">
+                        <input class="custom-control-input" type="radio" id="pickup" name="shipping-method">
+                        <label class="custom-control-label" for="pickup"></label>
+                      </div>
+                    </td>
+                    <td class="align-middle"><span class="text-gray-dark">Local Pickup from store</span><br><span class="text-muted text-sm">All Addresses(default zone)</span></td>
+                    <td class="align-middle">&mdash;</td>
+                    <td class="align-middle">$0.00</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="custom-control custom-radio mb-0">
+                        <input class="custom-control-input" type="radio" id="locker" name="shipping-method">
+                        <label class="custom-control-label" for="locker"></label>
+                      </div>
+                    </td>
+                    <td class="align-middle"><span class="text-gray-dark">Pick Up at Unishop Locker</span><br><span class="text-muted text-sm">All Addresses(default zone), United States & Canada</span></td>
+                    <td class="align-middle">&mdash;</td>
+                    <td class="align-middle">$9.99</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="custom-control custom-radio mb-0">
+                        <input class="custom-control-input" type="radio" id="global" name="shipping-method">
+                        <label class="custom-control-label" for="global"></label>
+                      </div>
+                    </td>
+                    <td class="align-middle"><span class="text-gray-dark">Unishop Global Export</span><br><span class="text-muted text-sm">All Addresses(default zone), outside United States</span></td>
+                    <td class="align-middle">3 - 4 days;</td>
+                    <td class="align-middle">$25.00</td>
+                  </tr>
+                </tbody>
               </table>
-            </section>
-          </aside>
+            </div>
+            <div class="d-flex justify-content-between paddin-top-1x mt-4"><a class="btn btn-outline-secondary" href="/t35-user-payment-gateway-1.html"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Back</span></a><a class="btn btn-primary" href="/t35-user-payment-gateway-3.html"><span class="hidden-xs-down">Continue&nbsp;</span><i class="icon-arrow-right"></i></a></div>
+          </div>
+          <!-- Sidebar-->
+          <div class="col-xl-3 col-lg-4">
+            <aside class="sidebar">
+              <div class="padding-top-2x hidden-lg-up"></div>
+              <!-- Order Summary Widget-->
+              <section class="widget widget-order-summary">
+                <h3 class="widget-title">Order Summary</h3>
+                <table class="table">
+                  <tr>
+                    <td>Cart Subtotal:</td>
+                    <td class="text-gray-dark">$2,548.50</td>
+                  </tr>
+                  <tr>
+                    <td>Shipping:</td>
+                    <td class="text-gray-dark">$26.50</td>
+                  </tr>
+                  <tr>
+                    <td>Estimated tax:</td>
+                    <td class="text-gray-dark">$9.72</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="text-lg text-gray-dark">$2,584.72</td>
+                  </tr>
+                </table>
+              </section>
+            </aside>
+          </div>
         </div>
       </div>
     </div>

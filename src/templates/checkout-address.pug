@@ -11,7 +11,6 @@ append config
 block content
   .container.padding-bottom-3x.mb-2
     .row
-
       // Checkout Adress
       .col-xl-9.col-lg-8
         .steps.flex-sm-nowrap.mb-5
@@ -23,7 +22,7 @@ block content
             h4.step-title 3. Payment
           a(href='checkout-review.html').step
             h4.step-title 4. Review
-        
+
         h4 Billing Address
         hr.padding-bottom-1x
         .row
@@ -91,7 +90,7 @@ block content
           .custom-control.custom-checkbox
             input(type='checkbox' id='same_address' checked).custom-control-input
             label(for='same_address').custom-control-label Same as billing address
-        
+
         .d-flex.justify-content-between.paddin-top-1x.mt-4
           a(href='cart.html' class='btn btn-outline-secondary')
             i.icon-arrow-left
@@ -101,6 +100,6 @@ block content
             i.icon-arrow-right
 
 
-      // Sidebar          
+      // Sidebar
       .col-xl-3.col-lg-4
         include partials/checkout-sidebar
