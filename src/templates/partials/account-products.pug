@@ -1,3 +1,28 @@
+-
+  var items = [
+    {
+      lotNo: '#1',
+      lotTitle: 'Lot Title',
+      time: '8 Days / 4 Hours / 39 Mins',
+      nowAt: '$300.00',
+      nextBid: '$0.00'
+    },
+    {
+      lotNo: '#2',
+      lotTitle: 'Lot Title 2',
+      time: '8 Days / 4 Hours / 39 Mins',
+      nowAt: '$400.00',
+      nextBid: '$0.00'
+    },
+    {
+      lotNo: '#3',
+      lotTitle: 'Lot Title 3',
+      time: '8 Days / 4 Hours / 39 Mins',
+      nowAt: '$500.00',
+      nextBid: '$0.00'
+    },
+  ]
+
 .account-products
   ul(class='nav nav-tabs nav-justified')
     li.nav-item: a(href='/t28-user-bids.html' class=activeLink === 0 ? 'nav-link active' : 'nav-link' ) My Bids
@@ -12,101 +37,129 @@
     li.nav-item
       a(href="#").nav-link Subfilter 3
 
+
+
   .table-responsive.shopping-cart
     table.table
       thead
         tr
-          th Product Name
-          th.text-center Quantity
-          th.text-center Subtotal
-          th.text-center Discount
-          th.text-center
-            a(href='#').btn.btn-sm.btn-outline-danger Clear List
+          th Lot #
+          th Lot Title
+          th Time Remaining
+          th Now at
+          th Next bid
+          th.text-center View
+          th.text-center Remove
       tbody
-        tr
-          td
-            .product-item
-              a(href='/t21-auction-item-detail.html').product-thumb
-                img(src='/img/rr/items/3409878_1.jpg', alt='Product')
-              .product-info
-                h4.product-title
-                  a(href='/t21-auction-item-detail.html') George Washington
-                span
-                  em Type:
-                  |  Book
-                span
-                  em Color:
-                  |  White
-          td.text-center
-            .count-input
-              select.form-control
-                option 1
-                option 2
-                option 3
-                option 4
-                option 5
-          td.text-center.text-lg $910.00
-          td.text-center.text-lg $35.00
-          td.text-center
-            a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
-              i.icon-x
-        tr
-          td
-            .product-item
-              a(href='/t21-auction-item-detail.html').product-thumb
-                img(src='/img/rr/items/3410295_1.jpg', alt='Product')
-              .product-info
-                h4.product-title
-                  a(href='/t21-auction-item-detail.html') Thomas Jefferson
-                span
-                  em Type:
-                  |  Picture
-                span
-                  em Color:
-                  |  Space Gray
-          td.text-center
-            .count-input
-              select.form-control
-                option 1
-                option 2
-                option 3
-                option 4
-                option 5
-          td.text-center.text-lg $1,450.00
-          td.text-center &mdash;
-          td.text-center
-            a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
-              i.icon-x
-        tr
-          td
-            .product-item
-              a(href='/t21-auction-item-detail.html').product-thumb
-                img(src='/img/rr/items/3409343_1.jpg', alt='Product')
-              .product-info
-                h4.product-title
-                  a(href='/t21-auction-item-detail.html') Abraham Lincoln
-                span
-                  em Type:
-                  |  Transcript
-                span
-                  em Color:
-                  |  White
-          td.text-center
-            .count-input
-              select.form-control
-                option 1
-                option 2
-                option 3
-                option 4
-                option 5
-          td.text-center.text-lg $188.50
-          td.text-center &mdash;
-          td.text-center
-            a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
-              i.icon-x
-  .shopping-cart-footer
-    .column
+        each item in items
+          tr
+            td #{item.lotNo}
+            td #{item.lotTitle}
+            td #{item.time}
+            td #{item.nowAt}
+            td #{item.nextBid}
+            td.text-center
+              a(href="#").btn.btn-primary.btn-sm.m-0
+                i.icon-eye
+            td.text-center
+              a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+                i.icon-x
 
-    .column.text-lg
-      span.text-muted Subtotal:&nbsp;
-      span.text-gray-dark $2,548.50
+  //- .table-responsive.shopping-cart
+  //-   table.table
+  //-     thead
+  //-       tr
+  //-         th Product Name
+  //-         th.text-center Quantity
+  //-         th.text-center Subtotal
+  //-         th.text-center Discount
+  //-         th.text-center
+  //-           a(href='#').btn.btn-sm.btn-outline-danger Clear List
+  //-     tbody
+  //-       tr
+  //-         td
+  //-           .product-item
+  //-             a(href='/t21-auction-item-detail.html').product-thumb
+  //-               img(src='/img/rr/items/3409878_1.jpg', alt='Product')
+  //-             .product-info
+  //-               h4.product-title
+  //-                 a(href='/t21-auction-item-detail.html') George Washington
+  //-               span
+  //-                 em Type:
+  //-                 |  Book
+  //-               span
+  //-                 em Color:
+  //-                 |  White
+  //-         td.text-center
+  //-           .count-input
+  //-             select.form-control
+  //-               option 1
+  //-               option 2
+  //-               option 3
+  //-               option 4
+  //-               option 5
+  //-         td.text-center.text-lg $910.00
+  //-         td.text-center.text-lg $35.00
+  //-         td.text-center
+  //-           a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+  //-             i.icon-x
+  //-       tr
+  //-         td
+  //-           .product-item
+  //-             a(href='/t21-auction-item-detail.html').product-thumb
+  //-               img(src='/img/rr/items/3410295_1.jpg', alt='Product')
+  //-             .product-info
+  //-               h4.product-title
+  //-                 a(href='/t21-auction-item-detail.html') Thomas Jefferson
+  //-               span
+  //-                 em Type:
+  //-                 |  Picture
+  //-               span
+  //-                 em Color:
+  //-                 |  Space Gray
+  //-         td.text-center
+  //-           .count-input
+  //-             select.form-control
+  //-               option 1
+  //-               option 2
+  //-               option 3
+  //-               option 4
+  //-               option 5
+  //-         td.text-center.text-lg $1,450.00
+  //-         td.text-center &mdash;
+  //-         td.text-center
+  //-           a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+  //-             i.icon-x
+  //-       tr
+  //-         td
+  //-           .product-item
+  //-             a(href='/t21-auction-item-detail.html').product-thumb
+  //-               img(src='/img/rr/items/3409343_1.jpg', alt='Product')
+  //-             .product-info
+  //-               h4.product-title
+  //-                 a(href='/t21-auction-item-detail.html') Abraham Lincoln
+  //-               span
+  //-                 em Type:
+  //-                 |  Transcript
+  //-               span
+  //-                 em Color:
+  //-                 |  White
+  //-         td.text-center
+  //-           .count-input
+  //-             select.form-control
+  //-               option 1
+  //-               option 2
+  //-               option 3
+  //-               option 4
+  //-               option 5
+  //-         td.text-center.text-lg $188.50
+  //-         td.text-center &mdash;
+  //-         td.text-center
+  //-           a(href='#' data-toggle='tooltip' title='Remove item').remove-from-cart
+  //-             i.icon-x
+  //- .shopping-cart-footer
+  //-   .column
+
+  //-   .column.text-lg
+  //-     span.text-muted Subtotal:&nbsp;
+  //-     span.text-gray-dark $2,548.50
