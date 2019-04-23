@@ -11,4 +11,84 @@ append config
 
 //- Page Content
 block content
+
+  - var activeView = 'grid'
+
   .auction-list-page.padding-bottom-3x
+    .container
+      .row
+        // Products
+        .col-lg-9.order-lg-2
+          include partials/auction-toolbar
+
+          .row
+            .col-md-4.col-sm-6
+              .auction-card.mb-30
+                .auction-card__body
+                  img.img-fluid.mb-3(src='//source.unsplash.com/1024x768')
+                  a.auction-card__title(href="/t21-auction-item-detail.html")
+                    span.text-muted #23
+                    span.title: em John F. Kennedy's Monogrammed Shaving Kit Used as President
+                  hr.thick.mb-2.mt-3
+                  .auction-card__meta
+                    div
+                      span.title.text-muted Current bid
+                      span.value $6,000
+                    div
+                      span.title.text-muted Next bid
+                      span.value $6,500
+                    .bid
+                      a(href="#").btn.btn-primary.btn-sm Bid
+                .auction-card__footer
+                  div
+                    a(href="#")
+                      i.icon-eye
+                      span Watch list
+                  div
+                    a(href="#")
+                      i.icon-search
+                      span View lot details
+            .col-md-4.col-sm-6
+              .auction-card.auction-card--skin-2.mb-30
+                img.img-fluid(src='//source.unsplash.com/1024x768')
+                .auction-card__body
+                  a.auction-card__title(href="/t21-auction-item-detail.html")
+                    span.title: John F. Kennedy's Monogrammed Shaving Kit Used as President
+                  .auction-card__meta
+                    div
+                      span.title.text-muted.text-uppercase Current bid
+                      span.value $6,000
+                    .watch
+                      a(href="#").btn.btn-outline-primary.btn-sm
+                        | Watch
+                        i.icon-eye
+                  .auction-card__time
+                    span.circle
+                    span.text 1 Day Left
+            .col-md-4.col-sm-6
+              .auction-card.auction-card--skin-3.mb-30
+                .auction-card__header
+                  div.watch
+                    a(href="#")
+                      i.icon-eye
+                  .time
+                    | 8d 4h 39m
+                img.img-fluid(src='//source.unsplash.com/1024x768')
+                .auction-card__body
+                  a.auction-card__title(href="/t21-auction-item-detail.html")
+                    span.title: #23 John F. Kennedy's Monogrammed Shaving Kit Used as President
+                  p.auction-card__description This is the description of the auction item
+                  .auction-card__meta
+                    div
+                      span.title.text-muted Now At
+                      span.value $6,000
+                    div
+                      span.title.text-muted Next bid
+                      span.value $6,500
+                    .bid
+                      a(href="#").btn.btn-primary.btn-sm Bid
+
+          include partials/pagination
+
+        .col-lg-3.order-lg-1
+          include partials/auction-sidebar

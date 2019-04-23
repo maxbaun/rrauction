@@ -1,0 +1,136 @@
+extends partials/layout
+
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Shop'
+  - var pageTitle = 'T18 - Auction List (List)'
+  - var menuTitle = 'Home'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T18 - Auction List (List)'}]
+
+//- Page Content
+block content
+
+  - var activeView = 'list'
+  -
+    var items = [
+      {
+        lotNo: '#1',
+        lotTitle: 'Lot Title',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$300.00',
+        nextBid: '$0.00'
+      },
+      {
+        lotNo: '#2',
+        lotTitle: 'Lot Title 2',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$400.00',
+        nextBid: '$0.00'
+      },
+      {
+        lotNo: '#3',
+        lotTitle: 'Lot Title 3',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$500.00',
+        nextBid: '$0.00'
+      },
+      {
+        lotNo: '#4',
+        lotTitle: 'Lot Title 4',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$506.00',
+        nextBid: '$0.00'
+      },
+      {
+        lotNo: '#5',
+        lotTitle: 'Lot Title 5',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$3406.00',
+        nextBid: '$0.00'
+      },
+      {
+        lotNo: '#6',
+        lotTitle: 'Lot Title 6',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$834.00',
+        nextBid: '$0.00'
+      },
+      {
+        lotNo: '#7',
+        lotTitle: 'Lot Title 7',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$98.00',
+        nextBid: '$10.00'
+      },
+      {
+        lotNo: '#8',
+        lotTitle: 'Lot Title 8',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$948.00',
+        nextBid: '$10.00'
+      },
+      {
+        lotNo: '#9',
+        lotTitle: 'Lot Title 9',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$1645.00',
+        nextBid: '$10.00'
+      },
+      {
+        lotNo: '#10',
+        lotTitle: 'Lot Title 10',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$0.00',
+        nextBid: '$10.00'
+      },
+      {
+        lotNo: '#11',
+        lotTitle: 'Lot Title 11',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$9.00',
+        nextBid: '$10.00'
+      },
+      {
+        lotNo: '#12',
+        lotTitle: 'Lot Title 12',
+        time: '8 Days / 4 Hours / 39 Mins',
+        nowAt: '$65.00',
+        nextBid: '$10.00'
+      },
+    ]
+
+  .auction-list-page.padding-bottom-3x
+    .container
+      .row
+        // Products
+        .col-lg-9.order-lg-2
+          include partials/auction-toolbar
+
+          .table-responsive.shopping-card
+            table.table
+              thead
+                tr
+                  th Lot #
+                  th Lot Title
+                  th Time Remaining
+                  th Now at
+                  th Next bid
+                  th Watchlist
+                  th Bid
+              tbody
+                each item in items
+                  tr
+                    td #{item.lotNo}
+                    td #{item.lotTitle}
+                    td #{item.time}
+                    td #{item.nowAt}
+                    td #{item.nextBid}
+                    td: a(href="#").btn.btn-primary.btn-sm.m-0
+                      i.icon-eye
+                    td: a(href="#").btn.btn-primary.btn-sm.m-0 Bid
+
+
+          include partials/pagination
+
+        .col-lg-3.order-lg-1
+          include partials/auction-sidebar

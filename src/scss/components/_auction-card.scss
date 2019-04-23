@@ -1,0 +1,279 @@
+.auction-card {
+  $self: &;
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-base;
+
+  hr {
+    &.thick {
+      border-top-width: 4px;
+    }
+  }
+
+  &__body {
+    padding: 5px;
+    border: 1px solid $border-color;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  &__title {
+    color: $black-color;
+    display: flex;
+    font-size: 12px;
+    text-decoration: none;
+
+    span:not(:last-child) {
+      margin-right: 3px;
+    }
+
+    .title {
+      font-weight: 700;
+    }
+
+    &:focus,
+    &:hover {
+      .title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__meta {
+    display: flex;
+    padding: 7px 0;
+
+    > div {
+      flex: 1;
+
+      &.bid {
+        flex: .5;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      &:not(:first-child) {
+        padding-left: 10px;
+        border-left: 1px solid $border-color;
+      }
+
+      > span {
+        display: block;
+        font-size: 11px;
+      }
+
+      .value {
+        font-weight: 700;
+      }
+
+      .btn {
+        margin: 0;
+        font-size: 11px;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 12px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    font-size: 11px;
+    margin: 8px 7px 8px;
+
+    > div {
+      &:not(:first-child) {
+        border-left: 1px solid $border-color;
+        padding-left: 15px;
+        margin-left: 15px;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        i {
+          text-decoration: none;
+        }
+
+        span {
+          text-decoration: underline;
+        }
+      }
+
+      i {
+        color: $brand-primary;
+        padding-right: 7px;
+
+        &.icon-eye {
+          color: $gray;
+        }
+      }
+
+      span {
+        color: $black-color;
+        font-style: italic;
+      }
+
+      > * {
+        line-height: 16px;
+      }
+    }
+  }
+
+  &--skin-2 {
+    #{$self} {
+      &__body {
+        background-color: $gray-lighter;
+        margin: 0;
+        border: none;
+      }
+
+      &__title {
+        margin-top: 5px;
+      }
+
+      &__meta {
+        justify-content: space-between;
+        border-bottom: 2px solid $border-color;
+
+        > div {
+          &:not(:first-child) {
+            border-left: none;
+            padding-left: 0;
+            margin-left: 0;
+          }
+
+          > span {
+            font-size: 12px;
+
+            &.title {
+              font-weight: 500;
+            }
+          }
+
+          &.watch {
+            flex: .5;
+          }
+
+          .btn {
+            height: 100%;
+            font-size: 12px;
+            line-height: 36px;
+
+            i {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+
+      &__time {
+        display: flex;
+        width: auto;
+        font-size: 12px;
+        height: 20px;
+        align-items: center;
+        margin-top: 8px;
+
+        .circle {
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background-color: $gray;
+        }
+
+        .text {
+          text-transform: uppercase;
+          color: $gray-dark;
+          font-weight: 500;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  &--skin-3 {
+    #{$self} {
+      &__header {
+        padding: 5px 10px 5px 0;
+        background-color: $gray-lighter;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .watch {
+          flex: 0 0 30px;
+          text-align: center;
+          border-right: 1px solid $border-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          a {
+            color: $gray;
+            display: block;
+            line-height: 1;
+            text-decoration: none;
+
+            &:hover,
+            &.active {
+              color: $brand-primary;
+            }
+          }
+        }
+
+        .time {
+          font-weight: 500;
+          color: $gray-dark;
+          font-size: 12px;
+        }
+      }
+
+      &__body {
+        margin: 0;
+        border: none;
+        padding: 10px 10px 3px;
+      }
+
+      &__title {
+        margin: 5px 0 15px;
+      }
+
+      &__description {
+        font-size: 11px;
+        color: $gray;
+        font-style: italic;
+      }
+
+      &__meta {
+        justify-content: space-between;
+        border-top: 2px solid $border-color;
+
+        > div {
+          &:not(:first-child) {
+            border-left: none;
+          }
+
+          > span {
+            &.title {
+              text-transform: uppercase;
+              font-weight: 500;
+            }
+          }
+
+          &.bid {
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
