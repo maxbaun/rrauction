@@ -260,8 +260,12 @@ jQuery(document).ready(function($) {
 			countDownTrigger.downCount({
 		      date: dateTime,
 		      offset: +10
-		  });
-		});
+      });
+
+      setTimeout(function () {
+        countDown.addClass('active')
+      }, 1500)
+    });
 	}
 	countDownFunc( $('.countdown') );
 
@@ -968,6 +972,31 @@ jQuery(document).ready(function($) {
 
           check.prop('checked', false)
         })
+      })
+    })
+  }
+
+  var $auctionHeaders = $('.auction-header')
+
+  if ($auctionHeaders.length) {
+    $auctionHeaders.each(function () {
+      var $self = $(this);
+      var $toggle = $self.find('button[data-toggle]')
+      var $content = $self.find('.auction-header__content').first()
+      var isOpen = false
+
+      $toggle.click(function () {
+        if (isOpen) {
+          $content.slideUp()
+          $toggle.prop('aria-expanded', false)
+          $toggle.removeClass('active')
+          isOpen = false
+        } else {
+          $content.slideDown()
+          $toggle.prop('aria-expanded', true)
+          $toggle.addClass('active')
+          isOpen = true
+        }
       })
     })
   }

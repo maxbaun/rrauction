@@ -1,0 +1,231 @@
+.auction-header {
+  $breakpoint: 700px;
+
+  margin-bottom: ceil($grid-vertical-step * 2.5); //~60px
+
+  &__banner {
+    background-color: $gray-lighter;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__banner-info {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 0 0 15px;
+    }
+
+    .dates {
+      border: 1px solid $border-color;
+      background-color: $white-color;
+      display: flex;
+      padding: 3px 10px;
+      align-items: center;
+
+      .date {
+        text-align: center;
+
+        > span {
+          display: block;
+        }
+
+        .day {
+          font-size: 12px;
+          line-height: 1.1;
+          text-transform: uppercase;
+        }
+
+        .date {
+          font-size: 16px;
+          line-height: 1.2;
+        }
+
+        .month {
+          font-size: 11px;
+          font-weight: 700;
+          line-height: 1.1;
+          text-transform: uppercase;
+        }
+      }
+
+      .separator {
+        color: $gray;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__banner-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (min-width: $breakpoint) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__time {
+    padding-right: 15px;
+    position: relative;
+    color: $brand-primary;
+    font-style: italic;
+    display: none;
+
+    @media (min-width: $breakpoint) {
+      display: block;
+    }
+
+    .countdown {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .item {
+        margin: 0;
+
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+          background-color: transparent;
+          font-size: 12px;
+          border: none;
+          border-radius: 0;
+          width: auto;
+          height: auto;
+          display: inline;
+          line-height: 1;
+        }
+
+        .days_ref,
+        .hours_ref,
+        .minutes_ref,
+        .seconds_ref {
+          margin-left: 2px;
+        }
+      }
+    }
+
+    &:after {
+      content: ' ';
+      width: 1px;
+      background-color: $border-color;
+      height: 110%;
+      position: absolute;
+      top: -5%;
+      right: 0;
+    }
+  }
+
+  &__register {
+    padding: 0 15px;
+    display: none;
+
+    @media (min-width: $breakpoint) {
+      display: block;
+    }
+
+    .btn {
+      margin: 0;
+    }
+  }
+
+  &__more {
+    height: 100%;
+
+    button {
+      height: 100%;
+      line-height: 1;
+      margin: 0;
+      padding: 20px 10px 10px;
+      border: 1px solid $border-color;
+      border-top: none;
+      background-color: transparent;
+      border-bottom: none;
+      transition: background-color .2s ease-in-out;
+
+      &:hover,
+      &.active {
+        background-color: $white-color;
+      }
+
+      .text {
+        display: block;
+        height: auto;
+        line-height: 1;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    background-color: $white-color;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__content-inner {
+    padding: 15px 0;
+
+    .title {
+      border-bottom: 2px solid $border-color;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__content-meta {
+    display: flex;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    .items {
+      background-color: $gray-dark;
+      color: $white-color;
+      border-radius: 15px;
+      padding: 3px 20px;
+      margin-right: 10px;
+    }
+  }
+
+  &__content-details {
+    display: flex;
+
+    .status {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+
+      .circle {
+        height: 7px;
+        width: 7px;
+        border-radius: 50%;
+        margin-right: 3px;
+      }
+
+      .text {
+        font-weight: 500;
+      }
+
+      &.ended {
+        .circle {
+          background-color: $gray;
+        }
+      }
+    }
+  }
+}

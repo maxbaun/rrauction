@@ -3,6 +3,7 @@ extends partials/layout
 //- Override default config variables
 append config
   - var isPageTitle = true
+  - var pageTitleClass = 'page-title no-margin';
   - var parentMenu = 'Home'
   - var pageTitle = 'T19 - Auction List (Tile)'
   - var menuTitle = 'Home'
@@ -15,6 +16,7 @@ block content
   - var activeView = 'grid'
 
   .auction-list-page.padding-bottom-3x
+    include partials/auction-header
     .container
       .row
         // Products

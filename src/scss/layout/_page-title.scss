@@ -24,6 +24,10 @@
     font-size: $font-size-h4;
     line-height: $line-height-h4;
   }
+
+  &.no-margin {
+    margin: 0;
+  }
 }
 
 // Breadcrumbs
