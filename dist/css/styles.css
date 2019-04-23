@@ -6910,6 +6910,11 @@ video {
   z-index: 1;
 }
 
+.advanced-search-page .nav-tabs .nav-item .nav-link.active {
+  background-color: #7f2e2b;
+  color: #ffffff;
+}
+
 .user-info-wrapper {
   position: relative;
   width: 100%;

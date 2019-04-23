@@ -1,0 +1,100 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var pageTitle = 'T36 - Advanced Search'
+  - var parentMenu = 'Home'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T36 - Advanced Search'}]
+
+//- Page Content
+block content
+  .advanced-search-page.padding-bottom-3x
+    .container.padding-bottom-3x
+      ul(class='nav nav-tabs nav-justified' role='tablist')
+        li.nav-item: a(href='#advanced-search' class='nav-link active' data-toggle='tab' role='tab') Advanced Search
+        li.nav-item: a(href='#gallery-search' class='nav-link' data-toggle='tab' role='tab') Gallery Search
+        li.nav-item: a(href='#item-search' class='nav-link' data-toggle='tab' role='tab') Item # Search
+        li.nav-item: a(href='#past-auctions' class='nav-link' data-toggle='tab' role='tab') Past Auctions
+      .tab-content
+        div(id='advanced-search' class='tab-pane fade show active' role='tabpanel')
+          form(method='post')
+            label(for="search") Search For:
+            .form-group
+              .row
+                .col-10
+                  input(type="text" id="search" name="search").form-control
+                .col-2
+                  select(name="search-words").form-control
+                    option(value="All the words" selected) All the words
+                    option(value="Exact phrase") Exact Phrase
+            hr.mb-3.mt-3
+            label(for="exclude") Words to Exclude:
+            .form-group
+              input(type="text" id="exclude" name="exclude").form-control
+              small.form-text.text-muted (Use this if you'd like to omit items with certain words in the name or description. Examples: "glossy" or "felt")
+            hr.mb-3.mt-3
+            .row
+              .col-md-6
+                label(for="show") Show Results In
+                .form-group
+                  select(name="show" id="show").form-control
+                    option(value="All Categories" selected) All Categories
+                    option(value="Category 1") Category 1
+                    option(value="Category 2") Category 2
+                    option(value="Category 3") Category 3
+              .col-md-6
+                label(for="sort") Sort by
+                .form-group
+                  select(name="sort" id="sort").form-control
+                    option(value="Item Number" selected) Item Number
+                    option(value="Alphabetically") Alphabetically
+                    option(value="Format") Format
+                    option(value="Lowest Price First") Lowest Price First
+                    option(value="Highest Price First") Highest Price First
+            .form-group
+              button(type="submit").btn.btn-primary Submit
+        div(id='gallery-search' class='tab-pane fade' role='tabpanel')
+          form(method='post')
+            label(for="gallery-search") Search For:
+            .form-group
+              input(type="text" id="gallery-search" name="gallery-search").form-control
+
+            .form-group
+              button(type='submit').btn.btn-primary Submit
+
+          label Browse Gallery by Category:
+            a(href="#").d-block John F. Kennedy (99)
+            a(href="#").d-block Presidents and First Ladies (188)
+            a(href="#").d-block Notables (158)
+            a(href="#").d-block Declaration of Independence Signers (1)
+        div(id='item-search' class='tab-pane fade' role=-'tabpanel')
+          form(method='post')
+            label(for="gallery-search") Item#(s): (separated multiple items with a comma)
+            .form-group
+              input(type="text" id="gallery-search" name="gallery-search").form-control
+              small.form-text.text-muted (For previous catalogs, search past auctions.)
+            .form-group
+              button(type='submit').btn.btn-primary Submit
+        div(id='past-auctions' class='tab-pane fade' role=-'tabpanel')
+          form(method='post')
+            label(for="search") Search For:
+            .form-group
+              .row
+                .col-10
+                  input(type="text" id="search" name="search").form-control
+                .col-2
+                  select(name="search-words").form-control
+                    option(value="All the words" selected) All the words
+                    option(value="Exact phrase") Exact Phrase
+            .form-group
+              .custom-control.custom-radio
+                input(type='radio' id='search-item-titles' name='search' value='titles' checked).custom-control-input
+                label(for='search-item-titles').custom-control-label Search Item Titles
+              .custom-control.custom-radio
+                input(type='radio' id='search-item-titles-descriptions' name='search' value='titles-descriptions').custom-control-input
+                label(for='search-item-titles-descriptions').custom-control-label Search Item Titles & Description
+            .form-group
+              button(type='submit').btn.btn-primary Submit
+            p All items are listed the same way we list them in our auctions. You can enter either the full name such as Gerald Ford or John Ford, or last name, such as Presley or Ruth. If you are searching for John Lennon you may also want to enter Beatles to expand the search. If you are searching for a movie or character from a movie you should also try searching by that movie name, for example James Bond, Gone With the Wind, Wizard of Oz, etc.
+            p Looking for a possible reference within the description? Then search item titles and descriptions. Here you can find a particular date, name, city, character or format of the item.
+            p Email #[a(href="#") Bobby Eaton] for further assistance on this feature.

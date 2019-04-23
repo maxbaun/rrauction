@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>RR Auction
+    <title>T36 - Advanced Search
     </title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Unishop - Universal E-Commerce Template">
@@ -376,7 +376,7 @@
             <ul class="menu" data-initial-height="385">
               <li class="has-children active"><span><a href="index.html">Home</a><span class="sub-menu-toggle"></span></span>
                 <ul class="slideable-submenu">
-                    <li class="active"><a href="index.html">Hero Slider</a></li>
+                    <li><a href="index.html">Hero Slider</a></li>
                     <li><a href="home-featured-categories.html">Categories Grid</a></li>
                 </ul>
               </li>
@@ -525,7 +525,7 @@
           <ul>
             <li class="has-submenu active"><a href="index.html">Home</a>
               <ul class="sub-menu">
-                <li class="active has-children"><a href="index.html">Hero Slider</a>
+                <li class="has-children"><a href="index.html">Hero Slider</a>
                   <ul class="sub-menu w-400 p-0 overflow-hidden">
                     <li><a class="p-0" href="index.html"><img src="/img/banners/home01.jpg" alt="Hero Slider Home"></a></li>
                   </ul>
@@ -754,25 +754,144 @@
         </div>
       </div>
     </header>
-    <!-- Page Content-->
-    <section class="index-page my-4">
+    <!-- Page Title-->
+    <div class="page-title">
       <div class="container">
-        <div class="row">
-          <div class="col-md-4 offset-md-2">
-            <h2 class="h4">Color Key</h2>
-            <p class="template-item" data-status="approved">Approved</p>
-            <p class="template-item" data-status="pending">Pending Approval</p>
-            <p class="template-item" data-status="progress">In Progress</p>
-            <p class="template-item" data-status="submitted">Submitted</p>
-            <p class="template-item" data-status="rrtodo">RR TODO</p><br><a href="https://docs.google.com/spreadsheets/d/1DNosdWjkUAjccyX4oVdxFGhKGSZHgWavh8EVRj9Ixkw/edit?ts=5ca25056#gid=0">Dev Schedule</a>
+        <div class="column">
+          <h1>T36 - Advanced Search</h1>
+        </div>
+        <div class="column">
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Home</a>
+            </li>
+            <li class="separator">&nbsp;</li>
+            <li>T36 - Advanced Search</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Page Content-->
+    <div class="advanced-search-page padding-bottom-3x">
+      <div class="container padding-bottom-3x">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+          <li class="nav-item"><a class="nav-link active" href="#advanced-search" data-toggle="tab" role="tab">Advanced Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery-search" data-toggle="tab" role="tab">Gallery Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="#item-search" data-toggle="tab" role="tab">Item # Search</a></li>
+          <li class="nav-item"><a class="nav-link" href="#past-auctions" data-toggle="tab" role="tab">Past Auctions</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="advanced-search" role="tabpanel">
+            <form method="post">
+              <label for="search">Search For:</label>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-10">
+                    <input class="form-control" type="text" id="search" name="search">
+                  </div>
+                  <div class="col-2">
+                    <select class="form-control" name="search-words">
+                      <option value="All the words" selected>All the words</option>
+                      <option value="Exact phrase">Exact Phrase</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <hr class="mb-3 mt-3">
+              <label for="exclude">Words to Exclude:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" id="exclude" name="exclude"><small class="form-text text-muted">(Use this if you'd like to omit items with certain words in the name or description. Examples: "glossy" or "felt")</small>
+              </div>
+              <hr class="mb-3 mt-3">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="show">Show Results In</label>
+                  <div class="form-group">
+                    <select class="form-control" name="show" id="show">
+                      <option value="All Categories" selected>All Categories</option>
+                      <option value="Category 1">Category 1</option>
+                      <option value="Category 2">Category 2</option>
+                      <option value="Category 3">Category 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="sort">Sort by</label>
+                  <div class="form-group">
+                    <select class="form-control" name="sort" id="sort">
+                      <option value="Item Number" selected>Item Number</option>
+                      <option value="Alphabetically">Alphabetically</option>
+                      <option value="Format">Format</option>
+                      <option value="Lowest Price First">Lowest Price First</option>
+                      <option value="Highest Price First">Highest Price First</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </form>
           </div>
-          <div class="col-md-4 offset-md-4">
-            <nav class="list-group"><a class="list-group-item template-item" href="/t01-homepage.html" data-status="rrtodo">T01 - Homepage</a><a class="list-group-item template-item" href="/t02-how-to-buy.html" data-status="pending">T02 - How To Buy</a><a class="list-group-item template-item" href="/t03-how-to-sell.html" data-status="pending">T03 - How To Sell</a><a class="list-group-item template-item" href="/t04-form-page.html" data-status="approved">T04 - Form Page</a><a class="list-group-item template-item" href="/t06-testimonials.html" data-status="approved">T06 - Testimonials</a><a class="list-group-item template-item" href="/t07-contact.html" data-status="approved">T07 - Contact</a><a class="list-group-item template-item" href="/t08-about.html" data-status="approved">T08 - About</a><a class="list-group-item template-item" href="/t09-team.html" data-status="approved">T09 - Team</a><a class="list-group-item template-item" href="/t10-specialists.html" data-status="approved">T10 - Specialists</a><a class="list-group-item template-item" href="/t11-auction-department.html" data-status="approved">T11 - Auction Department</a><a class="list-group-item template-item" href="/t11-auction-department--sent.html" data-status="approved">T11 - Auction Department (Sent)</a><a class="list-group-item template-item" href="/t12-auction-catalog-list.html" data-status="approved">T12 - Auction Catalog List</a><a class="list-group-item template-item" href="/t13-auction-catalog-detail.html" data-status="approved">T13 - Auction Catalog Detail</a><a class="list-group-item template-item" href="/t14-faq.html" data-status="approved">T14 - FAQ</a><a class="list-group-item template-item" href="/t15-blog-list.html" data-status="approved">T15 - Blog List</a><a class="list-group-item template-item" href="/t16-blog-detail.html" data-status="approved">T16 - Blog Detail</a><a class="list-group-item template-item" href="/t17-auction-calendar.html" data-status="approved">T17 - Auction Calendar</a><a class="list-group-item template-item" href="/t18-auction-list--default.html" data-status="rrtodo">T18 - Auction List (Default)</a><a class="list-group-item template-item" href="/t19-auction-list--tile.html" data-status="rrtodo">T19 - Auction List (Tile)</a><a class="list-group-item template-item" href="/t20-auction-list--list.html" data-status="rrtodo">T20 - Auction List (List)</a><a class="list-group-item template-item" href="/t21-auction-item-detail.html" data-status="rrtodo">T21 - Auction Item Detail</a><a class="list-group-item template-item" href="/t22-terms.html" data-status="approved">T22 - Terms &amp; Conditions</a><a class="list-group-item template-item" href="/t23-login.html" data-status="approved">T23 - Login</a><a class="list-group-item template-item" href="/t24-forgot-password.html" data-status="approved">T24 - Forgot Password</a><a class="list-group-item template-item" href="/t25-register.html" data-status="approved">T25 - Register</a><a class="list-group-item template-item" href="/t26-user-profile.html" data-status="pending">T26 - User Profile</a><a class="list-group-item template-item" href="/t27-user-watchlist.html" data-status="pending">T27 - User Watchlist</a><a class="list-group-item template-item" href="/t28-user-bids.html" data-status="pending">T28 - User Bids</a><a class="list-group-item template-item" href="/t29-user-consignments.html" data-status="pending">T29 - User Consignments</a><a class="list-group-item template-item" href="/t30-user-wantlist.html" data-status="pending">T30 - User Wantlist</a><a class="list-group-item template-item" href="/t32-user-notifications.html" data-status="pending">T32 - User Notifications</a><a class="list-group-item template-item" href="/t33-user-invoice-list.html" data-status="pending">T33 - User Invoice List</a><a class="list-group-item template-item" href="/t35-user-payment-gateway-1.html" data-status="pending">T35 - User Payment Gateway (Step 1)</a><a class="list-group-item template-item" href="/t35-user-payment-gateway-2.html" data-status="pending">T35 - User Payment Gateway (Step 2)</a><a class="list-group-item template-item" href="/t35-user-payment-gateway-3.html" data-status="pending">T35 - User Payment Gateway (Step 3)</a><a class="list-group-item template-item" href="/t35-user-payment-gateway-4.html" data-status="pending">T35 - User Payment Gateway (Step 4)</a><a class="list-group-item template-item" href="/t35-user-payment-gateway-5.html" data-status="pending">T35 - User Payment Gateway (Step 5)</a><a class="list-group-item template-item" href="/t36-advanced-search.html" data-status="progress">T36 - Advanced Search</a>
-            </nav>
+          <div class="tab-pane fade" id="gallery-search" role="tabpanel">
+            <form method="post">
+              <label for="gallery-search">Search For:</label>
+              <div class="form-group">
+                <input class="form-control" type="text" id="gallery-search" name="gallery-search">
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </form>
+            <label>Browse Gallery by Category:<a class="d-block" href="#">John F. Kennedy (99)</a><a class="d-block" href="#">Presidents and First Ladies (188)</a><a class="d-block" href="#">Notables (158)</a><a class="d-block" href="#">Declaration of Independence Signers (1)</a></label>
+          </div>
+          <div class="tab-pane fade" id="item-search" role="null">
+            <form method="post">
+              <label for="gallery-search">Item#(s): (separated multiple items with a comma)</label>
+              <div class="form-group">
+                <input class="form-control" type="text" id="gallery-search" name="gallery-search"><small class="form-text text-muted">(For previous catalogs, search past auctions.)</small>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="past-auctions" role="null">
+            <form method="post">
+              <label for="search">Search For:</label>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-10">
+                    <input class="form-control" type="text" id="search" name="search">
+                  </div>
+                  <div class="col-2">
+                    <select class="form-control" name="search-words">
+                      <option value="All the words" selected>All the words</option>
+                      <option value="Exact phrase">Exact Phrase</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input class="custom-control-input" type="radio" id="search-item-titles" name="search" value="titles" checked>
+                  <label class="custom-control-label" for="search-item-titles">Search Item Titles</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input class="custom-control-input" type="radio" id="search-item-titles-descriptions" name="search" value="titles-descriptions">
+                  <label class="custom-control-label" for="search-item-titles-descriptions">Search Item Titles & Description</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+              <p>All items are listed the same way we list them in our auctions. You can enter either the full name such as Gerald Ford or John Ford, or last name, such as Presley or Ruth. If you are searching for John Lennon you may also want to enter Beatles to expand the search. If you are searching for a movie or character from a movie you should also try searching by that movie name, for example James Bond, Gone With the Wind, Wizard of Oz, etc.</p>
+              <p>Looking for a possible reference within the description? Then search item titles and descriptions. Here you can find a particular date, name, city, character or format of the item.</p>
+              <p>Email <a href="#">Bobby Eaton</a> for further assistance on this feature.</p>
+            </form>
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!-- Site Footer-->
     <footer class="site-footer" style="background-image: url(/img/footer-bg.png);">
       <div class="container">

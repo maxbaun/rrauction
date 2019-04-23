@@ -1,0 +1,12 @@
+.advanced-search-page {
+  .nav-tabs {
+    .nav-item {
+      .nav-link {
+        &.active {
+          background-color: $brand-primary;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
