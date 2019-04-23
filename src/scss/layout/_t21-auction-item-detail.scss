@@ -1,0 +1,12 @@
+.auction-item-detail-page {
+  .nav-tabs {
+    .nav-link {
+      transition-property: color, background-color;
+      &.active {
+        background-color: $gray-lighter;
+        border-bottom-color: $gray-lighter;
+        color: $gray-darker;
+      }
+    }
+  }
+}

@@ -7,8 +7,149 @@ append config
   - var pageTitle = 'T21 - Auction Item Detail'
   - var menuTitle = 'Home'
   - var pageTitle = 'T21 - Auction Item Detail'
-  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T21 - Auction Item Detail'}]
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Auction Name', 'link': '/t18-auction-list--list.html'}, {'title': 'T21 - Auction Item Detail'}]
 
 //- Page Content
 block content
-  .auction-item-detail-page.padding-bottom-3x
+  .auction-item-detail-page
+    .container
+      .row
+        // Poduct Gallery
+        .col-md-6
+          .product-gallery
+            //- .gallery-wrapper
+            //-   .gallery-item.video-btn.text-center
+            //-     a(href='#' data-toggle='tooltip' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube.com/embed/CjNjcrQZtd8" frameborder="0" allowfullscreen></iframe></div></div>' title='Watch video')
+            //- span.product-badge.bg-danger Sale
+            .product-carousel.owl-carousel.gallery-wrapper
+              .gallery-item(data-hash='one')
+                a(href='//source.unsplash.com/random/800x450?image=1' data-size='800x450')
+                  img(src='//source.unsplash.com/random/800x450?image=1' alt='Product')
+              .gallery-item(data-hash='two')
+                a(href='//source.unsplash.com/random/800x450?image=2' data-size='800x450')
+                  img(src='//source.unsplash.com/random/800x450?image=2' alt='Product')
+              .gallery-item(data-hash='three')
+                a(href='//source.unsplash.com/random/800x450?image=3' data-size='800x450')
+                  img(src='//source.unsplash.com/random/800x450?image=3' alt='Product')
+              .gallery-item(data-hash='four')
+                a(href='//source.unsplash.com/random/800x450?image=4' data-size='800x450')
+                  img(src='//source.unsplash.com/random/800x450?image=4' alt='Product')
+            ul.product-thumbnails
+              li.active
+                a(href='#one'): img(src='//source.unsplash.com/random/800x450?image=1' alt='Product')
+              li
+                a(href='#two'): img(src='//source.unsplash.com/random/800x450?image=2' alt='Product')
+              li
+                a(href='#three'): img(src='//source.unsplash.com/random/800x450?image=3' alt='Product')
+              li
+                a(href='#four'): img(src='//source.unsplash.com/random/800x450?image=4' alt='Product')
+
+        // Product Info
+        .col-md-6
+          .padding-top-2x.mt-2.hidden-md-up
+          .row.justify-content-between.mb-3
+            .col-4.text-left
+              .d-flex.align-items-center
+                i.icon-chevron-left.text-primary
+                a(href='/t21-auction-item-detail.html')
+                  | Previous
+            .col-4.text-center
+              | Lot 0013
+            .col-4.text-right
+              .d-flex.align-items-center.justify-content-end
+                a(href='/t21-auction-item-detail.html')
+                  | Next
+                i.icon-chevron-right.text-primary
+
+          .sp-categories.pb-3
+            a(href='#') Auction # 123456 - Auction Title
+          h2.mb-3 Auction Item Title
+          .bg-secondary.p-4
+            span.h3.d-flex.align-items-center
+              | $899.00
+              span.product-badge.bg-primary.ml-2.position-relative 1 bid
+            form(method='post').margin-top-1x
+              .form-group
+                label(for='bid') Your Maximum Bid
+                select(id='bid').form-control
+                  option $1000.00
+                  option $1250.00
+                  option $1300.00
+                  option $1350.00
+                  option $1400.00
+                  option $1450.00
+                  option $1500.00
+                  option $1550.00
+                  option $1600.00
+                .form-group
+                  button(type='submit' style='width: 100%; text-align: center;').btn.btn-primary.d-block Place Bid
+
+            hr.mt-3.mb-3
+            a(href="#").btn.btn-outline-primary.d-block
+              i.icon-heart
+              | &nbsp;Watch Item
+            small.text-center.mt-3.text-muted.d-block 16 bidders watched this item
+
+          .d-flex.flex-wrap.justify-content-between
+            .mt-2.mb-2
+              a(href='#').d-block
+                | Consign Similar Item
+              a(href='#').d-block
+                | Extended Payment
+
+            .mt-2.mb-2
+              span.text-muted Share:&nbsp;&nbsp;
+              .d-inline-block
+                a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-rounded.sb-facebook
+                  i.socicon-facebook
+                a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-rounded.sb-twitter
+                  i.socicon-twitter
+                a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-rounded.sb-instagram
+                  i.socicon-instagram
+                a(href='#' data-toggle='tooltip' data-placement='top' title='Google +').social-button.shape-rounded.sb-google-plus
+                  i.socicon-googleplus
+
+    // Product Details
+
+    #details.padding-top-3x.padding-bottom-2x.mb-3
+      .container
+        ul(class='nav nav-tabs nav-justified' role='tablist')
+          li.nav-item: a(href='#product-details' class='nav-link active' data-toggle='tab' role='tab') Details
+          li.nav-item: a(href='#product-specs' class='nav-link' data-toggle='tab' role='tab') Specifications
+          li.nav-item: a(href='#product-shipping' class='nav-link' data-toggle='tab' role='tab') Shipping Options
+        .tab-content.bg-secondary
+          div(role='tabpanel' id='product-details' class='tab-pane fade show active')
+            h3.h4 Details
+            p.mb-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+            h3.h4 Features
+            ul.list-icon.mb-4
+              li
+                i.icon-check.text-success
+                | Capture 4K30 Video and 12MP Photos
+              li
+                i.icon-check.text-success
+                | Game-Style Controller with Touchscreen
+              li
+                i.icon-check.text-success
+                | View Live Camera Feed
+              li
+                i.icon-check.text-success
+                | Full Control of HERO6 Black
+              li
+                i.icon-check.text-success
+                | Use App for Dedicated Camera Operation
+          div(role='tabpanel' id='product-specs' class='tab-pane fade')
+            h3.h4 Specifications
+            ul.list-unstyled.mb-4
+              li <strong>Weight:</strong> 35.5oz (1006g)
+              li <strong>Maximum Speed:</strong> 	35 mph (15 m/s)
+              li <strong>Maximum Distance:</strong> 	Up to 9,840ft (3,000m)
+              li <strong>Operating Frequency:</strong> 2.4GHz
+              li <strong>Manufacturer:</strong> GoPro, USA
+          div(role='tabpanel' id='product-shipping' class='tab-pane fade')
+            h3.h4 Shipping Options:
+            ul.list-unstyled.mb-4
+              li <strong>Courier:</strong> 2 - 4 days, $22.50
+              li <strong>Local Shipping:</strong> up to one week, $10.00
+              li <strong>UPS Ground Shipping:</strong> 4 - 6 days, $18.00
+              li <strong>Unishop Global Export:</strong> 3 - 4 days, $25.00

@@ -6334,7 +6334,7 @@ video {
       justify-content: flex-end;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .auction-header__banner-actions {
     -ms-flex-pack: start;
         justify-content: flex-start;
@@ -6349,10 +6349,47 @@ video {
   display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .auction-header__time {
     display: block;
   }
+}
+
+.auction-header__time .countdown {
+  display: none;
+}
+
+.auction-header__time .countdown.active {
+  display: block;
+}
+
+.auction-header__time .countdown .item {
+  margin: 0;
+}
+
+.auction-header__time .countdown .item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.auction-header__time .countdown .item .days,
+.auction-header__time .countdown .item .hours,
+.auction-header__time .countdown .item .minutes,
+.auction-header__time .countdown .item .seconds {
+  background-color: transparent;
+  font-size: 12px;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  display: inline;
+  line-height: 1;
+}
+
+.auction-header__time .countdown .item .days_ref,
+.auction-header__time .countdown .item .hours_ref,
+.auction-header__time .countdown .item .minutes_ref,
+.auction-header__time .countdown .item .seconds_ref {
+  margin-left: 2px;
 }
 
 .auction-header__time:after {
@@ -6370,7 +6407,7 @@ video {
   display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .auction-header__register {
     display: block;
   }
