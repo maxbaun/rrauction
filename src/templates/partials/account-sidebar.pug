@@ -34,6 +34,10 @@
       icon: 'icon-paperclip',
       text: 'My Invoices',
       url: '/t33-user-invoices.html'
+    },
+    {
+      text: 'Logout',
+      url: '#'
     }
   ]
 
@@ -46,5 +50,6 @@ aside.account-sidebar
   nav.list-group
     each item, index in items
       a(href=item.url class= index === activeItem ? "list-group-item active" : "list-group-item")
-        i(class=item.icon)
+        if (item.icon)
+          i(class=item.icon)
         | #{item.text}
