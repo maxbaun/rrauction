@@ -455,11 +455,19 @@
 }
 
 .sidebar--home-categories {
-  .widget {
-    &-title {
-      &:after {
-        content: none;
-      }
+  header {
+    margin-bottom: 15px;
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .header-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
     }
   }
 }

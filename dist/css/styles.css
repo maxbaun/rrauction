@@ -5717,8 +5717,21 @@ video {
   color: #ffffff !important;
 }
 
-.sidebar--home-categories .widget-title:after {
-  content: none;
+.sidebar--home-categories header {
+  margin-bottom: 15px;
+}
+
+.sidebar--home-categories header h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.sidebar--home-categories header .header-info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font-size: 14px;
 }
 
 .steps {
@@ -5979,7 +5992,7 @@ video {
   color: #ffffff;
 }
 
-.auction-card {
+.auction-item {
   display: block;
   position: relative;
   width: 100%;
@@ -5987,18 +6000,18 @@ video {
   border-radius: 5px;
 }
 
-.auction-card hr.thick {
+.auction-item hr.thick {
   border-top-width: 4px;
 }
 
-.auction-card__body {
+.auction-item__body {
   padding: 5px;
   border: 1px solid #e5e5e5;
   margin: 5px;
   padding: 10px;
 }
 
-.auction-card__title {
+.auction-item__title {
   color: #000000;
   display: -ms-flexbox;
   display: flex;
@@ -6006,30 +6019,30 @@ video {
   text-decoration: none;
 }
 
-.auction-card__title span:not(:last-child) {
+.auction-item__title span:not(:last-child) {
   margin-right: 3px;
 }
 
-.auction-card__title .title {
+.auction-item__title .title {
   font-weight: 700;
 }
 
-.auction-card__title:focus .title, .auction-card__title:hover .title {
+.auction-item__title:focus .title, .auction-item__title:hover .title {
   text-decoration: underline;
 }
 
-.auction-card__meta {
+.auction-item__meta {
   display: -ms-flexbox;
   display: flex;
   padding: 7px 0;
 }
 
-.auction-card__meta > div {
+.auction-item__meta > div {
   -ms-flex: 1;
       flex: 1;
 }
 
-.auction-card__meta > div.bid {
+.auction-item__meta > div.bid {
   -ms-flex: .5;
       flex: .5;
   display: -ms-flexbox;
@@ -6038,21 +6051,21 @@ video {
       align-items: flex-end;
 }
 
-.auction-card__meta > div:not(:first-child) {
+.auction-item__meta > div:not(:first-child) {
   padding-left: 10px;
   border-left: 1px solid #e5e5e5;
 }
 
-.auction-card__meta > div > span {
+.auction-item__meta > div > span {
   display: block;
   font-size: 11px;
 }
 
-.auction-card__meta > div .value {
+.auction-item__meta > div .value {
   font-weight: 700;
 }
 
-.auction-card__meta > div .btn {
+.auction-item__meta > div .btn {
   margin: 0;
   font-size: 11px;
   height: 25px;
@@ -6061,20 +6074,20 @@ video {
   width: 100%;
 }
 
-.auction-card__footer {
+.auction-item__footer {
   display: -ms-flexbox;
   display: flex;
   font-size: 11px;
   margin: 8px 7px 8px;
 }
 
-.auction-card__footer > div:not(:first-child) {
+.auction-item__footer > div:not(:first-child) {
   border-left: 1px solid #e5e5e5;
   padding-left: 15px;
   margin-left: 15px;
 }
 
-.auction-card__footer a {
+.auction-item__footer a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -6082,78 +6095,78 @@ video {
   text-decoration: none;
 }
 
-.auction-card__footer a:focus i, .auction-card__footer a:hover i {
+.auction-item__footer a:focus i, .auction-item__footer a:hover i {
   text-decoration: none;
 }
 
-.auction-card__footer a:focus span, .auction-card__footer a:hover span {
+.auction-item__footer a:focus span, .auction-item__footer a:hover span {
   text-decoration: underline;
 }
 
-.auction-card__footer a i {
+.auction-item__footer a i {
   color: #7f2e2b;
   padding-right: 7px;
 }
 
-.auction-card__footer a i.icon-eye {
+.auction-item__footer a i.icon-eye {
   color: #999999;
 }
 
-.auction-card__footer a span {
+.auction-item__footer a span {
   color: #000000;
   font-style: italic;
 }
 
-.auction-card__footer a > * {
+.auction-item__footer a > * {
   line-height: 16px;
 }
 
-.auction-card--skin-2 .auction-card__body {
+.auction-item--skin-2 .auction-item__body {
   background-color: #f5f5f5;
   margin: 0;
   border: none;
 }
 
-.auction-card--skin-2 .auction-card__title {
+.auction-item--skin-2 .auction-item__title {
   margin-top: 5px;
 }
 
-.auction-card--skin-2 .auction-card__meta {
+.auction-item--skin-2 .auction-item__meta {
   -ms-flex-pack: justify;
       justify-content: space-between;
   border-bottom: 2px solid #e5e5e5;
 }
 
-.auction-card--skin-2 .auction-card__meta > div:not(:first-child) {
+.auction-item--skin-2 .auction-item__meta > div:not(:first-child) {
   border-left: none;
   padding-left: 0;
   margin-left: 0;
 }
 
-.auction-card--skin-2 .auction-card__meta > div > span {
+.auction-item--skin-2 .auction-item__meta > div > span {
   font-size: 12px;
 }
 
-.auction-card--skin-2 .auction-card__meta > div > span.title {
+.auction-item--skin-2 .auction-item__meta > div > span.title {
   font-weight: 500;
 }
 
-.auction-card--skin-2 .auction-card__meta > div.watch {
+.auction-item--skin-2 .auction-item__meta > div.watch {
   -ms-flex: .5;
       flex: .5;
 }
 
-.auction-card--skin-2 .auction-card__meta > div .btn {
+.auction-item--skin-2 .auction-item__meta > div .btn {
   height: 100%;
   font-size: 12px;
   line-height: 36px;
 }
 
-.auction-card--skin-2 .auction-card__meta > div .btn i {
+.auction-item--skin-2 .auction-item__meta > div .btn i {
   margin-left: 5px;
 }
 
-.auction-card--skin-2 .auction-card__time {
+.auction-item--skin-2 .auction-item__time {
   display: -ms-flexbox;
   display: flex;
   width: auto;
@@ -6164,21 +6177,21 @@ video {
   margin-top: 8px;
 }
 
-.auction-card--skin-2 .auction-card__time .circle {
+.auction-item--skin-2 .auction-item__time .circle {
   height: 10px;
   width: 10px;
   border-radius: 50%;
   background-color: #999999;
 }
 
-.auction-card--skin-2 .auction-card__time .text {
+.auction-item--skin-2 .auction-item__time .text {
   text-transform: uppercase;
   color: #505050;
   font-weight: 500;
   margin-left: 5px;
 }
 
-.auction-card--skin-3 .auction-card__header {
+.auction-item--skin-3 .auction-item__header {
   padding: 5px 10px 5px 0;
   background-color: #f5f5f5;
   display: -ms-flexbox;
@@ -6189,9 +6202,9 @@ video {
       align-items: center;
 }
 
-.auction-card--skin-3 .auction-card__header .watch {
-  -ms-flex: 0 0 30px;
-      flex: 0 0 30px;
+.auction-item--skin-3 .auction-item__header .watch {
+  -ms-flex: 0 0 80px;
+      flex: 0 0 80px;
   text-align: center;
   border-right: 1px solid #e5e5e5;
   display: -ms-flexbox;
@@ -6202,55 +6215,63 @@ video {
       justify-content: center;
 }
 
-.auction-card--skin-3 .auction-card__header .watch a {
+.auction-item--skin-3 .auction-item__header .watch a {
   color: #999999;
-  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   line-height: 1;
   text-decoration: none;
 }
 
-.auction-card--skin-3 .auction-card__header .watch a:hover, .auction-card--skin-3 .auction-card__header .watch a.active {
+.auction-item--skin-3 .auction-item__header .watch a .text {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.auction-item--skin-3 .auction-item__header .watch a:hover, .auction-item--skin-3 .auction-item__header .watch a.active {
   color: #7f2e2b;
 }
 
-.auction-card--skin-3 .auction-card__header .time {
+.auction-item--skin-3 .auction-item__header .time {
   font-weight: 500;
   color: #505050;
   font-size: 12px;
 }
 
-.auction-card--skin-3 .auction-card__body {
+.auction-item--skin-3 .auction-item__body {
   margin: 0;
   border: none;
   padding: 10px 10px 3px;
 }
 
-.auction-card--skin-3 .auction-card__title {
+.auction-item--skin-3 .auction-item__title {
   margin: 5px 0 15px;
 }
 
-.auction-card--skin-3 .auction-card__description {
+.auction-item--skin-3 .auction-item__description {
   font-size: 11px;
   color: #999999;
   font-style: italic;
 }
 
-.auction-card--skin-3 .auction-card__meta {
+.auction-item--skin-3 .auction-item__meta {
   -ms-flex-pack: justify;
       justify-content: space-between;
   border-top: 2px solid #e5e5e5;
 }
 
-.auction-card--skin-3 .auction-card__meta > div:not(:first-child) {
+.auction-item--skin-3 .auction-item__meta > div:not(:first-child) {
   border-left: none;
 }
 
-.auction-card--skin-3 .auction-card__meta > div > span.title {
+.auction-item--skin-3 .auction-item__meta > div > span.title {
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.auction-card--skin-3 .auction-card__meta > div.bid {
+.auction-item--skin-3 .auction-item__meta > div.bid {
   -ms-flex-align: center;
       align-items: center;
 }
