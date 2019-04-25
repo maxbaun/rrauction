@@ -6852,8 +6852,8 @@ video {
 .site-header .search-box-wrap select.form-control {
   border-color: #dddddd;
   background-color: #e5e5e5;
-  -ms-flex: 0 0 150px;
-      flex: 0 0 150px;
+  -ms-flex: 0 1 150px;
+      flex: 0 1 150px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-right: 0;
