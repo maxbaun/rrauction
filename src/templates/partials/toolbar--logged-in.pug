@@ -1,0 +1,40 @@
+// Toolbar
+.toolbar-item.visible-on-mobile.mobile-menu-toggle
+  a(href='#')
+    div
+      i.icon-menu
+      span.text-label Menu
+.toolbar-item.hidden-on-mobile
+  a(href='/t29-user-consignments.html')
+    div
+      span.badge.badge-default.badge-pill 0
+      span.text-label My Consignments
+.toolbar-item.hidden-on-mobile
+  a(href='/t28-user-bids.html')
+    div
+      span.badge.badge-default.badge-pill 5
+      span.text-label My Bids
+.toolbar-item.hidden-on-mobile
+  a(href='/t27-user-watchlist.html')
+    div
+      span.badge.badge-default.badge-pill 5
+      span.text-label My Watchlist
+.toolbar-item.hidden-on-mobile
+  a(href='/t26-user-profile.html')
+    div
+      i.icon-user
+      span.text-label My Account
+
+  ul.toolbar-dropdown.lang-dropdown
+    li.px-3.pt-1.pb-2
+      | Welcome Robert
+    li
+      a(href='/t26-user-profile.html') My Profile
+    li
+      a(href='/t30-user-wantlist.html') My Wantlist
+    li
+      a(href='/t32-user-notifications.html') My Notifications
+    li
+      a(href='/t33-user-invoice-list.html') My Invoices
+    li
+      a(href='#') Logout

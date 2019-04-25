@@ -28,7 +28,7 @@
     flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
-    padding: 18px 30px;
+    padding: 20px 15px;
     border-right: 1px solid $border-color;
     .site-logo {
       display: block;
@@ -62,6 +62,21 @@
           top-right-radius: 0;
           bottom-right-radius: 0;
         }
+      }
+    }
+    .advanced-search {
+      padding: 0 10px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    select.form-control {
+      border-color: darken($border-color, 3%);
+      background-color: $gray-light;
+      flex: 0 1 150px;
+      border: {
+        top-right-radius: 0;
+        bottom-right-radius: 0;
+        right: 0;
       }
     }
     .input-group {
@@ -260,7 +275,7 @@
   background-color: $white-color;
   box-shadow: $navbar-stuck-shadow;
   .toolbar {
-    display: block;
+    display: flex;
     position: absolute;
     top: 0;
     right: 0;

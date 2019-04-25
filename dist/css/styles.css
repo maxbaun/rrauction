@@ -5724,6 +5724,7 @@ video {
 .sidebar--home-categories header h3 {
   font-size: 16px;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .sidebar--home-categories header .header-info {
@@ -5998,6 +5999,10 @@ video {
   width: 100%;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
+}
+
+.auction-item img {
+  width: 100%;
 }
 
 .auction-item hr.thick {
@@ -6792,13 +6797,13 @@ video {
       flex-grow: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 18px 30px;
+  padding: 20px 15px;
   border-right: 1px solid #e5e5e5;
 }
 
 .site-header .site-branding .site-logo {
   display: block;
-  width: 136px;
+  width: 170px;
   color: #232323 !important;
   text-decoration: none;
 }
@@ -6836,6 +6841,22 @@ video {
   border-right: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+.site-header .search-box-wrap .advanced-search {
+  padding: 0 10px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.site-header .search-box-wrap select.form-control {
+  border-color: #dddddd;
+  background-color: #e5e5e5;
+  -ms-flex: 0 0 150px;
+      flex: 0 0 150px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
 }
 
 .site-header .search-box-wrap .input-group {
@@ -7061,7 +7082,8 @@ video {
 }
 
 .navbar-stuck .navbar .toolbar {
-  display: block;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   top: 0;
   right: 0;
@@ -7375,6 +7397,29 @@ video {
 
 .index-page .template-item[data-status='progress']:before {
   background-color: lightblue;
+}
+
+.homepage .home-slide {
+  position: relative;
+}
+
+.homepage .home-slide .overlay {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.homepage .home-slide .overlay .text {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.homepage .home-slide .overlay .btn {
+  margin: 0;
 }
 
 .how-to-buy-page .tab-content {
