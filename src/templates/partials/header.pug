@@ -16,12 +16,8 @@ header.site-header.navbar-sticky
         .search-box
           form(method='get').d-flex.align-items-center
             select(name="type").form-control
-              option(value="")
-                i.icon-menu.text-lg
-                | &nbsp;Categories
               option(value="Current Auctions") Current Auctions
-              option(value="Specific Sale Title - Ends") Specific Site Title - Ends
-              option(value="Specific Sale Title - Starts") Specific Site Title - Starts
+              option(value="Preview Auctions") Preview Auctions
               option(value="Past Auctions") Past Auctions
               option(value="All Auctions") All Auctions
             .input-group
@@ -29,7 +25,7 @@ header.site-header.navbar-sticky
                 button(type='submit')
                   i.icon-search
               input(type='search' placeholder='Search by lot # of Keyword').form-control
-            a(href="/t36-advanced-search.html").advanced-search Advanced Search
+          a(href="/t36-advanced-search.html").advanced-search Advanced Search
 
     //- toolbar.pug template
     .toolbar.d-flex

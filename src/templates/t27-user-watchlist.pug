@@ -11,10 +11,85 @@ append config
 
 //- Page Content
 block content
-  - var activeLink = 1
+
+  -
+    var items = [
+      {
+        lotNo: '#1',
+        lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
+        time: '8d / 4h / 39m',
+        nowAt: '$300.00',
+        nextBid: '$0.00'
+      },
+      {
+        lotNo: '#2',
+        lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
+        time: '8d / 4h / 39m',
+        nowAt: '$400.00',
+        nextBid: '$0.00',
+        watched: true
+      },
+      {
+        lotNo: '#3',
+        lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
+        time: '8d / 4h / 39m',
+        nowAt: '$500.00',
+        nextBid: '$0.00'
+      },
+    ]
 
   .user-watchlist-page.padding-bottom-3x
     .container
       .row
         .col-12
-          include partials/account-products
+          .account-products
+            ul(class='nav nav-tabs nav-justified')
+              li.nav-item: a(href='/t28-user-bids.html').nav-link My Bids
+              li.nav-item: a(href='/t27-user-watchlist.html').nav-link.active My Watchlist
+              li.nav-item: a(href='/t29-user-consignments.html').nav-link My Consignments
+
+            ul.nav.nav-pills.mt-3.mb-3
+              li.nav-item
+                a(href="#").nav-link.active Current Auctions
+              li.nav-item
+                a(href="#").nav-link Preview Auctions
+              li.nav-item
+                a(href="#").nav-link Past Auctions
+
+            .table-responsive.shopping-cart
+              table.table
+                thead
+                  tr
+                    th
+                      a(href='#') Lot #
+                    th
+                      a(href='#') Lot Title
+                    th
+                      a(href='#') Time Remaining
+                    th
+                      a(href='#') Now at
+                    th
+                      a(href='#') Next bid
+                    th.text-center
+                      a(href='#') Watchlist
+                    th.text-center
+                      a(href='#') Bid
+                tbody
+                  each item in items
+                    tr
+                      td #{item.lotNo}
+                      td #{item.lotTitle}
+                      td #{item.time}
+                      td #{item.nowAt}
+                      td #{item.nextBid}
+                      if (item.watched)
+                        td.text-center
+                          a(href="#").btn.btn-outline-primary.btn-sm.m-0
+                            i.icon-x
+                            span.ml-1 Unwatch
+                      else
+                        td.text-center
+                          a(href="#").btn.btn-outline-primary.btn-sm.m-0
+                            i.icon-eye
+                            span.ml-1 Watch
+                      td.text-center: a(href="#").btn.btn-primary.btn-sm.m-0 Bid

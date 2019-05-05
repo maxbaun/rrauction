@@ -16,85 +16,86 @@ block content
     var items = [
       {
         lotNo: '#1',
-        lotTitle: 'Lot Title',
-        time: '8 Days / 4 Hours / 39 Mins',
+        lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
+        time: '8d / 4h / 39m',
         nowAt: '$300.00',
         nextBid: '$0.00'
       },
       {
         lotNo: '#2',
         lotTitle: 'Lot Title 2',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$400.00',
-        nextBid: '$0.00'
+        nextBid: '$0.00',
+        watched: true
       },
       {
         lotNo: '#3',
         lotTitle: 'Lot Title 3',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$500.00',
         nextBid: '$0.00'
       },
       {
         lotNo: '#4',
         lotTitle: 'Lot Title 4',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$506.00',
         nextBid: '$0.00'
       },
       {
         lotNo: '#5',
         lotTitle: 'Lot Title 5',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$3406.00',
         nextBid: '$0.00'
       },
       {
         lotNo: '#6',
         lotTitle: 'Lot Title 6',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$834.00',
         nextBid: '$0.00'
       },
       {
         lotNo: '#7',
         lotTitle: 'Lot Title 7',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$98.00',
         nextBid: '$10.00'
       },
       {
         lotNo: '#8',
         lotTitle: 'Lot Title 8',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$948.00',
         nextBid: '$10.00'
       },
       {
         lotNo: '#9',
         lotTitle: 'Lot Title 9',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$1645.00',
         nextBid: '$10.00'
       },
       {
         lotNo: '#10',
         lotTitle: 'Lot Title 10',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$0.00',
         nextBid: '$10.00'
       },
       {
         lotNo: '#11',
         lotTitle: 'Lot Title 11',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$9.00',
         nextBid: '$10.00'
       },
       {
         lotNo: '#12',
         lotTitle: 'Lot Title 12',
-        time: '8 Days / 4 Hours / 39 Mins',
+        time: '8d / 4h / 39m',
         nowAt: '$65.00',
         nextBid: '$10.00'
       },
@@ -117,8 +118,8 @@ block content
                   th Time Remaining
                   th Now at
                   th Next bid
-                  th Watchlist
-                  th Bid
+                  th.text-center Watchlist
+                  th.text-center Bid
               tbody
                 each item in items
                   tr
@@ -127,9 +128,17 @@ block content
                     td #{item.time}
                     td #{item.nowAt}
                     td #{item.nextBid}
-                    td: a(href="#").btn.btn-primary.btn-sm.m-0
-                      i.icon-eye
-                    td: a(href="#").btn.btn-primary.btn-sm.m-0 Bid
+                    if (item.watched)
+                      td.text-center
+                        a(href="#").btn.btn-outline-primary.btn-sm.m-0
+                          i.icon-x
+                          span.ml-1 Unwatch
+                    else
+                      td.text-center
+                        a(href="#").btn.btn-outline-primary.btn-sm.m-0
+                          i.icon-eye
+                          span.ml-1 Watch
+                    td.text-center: a(href="#").btn.btn-primary.btn-sm.m-0 Bid
 
 
           include partials/pagination

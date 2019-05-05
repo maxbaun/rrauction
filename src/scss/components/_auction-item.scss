@@ -23,10 +23,14 @@
     padding: 10px;
   }
 
+  &__image {
+    padding: 10px 10px 0;
+  }
+
   &__title {
     color: $black-color;
     display: flex;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
 
     span:not(:last-child) {
@@ -65,7 +69,7 @@
 
       > span {
         display: block;
-        font-size: 11px;
+        font-size: 13px;
       }
 
       .value {
@@ -74,10 +78,10 @@
 
       .btn {
         margin: 0;
-        font-size: 11px;
-        height: 25px;
-        line-height: 25px;
-        padding: 0 12px;
+        font-size: 13px;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 15px;
         width: 100%;
       }
     }

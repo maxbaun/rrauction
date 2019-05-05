@@ -363,8 +363,19 @@
   .btn { margin: 0; }
   > table > thead > tr,
   > table > tbody > tr {
-    > th,
     > td { vertical-align: middle !important; }
+    > th {
+      white-space: nowrap;
+      vertical-align: top !important;
+      a {
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
   > table thead th {
     padding: {

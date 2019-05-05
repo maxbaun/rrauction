@@ -6,11 +6,11 @@
         span.text Watch
     .time
       | 8d 4h 39m
-  img.img-fluid(src=item.image)
+  .auction-item__image
+    img.img-fluid(src=item.image)
   .auction-item__body
     a.auction-item__title(href="/t21-auction-item-detail.html")
       span.title #{item.title}
-    p.auction-item__description #{item.description}
     .auction-item__meta
       div
         span.title.text-muted Now At

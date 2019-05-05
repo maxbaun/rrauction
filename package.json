@@ -4,7 +4,8 @@
   "description": "Unishop - Universal Bootstrap 4 E-Commerce Template",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node_modules/.bin/grunt"
   },
   "author": "rokaux.com",
   "license": "ISC",

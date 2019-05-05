@@ -53,32 +53,37 @@ block content
 
   .homepage
     // Main Slider
-    section.mb-4.mt-4
+    section.mt-4
       .container
         .row
-          .col-lg-3.order-lg-1
-            include partials/home-sidebar
-          .col-lg-9.order-lg-2
+          .col-lg-8.order-lg-2
             .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true }')
               .item
                 .home-slide
                   img(src='//source.unsplash.com/1024x600', alt='Image')
-                  .overlay
-                    p.text This is some text about the item
+                  .overlay.d-md-flex.justify-content-between
+                    span
+                      h2.heading.h4 This is the header text
+                      p.text This is some text about the item
                     a.btn.btn-primary(href="#") Optional CTA
               .item
                 .home-slide
                   img(src='//source.unsplash.com/1024x600', alt='Image')
-                  .overlay
-                    p.text This is some text about the item
+                  .overlay.d-md-flex.justify-content-between
+                    span
+                      h2.heading.h4 This is the header text
+                      p.text This is some text about the item
                     a.btn.btn-primary(href="#") Optional CTA
               .item
                 .home-slide
                   img(src='//source.unsplash.com/1024x600', alt='Image')
-                  .overlay
-                    p.text This is some text about the item
+                  .overlay.d-md-flex.justify-content-between
+                    span
+                      h2.heading.h4 This is the header text
+                      p.text This is some text about the item
                     a.btn.btn-primary(href="#") Optional CTA
-
+          .col-lg-4.order-lg-1
+            include partials/home-sidebar
     section.padding-top-2x.padding-bottom-2x
       .container
         h3.text-lg.text-uppercase.margin-top-0 Upcoming Auctions

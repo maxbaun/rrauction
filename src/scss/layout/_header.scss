@@ -28,7 +28,7 @@
     flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
-    padding: 20px 15px;
+    padding: 5px 15px;
     border-right: 1px solid $border-color;
     .site-logo {
       display: block;
@@ -65,14 +65,15 @@
       }
     }
     .advanced-search {
-      padding: 0 10px;
-      text-align: right;
+      display: block;
+      padding: 10px 0 0;
+      text-align: left;
       white-space: nowrap;
     }
     select.form-control {
       border-color: darken($border-color, 3%);
       background-color: $gray-light;
-      flex: 0 1 150px;
+      flex: 0 1 40%;
       border: {
         top-right-radius: 0;
         bottom-right-radius: 0;
@@ -80,7 +81,8 @@
       }
     }
     .input-group {
-      width: 100%;
+      flex: 1 1 100%;
+      width: 60%;
       .form-control {
         border-color: darken($border-color, 3%);
         border: {
@@ -368,6 +370,11 @@
     .toolbar .toolbar-item.visible-on-mobile { display: block; }
   }
   .mobile-menu.open { display: block; }
+  .site-header {
+    .site-branding {
+      padding: 15px;
+    }
+  }
 }
 @media (max-width: $screen-xs) {
   .site-header .toolbar .toolbar-item {
