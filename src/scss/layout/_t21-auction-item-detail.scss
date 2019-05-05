@@ -9,4 +9,33 @@
       }
     }
   }
+
+  .product-info-card {
+    padding: .5rem 1.5rem 1.5rem;
+  }
+
+  .gallery-item {
+    img {
+      max-width: 320px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .auction-header__time {
+    color: $black-color;
+    display: block;
+    text-align: right;
+    padding: 0;
+    margin-bottom: 10px;
+
+    .countdown {
+      display: flex;
+      justify-content: flex-end;
+
+      .active {
+        display: flex;
+      }
+    }
+  }
 }
