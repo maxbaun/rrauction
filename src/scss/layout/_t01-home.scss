@@ -35,4 +35,20 @@
       padding-top: .5rem;
     }
   }
+
+  .item-carousel {
+    .item {
+      .auction-item__image {
+        img {
+          padding: 0;
+        }
+      }
+      img {
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+        padding: 10px;
+      }
+    }
+  }
 }

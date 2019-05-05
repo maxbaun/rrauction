@@ -1,100 +1,10 @@
 // Main Navigation
 nav.site-menu
   ul
-    li.has-submenu
-      +menu-link('#', 'Buy')
-      ul.sub-menu
-        li
-          +menu-link('#', 'Bid Now')
-        li
-          +menu-link('/t02-how-to-buy.html', 'How to Bid/Buy')
-        li
-          +menu-link('/t25-register.html', 'Register to Bid')
-        li
-          +menu-link('#', 'Bidding FAQs')
-        li
-          +menu-link('#', 'View or Buy Catalogs')
-    li.has-submenu
-      +menu-link('#', 'Sell')
-      ul.sub-menu
-        li
-          +menu-link('#', 'Free Appraisal')
-        li
-          +menu-link('/t03-how-to-sell.html', 'How to Sell/Consign')
-        li
-          +menu-link('/t10-specialists.html', 'Meet Our Specialists')
-        li
-          +menu-link('/t06-testimonials.html', 'Seller Testimonials')
-        li
-          +menu-link('#', 'Selling FAQs')
-    li.has-submenu
-      +menu-link('#', 'Auctions')
-      ul.sub-menu
-        li
-          +menu-link('/t17-auction-calendar.html', 'Auction Calendar')
-        li
-          +menu-link('/t18-auction-list--list.html', 'Current Auction')
-        li
-          +menu-link('#', 'Preview Auction')
-        li
-          +menu-link('#', 'Past Auctions')
-        li
-          +menu-link('#', 'Future Auctions')
-    li.has-submenu
-      +menu-link('#', 'Departments')
-      ul.sub-menu
-        li
-          +menu-link('/t11-auction-department.html', 'Autographs & Manuscripts')
-        li
-          +menu-link('/t11-auction-department.html', 'Autographs & Manuscripts')
-        li
-          +menu-link('/t11-auction-department.html', 'Animation Art')
-        li
-          +menu-link('/t11-auction-department.html', 'JFK & Presidential')
-        li
-          +menu-link('/t11-auction-department.html', 'Marvels of Modern Music')
-        li
-          +menu-link('/t11-auction-department.html', 'Olympics Memorabilia')
-        li
-          +menu-link('/t11-auction-department.html', 'Pop Culture & Hollywood')
-        li
-          +menu-link('/t11-auction-department.html', 'Prince Collectibles')
-        li
-          +menu-link('/t11-auction-department.html', 'Remarkable Rarities')
-        li
-          +menu-link('/t11-auction-department.html', 'Science & Technology')
-        li
-          +menu-link('/t11-auction-department.html', 'Space Exploration')
-        li
-          +menu-link('/t11-auction-department.html', 'Sports Cards & Memorabilia')
-    li.has-submenu
-      +menu-link('#', 'About')
-      ul.sub-menu
-        li
-          +menu-link('/t08-about.html', 'Our History')
-        li
-          +menu-link('/t09-team.html', 'Meet The Team')
-        li
-          +menu-link('/t06-testimonials.html', 'Testimonials')
-    li.has-submenu
-      +menu-link('#', 'Media')
-      ul.sub-menu
-        li
-          +menu-link('#', 'In The News')
-        li
-          +menu-link('/t15-blog-list.html', 'Blog')
-        li
-          +menu-link('#', 'Podcasts')
-    li.has-submenu
-      +menu-link('#', 'Results')
-      ul.sub-menu
-        li
-          +menu-link('#', 'Past Auction Archive')
-        li
-          +menu-link('#', 'Top Past Results')
-        li
-          +menu-link('#', 'Space Results')
-        li
-          +menu-link('#', 'Music Results')
-        li
-          +menu-link('#', 'Sports Results')
+    for link in mainMenuLinks
+      li.has-submenu
+        +menu-link('#', link.text)
+        ul.sub-menu
+          for sublink in link.children
+            li
+              +menu-link(sublink.url, sublink.text)
