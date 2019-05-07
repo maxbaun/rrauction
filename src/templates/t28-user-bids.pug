@@ -15,30 +15,47 @@ block content
     var items = [
       {
         status: 'Winning',
+        statusClass: 'text-success',
         lotNo: '#1',
         lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
         time: '8d / 4h / 39m',
         nowAt: '$300.00',
         nextBid: '$0.00',
-        max: '$4000.00'
+        max: '$4000.00',
+        bidText: 'Bid'
       },
       {
         status: 'Outbid',
+        statusClass: 'text-danger',
         lotNo: '#2',
         lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
         time: '8d / 4h / 39m',
         nowAt: '$400.00',
         nextBid: '$0.00',
-        max: '$4000.00'
+        max: '$4000.00',
+        bidText: 'Bid'
+      },
+      {
+        status: 'Closed',
+        statusClass: 'text-label',
+        lotNo: '#3',
+        lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
+        time: 'Closed',
+        nowAt: '$500.00',
+        nextBid: '$0.00',
+        max: '$4000.00',
+        bidText: 'View'
       },
       {
         status: 'Winning',
-        lotNo: '#3',
+        statusClass: 'text-success',
+        lotNo: '#4',
         lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
-        time: '8d / 4h / 39m',
+        time: 'Closed',
         nowAt: '$500.00',
         nextBid: '$0.00',
-        max: '$4000.00'
+        max: '$4000.00',
+        bidText: 'Bid'
       },
     ]
   .user-bids-page.padding-bottom-3x
@@ -50,12 +67,20 @@ block content
               li.nav-item: a(href='/t28-user-bids.html').nav-link.active My Bids
               li.nav-item: a(href='/t27-user-watchlist.html').nav-link My Watchlist
               li.nav-item: a(href='/t29-user-consignments.html').nav-link My Consignments
+            div.controls
+              ul.nav.nav-pills.mt-3.mb-3
+                li.nav-item
+                  a(href="#").nav-link Current Auctions
+                li.nav-item
+                  a(href="#").nav-link.active Past Auctions
+              .filter.mt-3.mb-3
+                label(for="filter").text-muted.text-small Filter By:
+                select(name="filter" id="filter").form-control
+                  option(value="Filter 1") Filter 1
+                  option(value="Filter 2") Filter 2
+                  option(value="Filter 3") Filter 3
+                  option(value="Filter 4") Filter 4
 
-            ul.nav.nav-pills.mt-3.mb-3
-              li.nav-item
-                a(href="#").nav-link Current Auctions
-              li.nav-item
-                a(href="#").nav-link.active Past Auctions
 
             .table-responsive.shopping-cart
               table.table
@@ -80,11 +105,14 @@ block content
                 tbody
                   each item in items
                     tr
-                      td #{item.status}
+                      td(class=item.statusClass) #{item.status}
                       td #{item.lotNo}
-                      td #{item.lotTitle}
+                      td
+                        a(href="#") #{item.lotTitle}
                       td #{item.time}
                       td #{item.nowAt}
                       td #{item.nextBid}
                       td #{item.max}
-                      td.text-center: a(href="#").btn.btn-primary.btn-sm.m-0 Bid
+                      td.text-center: a(href="#").btn.btn-primary.btn-sm.m-0 #{item.bidText}
+
+            include partials/pagination

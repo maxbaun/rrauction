@@ -522,11 +522,22 @@
                 <li class="nav-item"><a class="nav-link" href="/t27-user-watchlist.html">My Watchlist</a></li>
                 <li class="nav-item"><a class="nav-link active" href="/t29-user-consignments.html">My Consignments</a></li>
               </ul>
-              <ul class="nav nav-pills mt-3 mb-3">
-                <li class="nav-item"><a class="nav-link" href="#">Current Auctions</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Preview Auctions</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Past Auctions</a></li>
-              </ul>
+              <div class="controls">
+                <ul class="nav nav-pills mt-3 mb-3">
+                  <li class="nav-item"><a class="nav-link" href="#">Current Auctions</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="#">Preview Auctions</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Past Auctions</a></li>
+                </ul>
+                <div class="filter mt-3 mb-3">
+                  <label class="text-muted text-small" for="filter">Filter By:</label>
+                  <select class="form-control" name="filter" id="filter">
+                    <option value="Filter 1">Filter 1</option>
+                    <option value="Filter 2">Filter 2</option>
+                    <option value="Filter 3">Filter 3</option>
+                    <option value="Filter 4">Filter 4</option>
+                  </select>
+                </div>
+              </div>
               <div class="table-responsive shopping-cart">
                 <table class="table">
                   <thead>
@@ -543,9 +554,9 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Sold</td>
+                      <td class="text-success">Sold</td>
                       <td>#1</td>
-                      <td>Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</td>
+                      <td><a href="#">Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</a></td>
                       <td>8d / 4h / 39m</td>
                       <td>$300.00</td>
                       <td>$0.00</td>
@@ -553,9 +564,9 @@
                       <td class="text-center"><a class="btn btn-primary btn-sm m-0" href="#">Bid</a></td>
                     </tr>
                     <tr>
-                      <td>Unsold</td>
+                      <td class="text-danger">Unsold</td>
                       <td>#2</td>
-                      <td>Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</td>
+                      <td><a href="#">Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</a></td>
                       <td>8d / 4h / 39m</td>
                       <td>$400.00</td>
                       <td>$0.00</td>
@@ -563,9 +574,9 @@
                       <td class="text-center"><a class="btn btn-primary btn-sm m-0" href="#">Bid</a></td>
                     </tr>
                     <tr>
-                      <td>Sold</td>
+                      <td class="text-success">Sold</td>
                       <td>#3</td>
-                      <td>Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</td>
+                      <td><a href="#">Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</a></td>
                       <td>8d / 4h / 39m</td>
                       <td>$500.00</td>
                       <td>$0.00</td>
@@ -575,6 +586,20 @@
                   </tbody>
                 </table>
               </div>
+              <!-- Pagination-->
+              <nav class="pagination">
+                <div class="column">
+                  <ul class="pages">
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li>...</li>
+                    <li><a href="#">12</a></li>
+                  </ul>
+                </div>
+                <div class="column text-right hidden-xs-down"><a class="btn btn-outline-secondary btn-sm" href="#">Next&nbsp;<i class="icon-chevron-right"></i></a></div>
+              </nav>
             </div>
           </div>
         </div>

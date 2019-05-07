@@ -11,6 +11,8 @@
     transition: color .3s;
     border-top-left-radius: $border-radius-base;
     border-top-right-radius: $border-radius-base;
+    border-color: $border-color $border-color $white-color;
+    background-color: lighten($border-color, 5%);
     color: $nav-link-color;
     font: {
       size: $nav-link-font-size;

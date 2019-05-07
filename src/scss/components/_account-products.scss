@@ -1,10 +1,60 @@
 .account-products {
   .nav-tabs {
     .nav-link {
+      height: 100%;
       transition-property: color, background-color;
+
       &.active {
         background-color: $brand-primary;
         color: $white-color;
+      }
+    }
+  }
+
+  .nav-pills {
+    .nav-link {
+      border: 1px solid $brand-primary;
+      color: $brand-primary;
+      height: 40px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      padding: 5px 10px;
+
+      &:hover:not(:disabled),
+      &.active {
+        background-color: $brand-primary;
+        color: $white-color;
+      }
+
+      &.active {
+        &:hover {
+          background-color: darken($brand-primary, 5%);
+        }
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+
+    .filter {
+      flex: 0 0 222px;
+      display: flex;
+
+      label {
+        font-size: 13px;
+        margin: 0;
+        padding: 10px 10px 10px 0;
+        white-space: nowrap;
+      }
+
+      select {
+
       }
     }
   }
