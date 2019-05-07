@@ -55,6 +55,7 @@
 
     @media (min-width: $nav-collapse) {
       display: flex;
+      flex-wrap: wrap;
     }
 
     > div {
@@ -66,12 +67,12 @@
         align-items: flex-end;
       }
 
-      &:not(:first-child) {
-        padding-top: 10px;
+      &:not(:last-child) {
+        padding-bottom: 10px;
         @media (min-width: $nav-collapse) {
-          padding-top: 0;
-          padding-left: 10px;
-          border-left: 1px solid $border-color;
+          padding-bottom: 5px;
+          padding-top: 5px;
+          padding-right: 10px;
         }
       }
 
@@ -89,7 +90,7 @@
         font-size: 13px;
         height: 36px;
         line-height: 36px;
-        padding: 0 15px;
+        padding: 0 7.5px;
         width: 100%;
 
         i {

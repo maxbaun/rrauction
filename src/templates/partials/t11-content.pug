@@ -1,3 +1,50 @@
+-
+  var auctions = [
+    {
+      image: '/img/components/img05.jpg',
+      title: 'Marvels of Modern Music',
+      link: '#',
+      date: '27 September 2019 | 03:00 PM EST'
+    },
+    {
+      image: '/img/components/img05.jpg',
+      title: 'Marvels of Modern Music',
+      link: '#',
+      date: '27 September 2019 | 03:00 PM EST'
+    },
+    {
+      image: '/img/components/img05.jpg',
+      title: 'Marvels of Modern Music',
+      link: '#',
+      date: '27 September 2019 | 03:00 PM EST'
+    },
+    {
+      image: '/img/components/img05.jpg',
+      title: 'Marvels of Modern Music',
+      link: '#',
+      date: '27 September 2019 | 03:00 PM EST'
+    },
+    {
+      image: '/img/components/img05.jpg',
+      title: 'Marvels of Modern Music',
+      link: '#',
+      date: '27 September 2019 | 03:00 PM EST'
+    },
+    {
+      image: '/img/components/img05.jpg',
+      title: 'Marvels of Modern Music',
+      link: '#',
+      date: '27 September 2019 | 03:00 PM EST'
+    }
+  ]
+
+-
+  var auctionItems = [
+    {image: '/img/rr/items/3410396_1.jpg', title: '#23 John F. Kennedy\'s Monogrammed Shaving Kit Used as President', description: 'This is the description of the auction item', now: '$6,000', next: '$6,500'},
+    {image: '/img/rr/items/3410396_1.jpg', title: '#23 John F. Kennedy\'s Monogrammed Shaving Kit Used as President', description: 'This is the description of the auction item', now: '$6,000', next: '$6,500'},
+    {image: '/img/rr/items/3410396_1.jpg', title: '#23 John F. Kennedy\'s Monogrammed Shaving Kit Used as President', description: 'This is the description of the auction item', now: '$6,000', next: '$6,500'}
+  ]
+
 h2 Heading 1
 p Laboris esse fugiat quis et reprehenderit quis dolor qui. Laborum eiusmod dolore fugiat voluptate. Ex ea Lorem Lorem exercitation nulla laborum voluptate exercitation excepteur in. Irure velit sint qui dolor minim officia aliqua laborum mollit cupidatat aute. Exercitation laboris deserunt do aute nostrud adipisicing mollit dolor id adipisicing est consequat veniam pariatur.
 p Excepteur deserunt deserunt laboris cillum reprehenderit aliquip adipisicing commodo esse ad cupidatat ullamco. Quis fugiat cillum sit ipsum nulla do pariatur sunt officia ex eu sit. Eu fugiat quis id consequat consequat eiusmod elit culpa et laboris id dolore deserunt nulla. Aute ullamco mollit reprehenderit voluptate nostrud.
@@ -7,14 +54,14 @@ p Tempor anim non dolore Lorem duis exercitation eu quis enim nisi duis. Ullamco
 .carousel-section.mt-30
   h3.h6.text-muted.text-lg.text-uppercase Top Selling Items
   hr.margin-bottom-1x
-  .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3}} }')
+  .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":2},"630":{"items":3},"991":{"items":3}} }')
     each item in auctionItems
       .item
-        include auction-item-card
+        include auction-item
 .carousel-section.mt-30
   h3.h6.text-muted.text-lg.text-uppercase List of Auctions
   hr.margin-bottom-1x
-  .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3}} }')
+  .owl-carousel(data-owl-carousel='{ "nav": true, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":2},"630":{"items":3},"991":{"items":3}} }')
     each auction in auctions
       .item
         include auction-card

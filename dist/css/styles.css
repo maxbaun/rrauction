@@ -6041,6 +6041,7 @@ video {
   display: flex;
   font-size: 14px;
   text-decoration: none;
+  font-weight: 400;
 }
 
 .auction-item__title span:not(:last-child) {
@@ -6048,7 +6049,7 @@ video {
 }
 
 .auction-item__title .title {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .auction-item__title:focus .title, .auction-item__title:hover .title {
@@ -6056,9 +6057,16 @@ video {
 }
 
 .auction-item__meta {
-  display: -ms-flexbox;
-  display: flex;
   padding: 7px 0;
+}
+
+@media (min-width: 991px) {
+  .auction-item__meta {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .auction-item__meta > div {
@@ -6075,9 +6083,16 @@ video {
       align-items: flex-end;
 }
 
-.auction-item__meta > div:not(:first-child) {
-  padding-left: 10px;
-  border-left: 1px solid #e5e5e5;
+.auction-item__meta > div:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+@media (min-width: 991px) {
+  .auction-item__meta > div:not(:last-child) {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+  }
 }
 
 .auction-item__meta > div > span {
@@ -6094,8 +6109,12 @@ video {
   font-size: 13px;
   height: 36px;
   line-height: 36px;
-  padding: 0 15px;
+  padding: 0 7.5px;
   width: 100%;
+}
+
+.auction-item__meta > div .btn i {
+  margin-right: 5px;
 }
 
 .auction-item__footer {
@@ -6224,6 +6243,26 @@ video {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
+}
+
+.auction-item--skin-3 .auction-item__header .lot {
+  border-right: 1px solid #e5e5e5;
+  font-size: 12px;
+}
+
+.auction-item--skin-3 .auction-item__header .lot a {
+  color: #999999;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  line-height: 1;
+  text-decoration: none;
+  padding: 5px 15px;
+}
+
+.auction-item--skin-3 .auction-item__header .lot a:hover, .auction-item--skin-3 .auction-item__header .lot a.active {
+  color: #7f2e2b;
 }
 
 .auction-item--skin-3 .auction-item__header .watch {
@@ -7261,9 +7300,6 @@ video {
 }
 
 @media (max-width: 991px) {
-  body {
-    padding-top: 0 !important;
-  }
   .navbar,
   .search-box-wrap,
   .hidden-on-mobile {
