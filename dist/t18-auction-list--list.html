@@ -514,30 +514,9 @@
         <div class="auction-header__banner">
           <div class="container">
             <div class="auction-header__banner-info">
-              <div class="dates">
-                <div class="date"><span class="day">Mon</span><span class="date">15</span><span class="month">Apr</span></div>
-                <div class="separator"><i class="icon-chevron-right"></i></div>
-                <div class="date"><span class="day">Sat</span><span class="date">4</span><span class="month">May</span></div>
-              </div>
-              <h1 class="title">Auction 85</h1>
+              <h1 class="title">Fri April 19th - Sat April 20th</h1>
             </div>
             <div class="auction-header__banner-actions">
-              <div class="auction-header__time">
-                <div class="countdown" data-date-time="12/30/2019 12:00:00">
-                  <div class="item">
-                    <div class="days"></div><span class="days_ref">Days</span>
-                  </div>
-                  <div class="item">
-                    <div class="hours"></div><span class="hours_ref">Hours</span>
-                  </div>
-                  <div class="item">
-                    <div class="minutes"></div><span class="minutes_ref">Mins</span>
-                  </div>
-                  <div class="item">
-                    <div class="seconds"></div><span class="seconds_ref">Seconds</span>
-                  </div>
-                </div>
-              </div>
               <div class="auction-header__register"><a class="btn btn-primary btn-sm" href="#">Register</a></div>
               <div class="auction-header__more">
                 <button class="btn" data-toggle="true" aria-controls="auction-header-content" aria-expanded="false"><span class="text">More</span><i class="icon icon-chevron-down"></i></button>
@@ -549,11 +528,10 @@
           <div class="container">
             <div class="auction-header__content-inner">
               <div class="row align-items-center">
-                <div class="col-sm-4 col-md-3"><img class="img-fluid mb-3 mb-sm-0" src="//source.unsplash.com/1024x768" alt="Auction Image"></div>
+                <div class="col-sm-4 col-md-3"><img class="img-fluid mb-3 mb-sm-0" src="/img/auction-catalog/catalog-4.jpg" alt="Auction Image"></div>
                 <div class="col-sm-8 col-md-9">
-                  <div class="auction-header__content-meta mb-3"><span class="items">0 Items</span><span class="id">Sale #19BOS070</span></div>
-                  <h2 class="title">Furniture, Home Decore & More</h2>
-                  <div class="auction-header__content-details"><span class="status ended"><span class="circle"></span><span class="text">Ended</span></span><span class="date">Friday, April 19th 2019 @ 8:15pm</span></div>
+                  <h2 class="title">Auction Info</h2>
+                  <p>Pariatur ipsum ipsum magna do reprehenderit cupidatat. Veniam dolore veniam labore velit do reprehenderit incididunt aute incididunt eiusmod do. Veniam consectetur sit reprehenderit dolore. Id duis commodo proident eu eu nulla ea ullamco excepteur dolore velit sit aliqua. Voluptate velit nostrud fugiat aliqua est ut amet. Sunt in eu Lorem velit do cillum nulla Lorem magna cillum consequat. Id cillum et magna enim nostrud veniam ullamco exercitation ex.</p>
                 </div>
               </div>
             </div>
@@ -569,13 +547,19 @@
                 <div class="shop-sorting">
                   <label for="sorting">Sort by:</label>
                   <select class="form-control" id="sorting">
-                    <option>Popularity</option>
-                    <option>Low - High Price</option>
-                    <option>High - Low Price</option>
-                    <option>Average Rating</option>
-                    <option>A - Z Order</option>
-                    <option>Z - A Order</option>
-                  </select><span class="text-muted">Showing:&nbsp;</span><span>1 - 12 items</span>
+                    <option value="Popularity">Popularity</option>
+                    <option value="Low - High Price">Low - High Price</option>
+                    <option value="High - Low Price">High - Low Price</option>
+                    <option value="Average Rating">Average Rating</option>
+                    <option value="A - Z Order">A - Z Order</option>
+                    <option value="Z - A Order">Z - A Order</option>
+                  </select>
+                  <label for="show">Show:</label>
+                  <select class="form-control" id="show">
+                    <option value="24">24</option>
+                    <option value="48">48</option>
+                    <option value="96">96</option>
+                  </select>
                 </div>
               </div>
               <div class="column">
@@ -598,7 +582,7 @@
                 <tbody>
                   <tr>
                     <td>#1</td>
-                    <td>Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</td>
+                    <td><a href="#">Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</a></td>
                     <td>8d / 4h / 39m</td>
                     <td>$300.00</td>
                     <td>$0.00</td>
@@ -607,7 +591,7 @@
                   </tr>
                   <tr>
                     <td>#2</td>
-                    <td>Lot Title 2</td>
+                    <td><a href="#">Lot Title 2</a></td>
                     <td>8d / 4h / 39m</td>
                     <td>$400.00</td>
                     <td>$0.00</td>
@@ -616,25 +600,25 @@
                   </tr>
                   <tr>
                     <td>#3</td>
-                    <td>Lot Title 3</td>
-                    <td>8d / 4h / 39m</td>
+                    <td><a href="#">Lot Title 3</a></td>
+                    <td>Starts 5/4/19</td>
                     <td>$500.00</td>
                     <td>$0.00</td>
                     <td class="text-center"><a class="btn btn-outline-primary btn-sm m-0" href="#"><i class="icon-eye"></i><span class="ml-1">Watch</span></a></td>
-                    <td class="text-center"><a class="btn btn-primary btn-sm m-0" href="#">Bid</a></td>
+                    <td class="text-center"><a class="btn btn-primary btn-sm m-0" href="#">View</a></td>
                   </tr>
                   <tr>
                     <td>#4</td>
-                    <td>Lot Title 4</td>
-                    <td>8d / 4h / 39m</td>
+                    <td><a href="#">Lot Title 4</a></td>
+                    <td>Closed</td>
                     <td>$506.00</td>
                     <td>$0.00</td>
                     <td class="text-center"><a class="btn btn-outline-primary btn-sm m-0" href="#"><i class="icon-eye"></i><span class="ml-1">Watch</span></a></td>
-                    <td class="text-center"><a class="btn btn-primary btn-sm m-0" href="#">Bid</a></td>
+                    <td class="text-center"><a class="btn btn-primary btn-sm m-0" href="#">View</a></td>
                   </tr>
                   <tr>
                     <td>#5</td>
-                    <td>Lot Title 5</td>
+                    <td><a href="#">Lot Title 5</a></td>
                     <td>8d / 4h / 39m</td>
                     <td>$3406.00</td>
                     <td>$0.00</td>
@@ -643,7 +627,7 @@
                   </tr>
                   <tr>
                     <td>#6</td>
-                    <td>Lot Title 6</td>
+                    <td><a href="#">Lot Title 6</a></td>
                     <td>8d / 4h / 39m</td>
                     <td>$834.00</td>
                     <td>$0.00</td>
@@ -652,7 +636,7 @@
                   </tr>
                   <tr>
                     <td>#7</td>
-                    <td>Lot Title 7</td>
+                    <td><a href="#">Lot Title 7</a></td>
                     <td>8d / 4h / 39m</td>
                     <td>$98.00</td>
                     <td>$10.00</td>
@@ -661,7 +645,7 @@
                   </tr>
                   <tr>
                     <td>#8</td>
-                    <td>Lot Title 8</td>
+                    <td><a href="#">Lot Title 8</a></td>
                     <td>8d / 4h / 39m</td>
                     <td>$948.00</td>
                     <td>$10.00</td>
@@ -670,7 +654,7 @@
                   </tr>
                   <tr>
                     <td>#9</td>
-                    <td>Lot Title 9</td>
+                    <td><a href="#">Lot Title 9</a></td>
                     <td>8d / 4h / 39m</td>
                     <td>$1645.00</td>
                     <td>$10.00</td>
@@ -679,7 +663,7 @@
                   </tr>
                   <tr>
                     <td>#10</td>
-                    <td>Lot Title 10</td>
+                    <td><a href="#">Lot Title 10</a></td>
                     <td>8d / 4h / 39m</td>
                     <td>$0.00</td>
                     <td>$10.00</td>
@@ -688,7 +672,7 @@
                   </tr>
                   <tr>
                     <td>#11</td>
-                    <td>Lot Title 11</td>
+                    <td><a href="#">Lot Title 11</a></td>
                     <td>8d / 4h / 39m</td>
                     <td>$9.00</td>
                     <td>$10.00</td>
@@ -697,7 +681,7 @@
                   </tr>
                   <tr>
                     <td>#12</td>
-                    <td>Lot Title 12</td>
+                    <td><a href="#">Lot Title 12</a></td>
                     <td>8d / 4h / 39m</td>
                     <td>$65.00</td>
                     <td>$10.00</td>
