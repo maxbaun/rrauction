@@ -493,7 +493,7 @@
       </div>
     </header>
     <!-- Page Title-->
-    <div class="page-title no-margin">
+    <div class="page-title">
       <div class="container">
         <div class="column">
           <h1>T21 - Auction Item Detail</h1>
@@ -515,14 +515,12 @@
     <div class="auction-item-detail-page">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <h2 class="my-3">Auction Item Title</h2>
-          </div>
-        </div>
-        <div class="row">
           <!-- Poduct Gallery-->
           <div class="col-md-8">
             <div class="product-gallery">
+              <div class="gallery-wrapper">
+                <div class="gallery-item video-btn text-center"><a href="#" data-toggle="tooltip" data-type="video" data-video="&lt;div class=&quot;wrapper&quot;&gt;&lt;div class=&quot;video-wrapper&quot;&gt;&lt;iframe class=&quot;pswp__video&quot; width=&quot;960&quot; height=&quot;640&quot; src=&quot;https://www.youtube.com/embed/CjNjcrQZtd8&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;" title="Watch video"></a></div>
+              </div><span class="product-badge bg-primary">4 Images</span>
               <div class="product-carousel owl-carousel gallery-wrapper" data-owl-carousel="{ &quot;nav&quot;: true, &quot;dots&quot;: true, &quot;loop&quot;: true }">
                 <div class="gallery-item" data-hash="one"><a href="//source.unsplash.com/random/450x700?image=1" data-size="450x700"><img src="//source.unsplash.com/random/450x700?image=1" alt="Product"></a></div>
                 <div class="gallery-item" data-hash="two"><a href="//source.unsplash.com/random/450x700?image=2" data-size="450x700"><img src="//source.unsplash.com/random/450x700?image=2" alt="Product"></a></div>
@@ -543,32 +541,31 @@
                 <div class="d-flex align-items-center justify-content-end"><a href="/t21-auction-item-detail.html">Next</a><i class="icon-chevron-right text-primary"></i></div>
               </div>
             </div>
-            <div class="sp-categories pb-3"><a href="#">Auction # 123456 - Auction Title</a></div>
             <div class="product-info-card bg-secondary">
-              <div class="auction-header__time">
-                <div class="countdown" data-date-time="12/30/2019 12:00:00">
-                  <div class="item">
-                    <div class="days"></div><span class="days_ref">0 Days</span>
-                  </div>
-                  <div class="item">
-                    <div class="hours"></div><span class="hours_ref">0 Hours</span>
-                  </div>
-                  <div class="item">
-                    <div class="minutes"></div><span class="minutes_ref">0 Mins</span>
-                  </div>
-                  <div class="item">
-                    <div class="seconds"></div><span class="seconds_ref">0 Seconds</span>
-                  </div>
+              <div class="countdown" data-date-time="12/30/2019 12:00:00">
+                <div class="item">
+                  <div class="days">00</div><span class="days_ref">Days</span>
                 </div>
-              </div><span class="h3 d-flex align-items-center mb-2">Now At: $899.00<span class="product-badge bg-primary ml-2 position-relative">1 bid</span></span><span class="h3 d-flex align-items-center mb-2">Next Bid: $950.00</span>
+                <div class="item">
+                  <div class="hours">00</div><span class="hours_ref">Hours</span>
+                </div>
+                <div class="item">
+                  <div class="minutes">00</div><span class="minutes_ref">Mins</span>
+                </div>
+                <div class="item">
+                  <div class="seconds">00</div><span class="seconds_ref">Secs</span>
+                </div>
+              </div>
+              <hr class="mt-1 mb-3">
+              <h4 class="d-flex align-items-center mb-2 mt-3">Now At: $899.00<span class="product-badge bg-primary ml-2 position-relative">1 bid</span>
+              </h4>
               <form class="mt-3" method="post">
                 <div class="form-group">
-                  <label for="bid">Enter Your Bid</label>
-                  <input class="form-control" type="text" name="bid" id="bid" placeholder="Enter Your Bid">
+                  <input class="form-control" type="text" name="bid" id="bid" placeholder="Enter $950 or more">
                 </div>
                 <div class="form-group">
                   <select class="form-control" id="maxbid">
-                    <option selected>Your Maximum Bid</option>
+                    <option selected>Add Maximum Bid</option>
                     <option value="$1000">$1000.00</option>
                     <option value="$1250">$1250.00</option>
                     <option value="$1300">$1300.00</option>
@@ -584,10 +581,15 @@
                   <button class="btn btn-primary d-block" type="submit" style="width: 100%; text-align: center;">Place Bid</button>
                 </div>
               </form>
-              <hr class="mt-3 mb-3"><a class="btn btn-outline-primary d-block" href="#"><i class="icon-eye"></i>&nbsp;Watch Item</a><small class="text-center mt-3 text-muted d-block">Estimate: $3000+</small>
+              <hr class="mt-3 mb-3">
+              <div class="row">
+                <div class="col-6"><a class="btn btn-outline-primary btn-sm d-block" href="#"><i class="icon-eye"></i>&nbsp;Watch Item</a></div>
+                <div class="col-6"><a class="btn btn-outline-primary btn-sm d-block" href="#"><i class="icon-phone"></i>&nbsp;Add Text Alerts</a></div>
+              </div><small class="text-center mt-3 text-muted d-block">Estimate: $3000+</small>
             </div>
             <div class="d-flex flex-wrap justify-content-between">
-              <div class="mt-2 mb-2"><a class="d-block" href="#">Consign Similar Item</a><a class="d-block" href="#">Extended Payment</a></div>
+              <div class="mt-2 mb-2"><a class="d-block" href="#">Consign Similar Item</a><a class="d-block" href="#">Extended Payment</a>
+              </div>
               <div class="mt-2 mb-2"><span class="text-muted">Share:&nbsp;&nbsp;</span>
                 <div class="d-inline-block"><a class="social-button shape-rounded sb-facebook" href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-rounded sb-twitter" href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="socicon-twitter"></i></a><a class="social-button shape-rounded sb-instagram" href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="socicon-instagram"></i></a></div>
               </div>
@@ -624,7 +626,7 @@
           <div class="col-md-4">
             <h2 class="h4">Auction Info</h2>
             <ul class="list-unstyled mb-2">
-              <li><strong>Auction Title:</strong> The Title Of The Auction</li>
+              <li><strong>Auction Title:</strong> <a href="#">The Title Of The Auction</a></li>
               <li><strong>Dates:</strong> 	Apr 5 - May 5</li>
             </ul>
             <ul class="list-unstyled mb-2">

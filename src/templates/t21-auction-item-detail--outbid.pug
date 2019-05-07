@@ -4,18 +4,16 @@ extends partials/layout
 append config
   - var isPageTitle = true
   - var parentMenu = 'Home'
-  - var pageTitle = 'T21 - Auction Item Detail'
+  - var pageTitle = 'T21 - Auction Item Detail (Outbid)'
   - var menuTitle = 'Home'
-  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Auction Name', 'link': '/t18-auction-list--list.html'}, {'title': 'T21 - Auction Item Detail'}]
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Auction Name', 'link': '/t18-auction-list--list.html'}, {'title': 'T21 - Auction Item Detail (Outbid)'}]
 
 //- Page Content
 block content
-  - var showAlert = false
-  - var alertClass = 'alert-success'
-  - var alertText = 'You are curreently the high bid. Your bid: $1000. Your max: $2000.'
-  - var showStarts = false
+  - var showAlert = true
+  - var alertClass = 'alert-warning'
+  - var alertText = 'You have been outbid. Your bid: $1000.'
   - var showCountdown = true
-  - var showPrice = true
   - var price = 'Now At: $899.00'
   - var showBidCount = true
   - var showForm = true
@@ -23,6 +21,7 @@ block content
   - var registerText = 'Register To Bid'
   - var registerUrl = '/t25-register.html'
   - var showWatch = true
+  - var showPrice = true
   - var helperLinks = ['Consign Similar Item', 'Extended Payment']
 
   .auction-item-detail-page

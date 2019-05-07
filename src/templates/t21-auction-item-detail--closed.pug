@@ -1,0 +1,30 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T21 - Auction Item Detail (Closed)'
+  - var menuTitle = 'Home'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Auction Name', 'link': '/t18-auction-list--list.html'}, {'title': 'T21 - Auction Item Detail (Closed)'}]
+
+//- Page Content
+block content
+  - var showAlert = false
+  - var alertClass = 'alert-warning'
+  - var alertText = 'You have been outbid. Your bid: $1000.'
+  - var showCountdown = false
+  - var showStarts = false
+  - var showPrice = true
+  - var price = 'Sold For: $899.00'
+  - var showBidCount = false
+  - var showForm = false
+  - var showRegister = true
+  - var registerText = 'Consign Similar item'
+  - var registerUrl = '#'
+  - var showWatch = true
+  - var helperLinks = ['Extended Payment']
+
+  .auction-item-detail-page
+    include partials/auction-item-detail
+

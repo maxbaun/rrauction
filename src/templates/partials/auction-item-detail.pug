@@ -1,0 +1,164 @@
+.container
+  .row
+    // Poduct Gallery
+    .col-md-8
+      .product-gallery
+        .gallery-wrapper
+          .gallery-item.video-btn.text-center
+            a(href='#' data-toggle='tooltip' data-type="video" data-video='<div class="wrapper"><div class="video-wrapper"><iframe class="pswp__video" width="960" height="640" src="https://www.youtube.com/embed/CjNjcrQZtd8" frameborder="0" allowfullscreen></iframe></div></div>' title='Watch video')
+        span.product-badge.bg-primary 4 Images
+        .product-carousel.owl-carousel.gallery-wrapper(data-owl-carousel='{ "nav": true, "dots": true, "loop": true }')
+          .gallery-item(data-hash='one')
+            a(href='//source.unsplash.com/random/450x700?image=1' data-size='450x700')
+              img(src='//source.unsplash.com/random/450x700?image=1' alt='Product')
+          .gallery-item(data-hash='two')
+            a(href='//source.unsplash.com/random/450x700?image=2' data-size='450x700')
+              img(src='//source.unsplash.com/random/450x700?image=2' alt='Product')
+          .gallery-item(data-hash='three')
+            a(href='//source.unsplash.com/random/450x700?image=3' data-size='450x700')
+              img(src='//source.unsplash.com/random/450x700?image=3' alt='Product')
+          .gallery-item(data-hash='four')
+            a(href='//source.unsplash.com/random/450x700?image=4' data-size='450x700')
+              img(src='//source.unsplash.com/random/450x700?image=4' alt='Product')
+
+    // Product Info
+    .col-md-4
+      .padding-top-2x.mt-2.hidden-md-up
+      .row.justify-content-between.mb-3
+        .col-4.text-left
+          .d-flex.align-items-center
+            i.icon-chevron-left.text-primary
+            a(href='/t21-auction-item-detail.html')
+              | Previous
+        .col-4.text-center
+          | Lot 0013
+        .col-4.text-right
+          .d-flex.align-items-center.justify-content-end
+            a(href='/t21-auction-item-detail.html')
+              | Next
+            i.icon-chevron-right.text-primary
+
+      .product-info-card.bg-secondary
+        if (showAlert)
+          .alert(class=alertClass) #{alertText}
+        if (showCountdown)
+          .countdown(data-date-time='12/30/2019 12:00:00')
+            .item
+              .days 00
+              span.days_ref Days
+            .item
+              .hours 00
+              span.hours_ref Hours
+            .item
+              .minutes 00
+              span.minutes_ref Mins
+            .item
+              .seconds 00
+              span.seconds_ref Secs
+          hr.mt-1.mb-3
+        if (showStarts)
+          h4.mt-2 Starts on 5/4/19
+          hr.mt-3.mb-3
+        if (showPrice)
+          h4.d-flex.align-items-center.mb-2.mt-3
+            | #{price}
+            if (showBidCount)
+              span.product-badge.bg-primary.ml-2.position-relative 1 bid
+        if (showForm)
+          form(method='post').mt-3
+            .form-group
+              input(type="text" name="bid" id="bid" placeholder="Enter $950 or more").form-control
+            .form-group
+              select(id='maxbid').form-control
+                option(selected) Add Maximum Bid
+                option(value='$1000') $1000.00
+                option(value='$1250') $1250.00
+                option(value='$1300') $1300.00
+                option(value='$1350') $1350.00
+                option(value='$1400') $1400.00
+                option(value='$1450') $1450.00
+                option(value='$1500') $1500.00
+                option(value='$1550') $1550.00
+                option(value='$1600') $1600.00
+            .form-group
+              button(type='submit' style='width: 100%; text-align: center;').btn.btn-primary.d-block Place Bid
+        if (showRegister)
+          a(href=registerUrl).btn.btn-primary.mb-2.d-block #{registerText}
+        hr.mt-3.mb-3
+        if (showWatch)
+          .row
+            .col-6
+              a(href="#").btn.btn-outline-primary.btn-sm.d-block
+                i.icon-eye
+                | &nbsp;Watch Item
+            .col-6
+              a(href="#").btn.btn-outline-primary.btn-sm.d-block
+                i.icon-phone
+                | &nbsp;Add Text Alerts
+
+        small.text-center.mt-3.text-muted.d-block Estimate: $3000+
+
+      .d-flex.flex-wrap.justify-content-between
+        .mt-2.mb-2
+          for link in helperLinks
+            a(href='#').d-block
+              | #{link}
+
+        .mt-2.mb-2
+          span.text-muted Share:&nbsp;&nbsp;
+          .d-inline-block
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Facebook').social-button.shape-rounded.sb-facebook
+              i.socicon-facebook
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Twitter').social-button.shape-rounded.sb-twitter
+              i.socicon-twitter
+            a(href='#' data-toggle='tooltip' data-placement='top' title='Instagram').social-button.shape-rounded.sb-instagram
+              i.socicon-instagram
+
+// Product Details
+
+#details.container.padding-top-3x.padding-bottom-2x.mb-3
+  .row
+    .col-md-8
+      .bg-secondary.p-4.mb-3.mb-md-0
+        h2.h4 Lot Description
+        h3.h5 Details
+        p.mb-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+        h3.h5 Features
+        ul.list-icon.mb-4
+          li
+            i.icon-check.text-success
+            | Capture 4K30 Video and 12MP Photos
+          li
+            i.icon-check.text-success
+            | Game-Style Controller with Touchscreen
+          li
+            i.icon-check.text-success
+            | View Live Camera Feed
+          li
+            i.icon-check.text-success
+            | Full Control of HERO6 Black
+          li
+            i.icon-check.text-success
+            | Use App for Dedicated Camera Operation
+        h3.h5 Specifications
+        ul.list-unstyled.mb-0
+          li <strong>Weight:</strong> 35.5oz (1006g)
+          li <strong>Maximum Speed:</strong> 	35 mph (15 m/s)
+          li <strong>Maximum Distance:</strong> 	Up to 9,840ft (3,000m)
+          li <strong>Operating Frequency:</strong> 2.4GHz
+          li <strong>Manufacturer:</strong> GoPro, USA
+
+    .col-md-4
+      h2.h4 Auction Info
+      ul.list-unstyled.mb-2
+        li <strong>Auction Title:</strong> <a href="#">The Title Of The Auction</a>
+        li <strong>Dates:</strong> 	Apr 5 - May 5
+      ul.list-unstyled.mb-2
+        li
+          a(href="#") Shipping Info
+        li
+          a(href="#") Helper Link 1
+        li
+          a(href="#") Helper Link 2
+        li
+          a(href="#") Helper Link 3

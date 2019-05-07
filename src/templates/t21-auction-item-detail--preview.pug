@@ -1,0 +1,30 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T21 - Auction Item Detail (Preview)'
+  - var menuTitle = 'Home'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'Auction Name', 'link': '/t18-auction-list--list.html'}, {'title': 'T21 - Auction Item Detail (Preview)'}]
+
+//- Page Content
+block content
+  - var showAlert = false
+  - var alertClass = 'alert-warning'
+  - var alertText = 'You have been outbid. Your bid: $1000.'
+  - var showCountdown = false
+  - var showPrice = false
+  - var price = 'Now At: $899.00'
+  - var showBidCount = false
+  - var showForm = false
+  - var showRegister = true
+  - var registerText = 'Register To Bid'
+  - var registerUrl = '/t25-register.html'
+  - var showWatch = true
+  - var showStarts = true
+  - var helperLinks = ['Consign Similar Item', 'Extended Payment']
+
+  .auction-item-detail-page
+    include partials/auction-item-detail
+
