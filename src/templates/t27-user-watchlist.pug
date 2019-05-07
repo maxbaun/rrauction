@@ -64,7 +64,39 @@ block content
                   option(value="Filter 4") Filter 4
 
 
-            .table-responsive.shopping-cart
+            .hidden-lg-up
+              each item in items
+                .card.mb-3
+                  .card-body
+                    ul.list-unstyled
+                      li
+                        strong Lot:
+                        | &nbsp;#{item.lotNo}
+                      li
+                        strong Lot Title:
+                        a(href="#") &nbsp;#{item.lotTitle}
+                      li
+                        strong Time Remaining:
+                        | &nbsp;#{item.time}
+                      li
+                        strong Now at:
+                        | &nbsp;#{item.nowAt}
+                      li
+                        strong Next bid:
+                        | &nbsp;#{item.nextBid}
+                      li
+                        if (item.watched)
+                          a(href="#").btn.btn-outline-primary.btn-sm
+                            i.icon-x
+                            span.ml-1 Unwatch
+                        else
+                          a(href="#").btn.btn-outline-primary.btn-sm
+                            i.icon-eye
+                            span.ml-1 Watch
+                        a(href="#").btn.btn-primary.btn-sm Bid
+
+
+            .table-responsive.shopping-cart.hidden-md-down
               table.table
                 thead
                   tr
