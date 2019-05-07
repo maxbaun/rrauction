@@ -11,7 +11,7 @@
   .auction-item__image
     img.img-fluid(src=item.image)
     if (item.overlay)
-      .auction-item__image-overlay
+      .auction-item__image-overlay(class=item.overlayClass)
         p #{item.overlay}
   .auction-item__body
     a.auction-item__title(href="/t21-auction-item-detail.html")

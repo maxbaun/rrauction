@@ -10,8 +10,15 @@
     margin: 0;
     border-radius: 0;
     border: none;
-    padding: 10px 15px;
-    background-color: $gray-lighter;
+    padding: {
+      top: 5px;
+      bottom: 5px;
+    };
+    background-color: $black-color;
+    color: $white-color;
+    .alert-link {
+      color: $white-color;
+    }
   }
 
   // Topbar

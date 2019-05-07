@@ -10,7 +10,9 @@
  /*global jQuery, iziToast, noUiSlider*/
 
 jQuery(document).ready(function($) {
-	'use strict';
+  'use strict';
+
+  var mobileBreakpoint = 992
 
 	// Check if Page Scrollbar is visible
 	//------------------------------------------------------------------------------
@@ -66,17 +68,24 @@ jQuery(document).ready(function($) {
 		var $body = $('body');
 		var $navbar = $('.navbar-sticky');
 		var $topbarH = $('.topbar').outerHeight();
-		var $navbarH = $navbar.find('.navbar').outerHeight();
+		var $navbarH = $navbar.find('.navbar').outerHeight()
 		if($navbar.length) {
 			$(window).on('scroll', function() {
-				if($(this).scrollTop() > $topbarH) {
+				if($(this).scrollTop() > $topbarH && window.innerWidth > mobileBreakpoint) {
 					$navbar.addClass('navbar-stuck');
 					$body.css('padding-top', $topbarH);
 				} else {
 					$navbar.removeClass('navbar-stuck');
 					$body.css('padding-top', 0);
 				}
-			});
+      });
+
+      $(window).on('resize', function () {
+        if (window.innerWidth > mobileBreakpoint) {
+          $navbar.removeClass('navbar-stuck');
+					$body.css('padding-top', 0);
+        }
+      })
 		}
 	}
 	stickyHeader();
@@ -1011,11 +1020,9 @@ jQuery(document).ready(function($) {
       var $target = $($self.attr('href'));
 
       $self.on('shown.bs.tab', function () {
-        if (window.innerWidth < 992) {
+        if (window.innerWidth < mobileBreakpoint) {
           var top = $target[0].getBoundingClientRect().top
           var topbarHeight = $('.site-header .topbar').height();
-
-          console.log(topbarHeight)
 
           window.scrollTo({ top: top - topbarHeight });
         }
