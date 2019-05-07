@@ -1,7 +1,10 @@
 .auction-header {
   $breakpoint: 700px;
+  margin-bottom: 15px;
 
-  margin-bottom: ceil($grid-vertical-step * 2.5); //~60px
+  @media (min-width: $nav-collapse) {
+    margin-bottom: ceil($grid-vertical-step * 2.5); //~60px
+  }
 
   &__banner {
     background-color: $gray-lighter;
@@ -184,6 +187,11 @@
     .title {
       border-bottom: 2px solid $border-color;
       padding-bottom: 10px;
+      font-size: 20px;
+
+      @media (min-width: $nav-collapse) {
+        font-size: 24px;
+      }
     }
   }
 

@@ -1,17 +1,24 @@
+- var bidText = item.bidText || 'Bid'
+- var timeText = item.time || '8d 4h 39m'
+- var priceLabel = item.priceLabel || 'Now At'
+
 .auction-item.auction-item--skin-3
   .auction-item__header
     div.lot
       a(href='#') Lot 1
     .time
-      | 8d 4h 39m
+      | #{timeText}
   .auction-item__image
     img.img-fluid(src=item.image)
+    if (item.overlay)
+      .auction-item__image-overlay
+        p #{item.overlay}
   .auction-item__body
     a.auction-item__title(href="/t21-auction-item-detail.html")
       span.title #{item.title}
     .auction-item__meta
       div
-        span.title.text-muted Now At
+        span.title.text-muted #{priceLabel}
         span.value #{item.now}
       div
         a(href="#")
@@ -19,4 +26,4 @@
             i.icon-eye
             span.text Watch
       .bid
-        a(href="#").btn.btn-primary.btn-sm Bid
+        a(href="#").btn.btn-primary.btn-sm #{bidText}

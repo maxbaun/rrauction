@@ -25,6 +25,22 @@
 
   &__image {
     padding: 10px 10px 0;
+    position: relative;
+  }
+
+  &__image-overlay {
+    padding: 10px 15px;
+    background-color: rgba($white-color, .6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    p {
+      margin: 0;
+      text-align: center;
+      font-weight: 500;
+    }
   }
 
   &__title {

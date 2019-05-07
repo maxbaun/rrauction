@@ -1,19 +1,21 @@
-.shop-toolbar.padding-bottom-1x.mb-2
+.shop-toolbar.auction-toolbar.padding-bottom-1x.mb-2
   .column
     .shop-sorting
-      label(for='sorting') Sort by:
-      select(id='sorting').form-control
-        option(value='Popularity') Popularity
-        option(value='Low - High Price') Low - High Price
-        option(value='High - Low Price') High - Low Price
-        option(value='Average Rating') Average Rating
-        option(value='A - Z Order') A - Z Order
-        option(value='Z - A Order') Z - A Order
-      label(for='show') Show:
-      select(id='show').form-control
-        option(value='24') 24
-        option(value='48') 48
-        option(value='96') 96
+      div
+        label(for='sorting') Sort by:
+        select(id='sorting').form-control
+          option(value='Popularity') Popularity
+          option(value='Low - High Price') Low - High Price
+          option(value='High - Low Price') High - Low Price
+          option(value='Average Rating') Average Rating
+          option(value='A - Z Order') A - Z Order
+          option(value='Z - A Order') Z - A Order
+      div
+        label(for='show') Show:
+        select(id='show').form-control
+          option(value='24') 24
+          option(value='48') 48
+          option(value='96') 96
   .column
     .shop-view
       a(href='/t19-auction-list--tile.html' class= activeView === 'grid' ? "grid-view active" : "grid-view")
