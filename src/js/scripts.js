@@ -1003,4 +1003,29 @@ jQuery(document).ready(function($) {
     })
   }
 
+  var $tabAndScroll = $('.tab-and-scroll');
+
+  if ($tabAndScroll.length) {
+    $tabAndScroll.each(function () {
+      var $self = $(this);
+      var $target = $($self.attr('href'));
+
+      $self.on('shown.bs.tab', function () {
+        if (window.innerWidth < 992) {
+          var top = $target[0].getBoundingClientRect().top
+          var topbarHeight = $('.site-header .topbar').height();
+
+          console.log(topbarHeight)
+
+          window.scrollTo({ top: top - topbarHeight });
+        }
+      })
+      $self.click(function () {
+        setTimeout(function () {
+
+        }, 1000);
+      });
+    });
+  }
+
 });/*Document Ready End*/

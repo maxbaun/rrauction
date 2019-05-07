@@ -411,7 +411,7 @@
 
 // Navbar Collapse
 @media (max-width: $nav-collapse) {
-  body { padding-top: 0 !important; }
+  // body { padding-top: 0 !important; }
   .navbar,
   .search-box-wrap,
   .hidden-on-mobile { display: none !important; }
