@@ -1,29 +1,5 @@
 // Mobile Menu
 .mobile-menu
-
-  // Search Box
-  .mobile-search
-    .search-box
-      form(method='get').d-flex.align-items-center
-        select(name="type").form-control
-          option(value="Current Auctions") Current Auctions
-          option(value="Preview Auctions") Preview Auctions
-          option(value="Past Auctions") Past Auctions
-          option(value="All Auctions") All Auctions
-        .input-group
-          span.input-group-btn
-            button(type='submit')
-              i.icon-search
-          input(type='search' placeholder='Search by lot # of Keyword').form-control
-      a(href="/t36-advanced-search.html").advanced-search Advanced Search
-
-  // Toolbar
-  .toolbar
-    if isLoggedIn
-      include toolbar--logged-in--mobile
-    else
-      include toolbar--logged-out--mobile
-
   // Slideable (Mobile) Menu
   nav.slideable-menu
     ul(data-initial-height='385').menu

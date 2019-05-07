@@ -1,9 +1,7 @@
 .auction-item.auction-item--skin-3
   .auction-item__header
-    div.watch
-      a(href="#")
-        i.icon-eye
-        span.text Watch
+    div.lot
+      a(href='#') Lot 1
     .time
       | 8d 4h 39m
   .auction-item__image
@@ -16,7 +14,9 @@
         span.title.text-muted Now At
         span.value #{item.now}
       div
-        span.title.text-muted Next bid
-        span.value #{item.next}
+        a(href="#")
+          .btn.btn-outline-primary
+            i.icon-eye
+            span.text Watch
       .bid
         a(href="#").btn.btn-primary.btn-sm Bid

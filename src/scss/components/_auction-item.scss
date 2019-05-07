@@ -32,13 +32,14 @@
     display: flex;
     font-size: 14px;
     text-decoration: none;
+    font-weight: 400;
 
     span:not(:last-child) {
       margin-right: 3px;
     }
 
     .title {
-      font-weight: 700;
+      font-weight: 400;
     }
 
     &:focus,
@@ -50,8 +51,11 @@
   }
 
   &__meta {
-    display: flex;
     padding: 7px 0;
+
+    @media (min-width: $nav-collapse) {
+      display: flex;
+    }
 
     > div {
       flex: 1;
@@ -63,8 +67,12 @@
       }
 
       &:not(:first-child) {
-        padding-left: 10px;
-        border-left: 1px solid $border-color;
+        padding-top: 10px;
+        @media (min-width: $nav-collapse) {
+          padding-top: 0;
+          padding-left: 10px;
+          border-left: 1px solid $border-color;
+        }
       }
 
       > span {
@@ -83,6 +91,10 @@
         line-height: 36px;
         padding: 0 15px;
         width: 100%;
+
+        i {
+          margin-right: 5px;
+        }
       }
     }
   }
@@ -216,6 +228,25 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .lot {
+          border-right: 1px solid $border-color;
+          font-size: 12px;
+
+          a {
+            color: $gray;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            text-decoration: none;
+            padding: 5px 15px;
+
+            &:hover,
+            &.active {
+              color: $brand-primary;
+            }
+          }
+        }
 
         .watch {
           flex: 0 0 80px;

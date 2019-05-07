@@ -88,7 +88,7 @@ block content
       .container
         h3.text-lg.text-uppercase.margin-top-0 Upcoming Auctions
         hr.margin-bottom-1x
-        .owl-carousel.item-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":4}} }')
+        .owl-carousel.item-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":2},"630":{"items":3},"991":{"items":3},"1200":{"items":4}} }')
           each auction in auctions
             .item
               include partials/auction-card
@@ -97,7 +97,7 @@ block content
       .container
         h3.text-lg.text-uppercase.margin-top-0 Sell With RR
         hr.margin-bottom-1x
-        .owl-carousel.item-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":3}} }')
+        .owl-carousel.item-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":3},"991":{"items":3},"1200":{"items":3}} }')
           .item
             .card
               img(src='../img/components/img05.jpg' alt='Card image').card-img-top
@@ -121,7 +121,7 @@ block content
     // Featured Products
     section.container.padding-bottom-1x.mb-2
       h2.h3.py-3.my-3.text-center Featured Lots
-      .owl-carousel.item-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":1},"630":{"items":2},"991":{"items":3},"1200":{"items":4}} }')
+      .owl-carousel.item-carousel(data-owl-carousel='{ "nav": false, "dots": true, "loop": true, "margin": 30, "autoplayTimeout": 4000, "responsive": {"0":{"items":2},"630":{"items":3},"991":{"items":3},"1200":{"items":4}} }')
         .item
           - var item = {image: '/img/rr/items/3410395_1.jpg', title: '#1 Lot title 1', description: 'This is the description of the auction item', now: '$6,000', next: '$6,500'}
           include partials/auction-item

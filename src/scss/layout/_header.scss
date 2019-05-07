@@ -6,6 +6,14 @@
   position: relative;
   z-index: 1000;
 
+  .alert {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    padding: 10px 15px;
+    background-color: $gray-lighter;
+  }
+
   // Topbar
   .topbar {
     border: {
@@ -67,14 +75,14 @@
     }
     .advanced-search {
       display: block;
-      padding: 10px 0 0;
+      padding: 0 10px;
       text-align: left;
       white-space: nowrap;
     }
     select.form-control {
       border-color: darken($border-color, 3%);
       background-color: $gray-light;
-      flex: 0 1 40%;
+      flex: 0 1 35%;
       border: {
         top-right-radius: 0;
         bottom-right-radius: 0;
@@ -83,7 +91,7 @@
     }
     .input-group {
       flex: 1 1 100%;
-      width: 60%;
+      width: 55%;
       .form-control {
         border-color: darken($border-color, 3%);
         border: {
@@ -271,7 +279,16 @@
   .toolbar,
   .categories-btn { display: none; }
 }
+.navbar-stuck .topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white-color;
+  box-shadow: $navbar-stuck-shadow;
+  width: 100%;
+}
 .navbar-stuck .navbar {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -324,9 +341,9 @@
   top: 100%;
   left: 0;
   width: 100%;
-  padding-top: 15px;
+  padding-top: 0;
   background-color: $gray-lighter;
-  box-shadow: $navbar-stuck-shadow;
+  // box-shadow: $navbar-stuck-shadow;
   .mobile-search {
     padding: {
       right: 15px;
@@ -351,8 +368,46 @@
   }
 }
 
+.footer-nav {
+  display: none;
+  background-color: $white-color;
+
+  .toolbar {
+    display: flex;
+
+    .toolbar-item {
+      flex: 1 1 96px;
+    }
+
+    .toolbar-item > a {
+      position: static;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 10px;
+
+      > div {
+        position: static;
+        transform: none;
+      }
+    }
+  }
+}
+
 // Slideable Menu (Mobile)
 .slideable-menu { @extend %slideable-menu; }
+
+.mobile-search {
+  display: none;
+  background-color: $gray-lighter;
+
+  &.open {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+}
 
 // Navbar Collapse
 @media (max-width: $nav-collapse) {
@@ -368,7 +423,19 @@
     .site-branding {
       border: 0;
       padding: 20px 15px;
+      .site-logo {
+        width: 150px;
+      }
     }
+  }
+
+  .footer-nav {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 }
 @media (max-width: $screen-xs) {

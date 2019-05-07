@@ -2,6 +2,9 @@
 // Remove "navbar-sticky" class to make navigation bar scrollable with the page.
 header.site-header.navbar-sticky
 
+  .alert(role='alert')
+    | This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+
   // Topbar
   .topbar.d-flex.justify-content-between
 
@@ -13,19 +16,7 @@ header.site-header.navbar-sticky
     // Search / Categories
     .search-box-wrap.d-flex
       .search-box-inner.align-self-center
-        .search-box
-          form(method='get').d-flex.align-items-center
-            select(name="type").form-control
-              option(value="Current Auctions") Current Auctions
-              option(value="Preview Auctions") Preview Auctions
-              option(value="Past Auctions") Past Auctions
-              option(value="All Auctions") All Auctions
-            .input-group
-              span.input-group-btn
-                button(type='submit')
-                  i.icon-search
-              input(type='search' placeholder='Search by lot # of Keyword').form-control
-          a(href="/t36-advanced-search.html").advanced-search Advanced Search
+        include header-search
 
     //- toolbar.pug template
     .toolbar.d-flex
@@ -40,6 +31,16 @@ header.site-header.navbar-sticky
   // Navbar
   .navbar
     include menu
+
+  .mobile-search(id='mobile-search')
+    include header-search
+
+  .footer-nav
+    .toolbar
+      if isLoggedIn
+        include toolbar--logged-in--mobile
+      else
+        include toolbar--logged-out--mobile
 
     //- // Toolbar ( Put toolbar here only if you enable sticky navbar )
     //- .toolbar

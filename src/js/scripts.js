@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
 			$(window).on('scroll', function() {
 				if($(this).scrollTop() > $topbarH) {
 					$navbar.addClass('navbar-stuck');
-					$body.css('padding-top', $navbarH);
+					$body.css('padding-top', $topbarH);
 				} else {
 					$navbar.removeClass('navbar-stuck');
 					$body.css('padding-top', 0);
@@ -91,7 +91,9 @@ jQuery(document).ready(function($) {
 			$(target).toggleClass('open');
 		});
 	}
-	mobileMenu('.mobile-menu-toggle', '.mobile-menu');
+  mobileMenu('.mobile-menu-toggle', '.mobile-menu');
+
+  mobileMenu('.search-menu-toggle', '#mobile-search');
 
 
   // Slidable (Mobile) Menu

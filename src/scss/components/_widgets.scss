@@ -7,6 +7,21 @@
 .sidebar-toggle,
 .sidebar-close { display: none; }
 
+.sidebar-toggle {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  i {
+    display: block;
+  }
+
+  .text {
+    display: block;
+    font-size: 10px;
+    line-height: 1;
+  }
+}
+
 // Sidebar Off-Canvas
 @media (max-width: $screen-lg) {
   .sidebar-offcanvas {

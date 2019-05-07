@@ -1,4 +1,9 @@
 // Toolbar
+.toolbar-item.visible-on-mobile.search-menu-toggle
+  a(href='#')
+    div
+      i.icon-search
+      span.text-label Search
 .toolbar-item.visible-on-mobile.mobile-menu-toggle
   a(href='#')
     div
@@ -22,8 +27,8 @@
 .toolbar-item.hidden-on-mobile
   a(href='/t26-user-profile.html')
     div
-      i.icon-user
-      span.text-label My Account
+      i.icon-user.text-primary
+      span.text-label.text-primary My Account
 
   ul.toolbar-dropdown.lang-dropdown
     li.px-3.pt-1.pb-2

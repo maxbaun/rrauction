@@ -241,6 +241,7 @@
     <!-- Header-->
     <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
     <header class="site-header navbar-sticky">
+      <div class="alert" role="alert">This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div>
       <!-- Topbar-->
       <div class="topbar d-flex justify-content-between">
         <!-- Logo-->
@@ -258,13 +259,15 @@
                 </select>
                 <div class="input-group"><span class="input-group-btn">
                     <button type="submit"><i class="icon-search"></i></button></span>
-                  <input class="form-control" type="search" placeholder="Search by lot # of Keyword">
-                </div>
-              </form><a class="advanced-search" href="/t36-advanced-search.html">Advanced Search</a>
+                  <input class="form-control" type="search" placeholder="Search by lot # or Keyword">
+                </div><a class="advanced-search" href="/t36-advanced-search.html">Advanced Search</a>
+              </form>
             </div>
           </div>
         </div>
         <div class="toolbar d-flex">
+          <div class="toolbar-item visible-on-mobile search-menu-toggle"><a href="#">
+              <div><i class="icon-search"></i><span class="text-label">Search</span></div></a></div>
           <div class="toolbar-item visible-on-mobile mobile-menu-toggle"><a href="#">
               <div><i class="icon-menu"></i><span class="text-label">Menu</span></div></a></div>
           <div class="toolbar-item hidden-on-mobile"><a href="/t07-contact.html">
@@ -274,38 +277,10 @@
           <div class="toolbar-item hidden-on-mobile"><a href="/t23-login.html">
               <div><i class="icon-edit"></i><span class="text-label">Create Account</span></div></a></div>
           <div class="toolbar-item hidden-on-mobile"><a href="/t23-login.html">
-              <div><i class="icon-user"></i><span class="text-label">Sign In</span></div></a></div>
+              <div><i class="icon-user text-primary"></i><span class="text-label text-primary">Sign In</span></div></a></div>
         </div>
         <!-- Mobile Menu-->
         <div class="mobile-menu">
-          <!-- Search Box-->
-          <div class="mobile-search">
-            <div class="search-box">
-              <form class="d-flex align-items-center" method="get">
-                <select class="form-control" name="type">
-                  <option value="Current Auctions">Current Auctions</option>
-                  <option value="Preview Auctions">Preview Auctions</option>
-                  <option value="Past Auctions">Past Auctions</option>
-                  <option value="All Auctions">All Auctions</option>
-                </select>
-                <div class="input-group"><span class="input-group-btn">
-                    <button type="submit"><i class="icon-search"></i></button></span>
-                  <input class="form-control" type="search" placeholder="Search by lot # of Keyword">
-                </div>
-              </form><a class="advanced-search" href="/t36-advanced-search.html">Advanced Search</a>
-            </div>
-          </div>
-          <!-- Toolbar-->
-          <div class="toolbar">
-            <div class="toolbar-item"><a href="/t07-contact.html">
-                <div><i class="icon-phone"></i><span class="text-label">Contact</span></div></a></div>
-            <div class="toolbar-item"><a href="/t03-how-to-sell.html">
-                <div><i class="icon-dollar-sign"></i><span class="text-label">Sell With Us</span></div></a></div>
-            <div class="toolbar-item"><a href="/t23-login.html">
-                <div><i class="icon-edit"></i><span class="text-label">Create Account</span></div></a></div>
-            <div class="toolbar-item"><a href="/t23-login.html">
-                <div><i class="icon-user"></i><span class="text-label">Sign In</span></div></a></div>
-          </div>
           <!-- Slideable (Mobile) Menu-->
           <nav class="slideable-menu">
             <ul class="menu" data-initial-height="385">
@@ -487,6 +462,34 @@
             </li>
           </ul>
         </nav>
+      </div>
+      <div class="mobile-search" id="mobile-search">
+        <div class="search-box">
+          <form class="d-flex align-items-center" method="get">
+            <select class="form-control" name="type">
+              <option value="Current Auctions">Current Auctions</option>
+              <option value="Preview Auctions">Preview Auctions</option>
+              <option value="Past Auctions">Past Auctions</option>
+              <option value="All Auctions">All Auctions</option>
+            </select>
+            <div class="input-group"><span class="input-group-btn">
+                <button type="submit"><i class="icon-search"></i></button></span>
+              <input class="form-control" type="search" placeholder="Search by lot # or Keyword">
+            </div><a class="advanced-search" href="/t36-advanced-search.html">Advanced Search</a>
+          </form>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="toolbar">
+          <div class="toolbar-item"><a href="/t07-contact.html">
+              <div><i class="icon-phone"></i><span class="text-label">Contact</span></div></a></div>
+          <div class="toolbar-item"><a href="/t03-how-to-sell.html">
+              <div><i class="icon-dollar-sign"></i><span class="text-label">Sell With Us</span></div></a></div>
+          <div class="toolbar-item"><a href="/t23-login.html">
+              <div><i class="icon-edit"></i><span class="text-label">Create Account</span></div></a></div>
+          <div class="toolbar-item"><a href="/t23-login.html">
+              <div><i class="icon-user text-primary"></i><span class="text-label text-primary">Sign In</span></div></a></div>
+        </div>
       </div>
     </header>
     <!-- Page Title-->
@@ -692,7 +695,9 @@
         </div>
         <!-- Sidebar-->
         <div class="col-lg-3 order-lg-2">
-          <div class="sidebar-toggle position-left"><i class="icon-filter"></i></div>
+          <div class="sidebar-toggle position-left"><i class="icon-filter"></i>
+            <div class="text">Filters</div>
+          </div>
           <aside class="sidebar sidebar-offcanvas position-left"><span class="sidebar-close"><i class="icon-x"></i></span>
             <!-- Widget Categories-->
             <section class="widget widget-categories">
@@ -709,7 +714,7 @@
                     </li>
                     <li><a href="#">Laptops</a><span>(423)</span>
                       <ul>
-                        <li><a href="#">15' Screens </a></li>
+                        <li><a href="#">15' Screens</a></li>
                         <li><a href="#">13' Screens</a></li>
                         <li><a href="#">Touch Screens</a></li>
                       </ul>
@@ -994,7 +999,7 @@
                 </div>
               </form>
               <div class="pt-3">
-                <div class="social-buttons"><a class="social-button shape-circle sb-facebook sb-light-skin" href="https://www.facebook.com/rrauction"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter sb-light-skin" href="https://twitter.com/rrauction"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-pinterest sb-light-skin" href="https://www.pinterest.com/rrauction/"><i class="socicon-pinterest"></i></a><a class="social-button shape-circle sb-google-plus sb-light-skin" href="https://plus.google.com/112356402140002511649?hl=en"><i class="socicon-googleplus"></i></a><a class="social-button shape-circle sb-linkedin sb-light-skin" href="https://www.linkedin.com/company/rr-auction"><i class="socicon-linkedin"></i></a></div>
+                <div class="social-buttons"><a class="social-button shape-circle sb-facebook sb-light-skin" href="https://www.facebook.com/rrauction"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter sb-light-skin" href="https://twitter.com/rrauction"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-instagram sb-light-skin" href="https://www.instagram.com/rrauction/"><i class="socicon-instagram"></i></a></div>
               </div>
             </section>
           </div>
