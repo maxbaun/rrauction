@@ -6,13 +6,14 @@
   .row
     .col-4.col-sm-3
       .auction-list-item__image
-        img.img-fluid(src=item.image)
-        if (item.overlay)
-          .auction-list-item__image-overlay(class=item.overlayClass)
-            p #{item.overlay}
+        a(href="/t21-auction-item-detail.html")
+          img.img-fluid(src=item.image)
+          if (item.overlay)
+            .auction-list-item__image-overlay(class=item.overlayClass)
+              p #{item.overlay}
     .col-8.col-sm-9
       p.mb-1 #1
-      p.mb-1 #{item.title}
+      p.mb-1: a(href="/t21-auction-item-detail.html") #{item.title}
       .row
         .col-6
           p.mb-1 #{timeText}
