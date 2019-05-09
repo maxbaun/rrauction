@@ -167,7 +167,7 @@ module.exports = function(grunt) {
    },
 
    zip: {
-     [`build/${new Date().toISOString().slice(0,10)}.zip`]: 'dist/**/*'
+     [`build/rrauction-fe--${new Date().toISOString().slice(0,10)}.zip`]: 'dist/**/*'
    }
 
  });
