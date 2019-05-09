@@ -8,6 +8,7 @@ append config
   - var menuTitle = 'Account'
   - var pageTitle = 'T29 - User Consignments'
   - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {title: 'Account', link: '/t26-user-profile.html'}, {'title': 'T29 - User Consignments'}]
+  - var isLoggedIn = true
 
 //- Page Content
 block content
@@ -16,6 +17,7 @@ block content
       {
         status: 'Sold',
         statusClass: 'text-success',
+        cardClass: 'winning',
         lotNo: '#1',
         lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
         time: '8d / 4h / 39m',
@@ -26,6 +28,7 @@ block content
       {
         status: 'Unsold',
         statusClass: 'text-danger',
+        cardClass: 'outbid',
         lotNo: '#2',
         lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
         time: '8d / 4h / 39m',
@@ -36,6 +39,7 @@ block content
       {
         status: 'Sold',
         statusClass: 'text-success',
+        cardClass: 'winning',
         lotNo: '#3',
         lotTitle: 'Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur',
         time: '8d / 4h / 39m',
@@ -51,19 +55,21 @@ block content
         .col-12
           .account-products
             ul(class='nav nav-tabs nav-justified')
-              li.nav-item: a(href='/t28-user-bids.html').nav-link My Bids
-              li.nav-item: a(href='/t27-user-watchlist.html').nav-link My Watchlist
-              li.nav-item: a(href='/t29-user-consignments.html').nav-link.active My Consignments
-
-            div.controls
-              ul.nav.nav-pills.mt-3.mb-3
-                li.nav-item
-                  a(href="#").nav-link Current Auctions
-                li.nav-item
-                  a(href="#").nav-link.active Preview Auctions
-                li.nav-item
-                  a(href="#").nav-link Past Auctions
-              .filter.mt-3.mb-3
+              li.nav-item
+                a(href="#").nav-link Current Auctions
+              li.nav-item
+                a(href="#").nav-link.active Preview Auctions
+              li.nav-item
+                a(href="#").nav-link Past Auctions
+            div.controls.mt-3.mb-3
+              .filter
+                label(for="sort").text-muted.text-small Sort By:
+                select(name="sort" id="sort").form-control
+                  option(value="Sort 1") Sort 1
+                  option(value="Sort 2") Sort 2
+                  option(value="Sort 3") Sort 3
+                  option(value="Sort 4") Sort 4
+              .filter
                 label(for="filter").text-muted.text-small Filter By:
                 select(name="filter" id="filter").form-control
                   option(value="Filter 1") Filter 1
@@ -72,19 +78,16 @@ block content
                   option(value="Filter 4") Filter 4
             .hidden-lg-up
               each item in items
-                .card.mb-3
+                .card.mb-3(class=item.cardClass)
                   .card-body
                     ul.list-unstyled
                       li
-                        strong Lot:
                         span(class=item.statusClass)
-                          | &nbsp;#{item.status}
+                          | #{item.status}
                       li
-                        strong Lot:
-                        | &nbsp;#{item.lotNo}
+                        | #{item.lotNo}
                       li
-                        strong Lot Title:
-                        a(href="#") &nbsp;#{item.lotTitle}
+                        a(href="#") #{item.lotTitle}
                       li
                         strong Time Remaining:
                         | &nbsp;#{item.time}

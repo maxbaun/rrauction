@@ -1,0 +1,20 @@
+extends partials/layout
+
+//- Override default config variables
+append config
+  - var isPageTitle = true
+  - var pageTitleClass = 'page-title no-margin';
+  - var parentMenu = 'Home'
+  - var pageTitle = 'T19 - Auction List (Tile -- Full/Search)'
+  - var menuTitle = 'Home'
+  - var breadcrumbs = [{'title': 'Home', 'link': 'index.html'}, {'title': 'T19 - Auction List (Tile -- Full/Search)'}]
+
+//- Page Content
+block content
+
+  - var activeView = 'grid'
+
+  .auction-list-page.padding-bottom-3x
+    .container
+      include partials/t19-content
+

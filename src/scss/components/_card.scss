@@ -90,6 +90,16 @@ a.card {
   }
 }
 
+.card.winning {
+  background-color: rgba($brand-success, .1);
+  border-color: rgba($brand-success, .1);
+}
+
+.card.outbid {
+  background-color: rgba($brand-danger, .1);
+  border-color: rgba($brand-danger, .1);
+}
+
 // Light skin
 .text-white,
 .text-light {

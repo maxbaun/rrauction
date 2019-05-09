@@ -268,18 +268,28 @@
           </div>
         </div>
         <div class="toolbar d-flex">
+          <!-- Toolbar-->
           <div class="toolbar-item visible-on-mobile search-menu-toggle"><a href="#">
               <div><i class="icon-search"></i><span class="text-label">Search</span></div></a></div>
           <div class="toolbar-item visible-on-mobile mobile-menu-toggle"><a href="#">
               <div><i class="icon-menu"></i><span class="text-label">Menu</span></div></a></div>
-          <div class="toolbar-item hidden-on-mobile"><a href="/t07-contact.html">
-              <div><i class="icon-phone"></i><span class="text-label">Contact</span></div></a></div>
-          <div class="toolbar-item hidden-on-mobile"><a href="/t03-how-to-sell.html">
-              <div><i class="icon-dollar-sign"></i><span class="text-label">Sell With Us</span></div></a></div>
-          <div class="toolbar-item hidden-on-mobile"><a href="/t23-login.html">
-              <div><i class="icon-edit"></i><span class="text-label">Sign Up</span></div></a></div>
-          <div class="toolbar-item hidden-on-mobile"><a href="/t23-login.html">
-              <div><i class="icon-user text-primary"></i><span class="text-label text-primary">Sign In</span></div></a></div>
+          <div class="toolbar-item hidden-on-mobile"><a href="/t29-user-consignments.html">
+              <div><span class="badge badge-default badge-pill mb-2">0</span><span class="text-label">Consignments</span></div></a></div>
+          <div class="toolbar-item hidden-on-mobile"><a href="/t28-user-bids.html">
+              <div><span class="badge badge-default badge-pill mb-2">5</span><span class="text-label">BidTracker</span></div></a></div>
+          <div class="toolbar-item hidden-on-mobile"><a href="/t27-user-watchlist.html">
+              <div><span class="badge badge-default badge-pill mb-2">5</span><span class="text-label">Watchlist</span></div></a></div>
+          <div class="toolbar-item hidden-on-mobile"><a href="/t26-user-profile.html">
+              <div><i class="icon-user text-primary"></i><span class="text-label text-primary">My Account</span></div></a>
+            <ul class="toolbar-dropdown lang-dropdown">
+              <li class="px-3 pt-1 pb-2">Welcome Robert</li>
+              <li><a href="/t26-user-profile.html">My Profile</a></li>
+              <li><a href="/t30-user-wantlist.html">My Wantlist</a></li>
+              <li><a href="/t32-user-notifications.html">My Notifications</a></li>
+              <li><a href="/t33-user-invoice-list.html">My Invoices</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
         </div>
         <!-- Mobile Menu-->
         <div class="mobile-menu">
@@ -483,14 +493,23 @@
       </div>
       <div class="footer-nav">
         <div class="toolbar">
-          <div class="toolbar-item bg-secondary"><a href="/t07-contact.html">
-              <div><i class="icon-phone"></i><span class="text-label">Contact</span></div></a></div>
-          <div class="toolbar-item bg-secondary"><a href="/t03-how-to-sell.html">
-              <div><i class="icon-dollar-sign"></i><span class="text-label">Sell With Us</span></div></a></div>
-          <div class="toolbar-item bg-secondary"><a href="/t23-login.html">
-              <div><i class="icon-edit"></i><span class="text-label">Sign Up</span></div></a></div>
-          <div class="toolbar-item bg-secondary"><a href="/t23-login.html">
-              <div><i class="icon-user text-primary"></i><span class="text-label text-primary">Sign In</span></div></a></div>
+          <div class="toolbar-item bg-secondary"><a href="/t29-user-consignments.html">
+              <div><span class="badge badge-default badge-pill mb-2">0</span><span class="text-label">Consignments</span></div></a></div>
+          <div class="toolbar-item bg-secondary"><a href="/t28-user-bids.html">
+              <div><span class="badge badge-default badge-pill mb-2">5</span><span class="text-label">BidTracker</span></div></a></div>
+          <div class="toolbar-item bg-secondary"><a href="/t27-user-watchlist.html">
+              <div><span class="badge badge-default badge-pill mb-2">5</span><span class="text-label">Watchlist</span></div></a></div>
+          <div class="toolbar-item bg-secondary"><a href="/t26-user-profile.html">
+              <div><i class="icon-user text-primary"></i><span class="text-label text-primary">My Account</span></div></a>
+            <ul class="toolbar-dropdown lang-dropdown">
+              <li class="px-3 pt-1 pb-2">Welcome Robert</li>
+              <li><a href="/t26-user-profile.html">My Profile</a></li>
+              <li><a href="/t30-user-wantlist.html">My Wantlist</a></li>
+              <li><a href="/t32-user-notifications.html">My Notifications</a></li>
+              <li><a href="/t33-user-invoice-list.html">My Invoices</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -520,17 +539,21 @@
           <div class="col-12">
             <div class="account-products">
               <ul class="nav nav-tabs nav-justified">
-                <li class="nav-item"><a class="nav-link" href="/t28-user-bids.html">My Bids</a></li>
-                <li class="nav-item"><a class="nav-link" href="/t27-user-watchlist.html">My Watchlist</a></li>
-                <li class="nav-item"><a class="nav-link active" href="/t29-user-consignments.html">My Consignments</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Current Auctions</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Preview Auctions</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Past Auctions</a></li>
               </ul>
-              <div class="controls">
-                <ul class="nav nav-pills mt-3 mb-3">
-                  <li class="nav-item"><a class="nav-link" href="#">Current Auctions</a></li>
-                  <li class="nav-item"><a class="nav-link active" href="#">Preview Auctions</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Past Auctions</a></li>
-                </ul>
-                <div class="filter mt-3 mb-3">
+              <div class="controls mt-3 mb-3">
+                <div class="filter">
+                  <label class="text-muted text-small" for="sort">Sort By:</label>
+                  <select class="form-control" name="sort" id="sort">
+                    <option value="Sort 1">Sort 1</option>
+                    <option value="Sort 2">Sort 2</option>
+                    <option value="Sort 3">Sort 3</option>
+                    <option value="Sort 4">Sort 4</option>
+                  </select>
+                </div>
+                <div class="filter">
                   <label class="text-muted text-small" for="filter">Filter By:</label>
                   <select class="form-control" name="filter" id="filter">
                     <option value="Filter 1">Filter 1</option>
@@ -541,12 +564,12 @@
                 </div>
               </div>
               <div class="hidden-lg-up">
-                <div class="card mb-3">
+                <div class="card mb-3 winning">
                   <div class="card-body">
                     <ul class="list-unstyled">
-                      <li><strong>Lot:</strong><span class="text-success">&nbsp;Sold</span></li>
-                      <li><strong>Lot:</strong>&nbsp;#1</li>
-                      <li><strong>Lot Title:</strong><a href="#">&nbsp;Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</a></li>
+                      <li><span class="text-success">Sold</span></li>
+                      <li>#1</li>
+                      <li><a href="#">Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</a></li>
                       <li><strong>Time Remaining:</strong>&nbsp;8d / 4h / 39m</li>
                       <li><strong>Now at:</strong>&nbsp;$300.00</li>
                       <li><strong>Next bid:</strong>&nbsp;$0.00</li>
@@ -555,12 +578,12 @@
                     </ul>
                   </div>
                 </div>
-                <div class="card mb-3">
+                <div class="card mb-3 outbid">
                   <div class="card-body">
                     <ul class="list-unstyled">
-                      <li><strong>Lot:</strong><span class="text-danger">&nbsp;Unsold</span></li>
-                      <li><strong>Lot:</strong>&nbsp;#2</li>
-                      <li><strong>Lot Title:</strong><a href="#">&nbsp;Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</a></li>
+                      <li><span class="text-danger">Unsold</span></li>
+                      <li>#2</li>
+                      <li><a href="#">Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</a></li>
                       <li><strong>Time Remaining:</strong>&nbsp;8d / 4h / 39m</li>
                       <li><strong>Now at:</strong>&nbsp;$400.00</li>
                       <li><strong>Next bid:</strong>&nbsp;$0.00</li>
@@ -569,12 +592,12 @@
                     </ul>
                   </div>
                 </div>
-                <div class="card mb-3">
+                <div class="card mb-3 winning">
                   <div class="card-body">
                     <ul class="list-unstyled">
-                      <li><strong>Lot:</strong><span class="text-success">&nbsp;Sold</span></li>
-                      <li><strong>Lot:</strong>&nbsp;#3</li>
-                      <li><strong>Lot Title:</strong><a href="#">&nbsp;Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</a></li>
+                      <li><span class="text-success">Sold</span></li>
+                      <li>#3</li>
+                      <li><a href="#">Consequat eiusmod fugiat irure sit enim excepteur pariatur velit enim excepteur</a></li>
                       <li><strong>Time Remaining:</strong>&nbsp;8d / 4h / 39m</li>
                       <li><strong>Now at:</strong>&nbsp;$500.00</li>
                       <li><strong>Next bid:</strong>&nbsp;$0.00</li>

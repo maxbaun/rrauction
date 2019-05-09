@@ -1,0 +1,19 @@
+- var bidText = item.bidText || 'Bid'
+- var timeText = item.time || '8d 4h 39m'
+- var priceLabel = item.priceLabel || 'Now At'
+
+.auction-list-item
+  .row
+    .col-4.col-sm-3
+      img.img-fluid(src=item.image)
+    .col-8.col-sm-9
+      p.mb-1 #1
+      p.mb-1 #{item.title}
+      p.mb-1 #{timeText}
+      p.mb-1 #{priceLabel}: #{item.now}
+      a(href="#").btn.btn-outline-primary.btn-sm
+        i.icon-eye.mr-1
+        span.text Watch
+      a(href="#").btn.btn-primary.btn-sm #{bidText}
+
+hr.mt-2.mb-2

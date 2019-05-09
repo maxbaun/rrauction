@@ -3066,6 +3066,8 @@ button:focus {
   transition: color .3s;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  border-color: #e5e5e5 #e5e5e5 #ffffff;
+  background-color: #f2f2f2;
   color: #505050;
   font-size: 15px;
   font-weight: normal;
@@ -6000,12 +6002,84 @@ video {
 }
 
 .account-products .nav-tabs .nav-link {
+  height: 100%;
   transition-property: color, background-color;
 }
 
 .account-products .nav-tabs .nav-link.active {
   background-color: #7f2e2b;
   color: #ffffff;
+}
+
+.account-products .nav-pills .nav-link {
+  border: 1px solid #7f2e2b;
+  color: #7f2e2b;
+  height: 40px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  line-height: 1;
+  padding: 5px 10px;
+}
+
+.account-products .nav-pills .nav-link:hover:not(:disabled), .account-products .nav-pills .nav-link.active {
+  background-color: #7f2e2b;
+  color: #ffffff;
+}
+
+.account-products .nav-pills .nav-link.active:hover {
+  background-color: #6c2725;
+}
+
+.account-products .controls {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+@media (min-width: 576px) {
+  .account-products .controls {
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+}
+
+.account-products .controls .filter {
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: left;
+}
+
+@media (min-width: 576px) {
+  .account-products .controls .filter {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.account-products .controls .filter label {
+  -ms-flex: 1;
+      flex: 1;
+  margin-bottom: 0;
+  margin-right: 10px;
+  padding: 8px 5px 8px 0;
+  white-space: nowrap;
+}
+
+.account-products .controls .filter select {
+  padding-right: 38px;
+}
+
+.account-products .controls .filter:not(:last-child) {
+  margin-right: 15px;
 }
 
 .auction-item {
@@ -6626,9 +6700,27 @@ video {
 }
 
 .auction-toolbar .shop-sorting > div {
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: left;
+}
+
+@media (min-width: 576px) {
+  .auction-toolbar .shop-sorting > div {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.auction-toolbar .shop-sorting > div label {
   -ms-flex: 1;
       flex: 1;
-  text-align: left;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.auction-toolbar .shop-sorting > div select {
+  padding-right: 38px;
 }
 
 .auction-toolbar .shop-sorting > div:not(:last-child) {
@@ -6887,8 +6979,14 @@ video {
   margin: 0;
   border-radius: 0;
   border: none;
-  padding: 10px 15px;
-  background-color: #f5f5f5;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.site-header .alert .alert-link {
+  color: #ffffff;
 }
 
 .site-header .topbar {

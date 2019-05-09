@@ -1,0 +1,21 @@
+-
+  var items = [
+    {image: '/img/rr/items/3410396_1.jpg', title: 'John F. Kennedy\'s Monogrammed Shaving Kit Used as President', description: 'This is the description of the auction item', now: '$6,000', next: '$6,500', overlay: 'High Bidder', overlayClass: 'text-success', showWatch: true},
+    {image: '/img/rr/items/3410396_1.jpg', title: 'John F. Kennedy\'s Monogrammed Shaving Kit Used as President', description: 'This is the description of the auction item', now: '$6,000', next: '$6,500', overlay: 'Outbid', overlayClass: 'text-danger', showWatch: true},
+    {image: '/img/rr/items/3410396_1.jpg', title: 'John F. Kennedy\'s Monogrammed Shaving Kit Used as President', description: 'This is the description of the auction item', now: '$6,000', next: '$6,500', overlay: 'My Item', overlayClass: 'text-warning', showWatch: true},
+    {image: '/img/rr/items/3410396_1.jpg', title: 'John F. Kennedy\'s Monogrammed Shaving Kit Used as President', description: 'This is the description of the auction item', now: '$6,000', next: '$6,500', bidText: 'View', time: 'Closed', overlay: 'Sold', priceLabel: 'Sold For', showWatch: false},
+    {image: '/img/rr/items/3410396_1.jpg', title: 'John F. Kennedy\'s Monogrammed Shaving Kit Used as President', description: 'This is the description of the auction item', now: '$6,000', next: '$6,500', bidText: 'View', time: 'Starts 5/4/19', showWatch: true},
+    {image: '/img/rr/items/3410396_1.jpg', title: 'John F. Kennedy\'s Monogrammed Shaving Kit Used as President', description: 'This is the description of the auction item', now: '$6,000', next: '$6,500', showWatch: true}
+  ]
+
+include auction-toolbar
+.row.hidden-lg-up
+  each item in items
+    .col-12
+      include auction-list-item
+.row.hidden-md-down
+  each item in items
+    .col-12.col-md-4.col-sm-6.mb-30
+      include auction-item
+
+include pagination
