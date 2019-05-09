@@ -164,6 +164,10 @@ module.exports = function(grunt) {
        files:['<%= paths.src_js %>/*.js'],
        tasks: ['uglify']
      }
+   },
+
+   zip: {
+     [`build/${new Date().toISOString().slice(0,10)}.zip`]: 'dist/**/*'
    }
 
  });
@@ -194,6 +198,9 @@ module.exports = function(grunt) {
  // Watch.
  grunt.loadNpmTasks('grunt-contrib-watch');
 
+ // Zip
+ grunt.loadNpmTasks('grunt-zip');
+
  // Run tasks.
 
  // Default task.
@@ -201,4 +208,6 @@ module.exports = function(grunt) {
 
  // Build tast
  grunt.registerTask('build', ['sass:bootstrap', 'sass:minified', 'autoprefixer:bootstrap', 'autoprefixer:minified', 'concat', 'uglify', 'pug'])
+
+ grunt.registerTask('bundle', ['zip'])
 };

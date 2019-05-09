@@ -3361,6 +3361,16 @@ a.card {
   background-color: #141414;
 }
 
+.card.winning {
+  background-color: rgba(76, 175, 80, 0.1);
+  border-color: rgba(76, 175, 80, 0.1);
+}
+
+.card.outbid {
+  background-color: rgba(244, 67, 54, 0.1);
+  border-color: rgba(244, 67, 54, 0.1);
+}
+
 .text-white .card-title,
 .text-light .card-title {
   color: #ffffff;
