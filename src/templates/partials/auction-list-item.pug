@@ -14,13 +14,13 @@
       p.mb-1 #1
       p.mb-1 #{item.title}
       .row
-        .col-12.col-sm-6
+        .col-6
           p.mb-1 #{timeText}
           p.mb-1 #{priceLabel}: #{item.now}
-        .col-12.col-sm-6
+        .col-6
           a(href="#").btn.btn-outline-primary.btn-sm
-            i.icon-eye.mr-1
-            span.text Watch
+            i.icon-eye
+            span.text.hidden-sm-down Watch
           a(href="#").btn.btn-primary.btn-sm #{bidText}
 
 hr.mt-2.mb-2

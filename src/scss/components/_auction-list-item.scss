@@ -17,4 +17,20 @@
       font-weight: 500;
     }
   }
+
+  .btn {
+    padding: 0 8px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+
+    @media (min-width: $screen-sm) {
+      margin-right: 12px;
+      padding: 0 18px;
+    }
+
+    .text {
+      margin-left: 2.5px;
+    }
+  }
 }
