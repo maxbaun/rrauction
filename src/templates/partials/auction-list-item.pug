@@ -5,15 +5,22 @@
 .auction-list-item
   .row
     .col-4.col-sm-3
-      img.img-fluid(src=item.image)
+      .auction-list-item__image
+        img.img-fluid(src=item.image)
+        if (item.overlay)
+          .auction-list-item__image-overlay(class=item.overlayClass)
+            p #{item.overlay}
     .col-8.col-sm-9
       p.mb-1 #1
       p.mb-1 #{item.title}
-      p.mb-1 #{timeText}
-      p.mb-1 #{priceLabel}: #{item.now}
-      a(href="#").btn.btn-outline-primary.btn-sm
-        i.icon-eye.mr-1
-        span.text Watch
-      a(href="#").btn.btn-primary.btn-sm #{bidText}
+      .row
+        .col-6
+          p.mb-1 #{timeText}
+          p.mb-1 #{priceLabel}: #{item.now}
+        .col-6
+          a(href="#").btn.btn-outline-primary.btn-sm
+            i.icon-eye.mr-1
+            span.text Watch
+          a(href="#").btn.btn-primary.btn-sm #{bidText}
 
 hr.mt-2.mb-2
