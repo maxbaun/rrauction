@@ -5,11 +5,12 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node_modules/.bin/grunt"
+    "dev": "node_modules/.bin/grunt",
+    "build": "node_modules/.bin/grunt build"
   },
   "author": "rokaux.com",
   "license": "ISC",
-  "homepage": "themes.rokaux.com/unishop/v1.1",
+  "homepage": "http://themes.rokaux.com/unishop/v1.1",
   "devDependencies": {
     "eslint": "^5.16.0",
     "grunt": "^1.0.3",
